@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GesWin", "..\PrincipalScreenMDIIoanna\PrincipalScreenMDI\GesWin.csproj", "{C5E6C141-FBCD-4D62-848A-A2360D82AC95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForm_ABI", "..\WinForm_ABI_Nouveau_ClientSvetlana\WinForm_ABI_Nouveau_Client\WinForm_ABI.csproj", "{F9863FD7-75FF-4525-9766-B19A41D04A0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForm_ABI_Nouveau_Client", "..\WinForm_ABI_Nouveau_ClientSvetlana\WinForm_ABI_Nouveau_Client\WinForm_ABI_Nouveau_Client.csproj", "{F9863FD7-75FF-4525-9766-B19A41D04A0C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFabiP", "..\WFabiP1\WFabiP\WFabiP.csproj", "{95EFA1A8-534B-4D05-91C2-BE9D2B289705}"
 EndProject

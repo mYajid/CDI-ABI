@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForm_ABI_Nouveau_Client", "WinForm_ABI_Nouveau_Client\WinForm_ABI_Nouveau_Client.csproj", "{F9863FD7-75FF-4525-9766-B19A41D04A0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9863FD7-75FF-4525-9766-B19A41D04A0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9863FD7-75FF-4525-9766-B19A41D04A0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9863FD7-75FF-4525-9766-B19A41D04A0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9863FD7-75FF-4525-9766-B19A41D04A0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C90070B1-FCD5-4B59-B05B-75008C814B27}
+	EndGlobalSection
+EndGlobal

@@ -16,6 +16,10 @@ namespace GesWin
         public FormConsultClient()
         {
             InitializeComponent();
+            //string[] row0 = { "Legoff", "Alain", "06631234", "alain@legoffbretagne.fr", "Dirigeant" };
+            //dataGridContact.Rows.Add(row0);    
         }
+
+
     }
 }

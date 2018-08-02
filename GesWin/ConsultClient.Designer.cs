@@ -55,8 +55,15 @@
             this.btnModifClient = new System.Windows.Forms.Button();
             this.btnNouveauContact = new System.Windows.Forms.Button();
             this.btnFermer = new System.Windows.Forms.Button();
+            this.dataGridContact = new System.Windows.Forms.DataGridView();
+            this.ColNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPrenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTelephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColFonction = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.boxIdentification.SuspendLayout();
             this.boxCaractéristique.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridContact)).BeginInit();
             this.SuspendLayout();
             // 
             // boxIdentification
@@ -85,7 +92,7 @@
             // 
             // txtVille
             // 
-            this.txtVille.Location = new System.Drawing.Point(353, 210);
+            this.txtVille.Location = new System.Drawing.Point(347, 202);
             this.txtVille.Name = "txtVille";
             this.txtVille.Size = new System.Drawing.Size(128, 22);
             this.txtVille.TabIndex = 11;
@@ -94,26 +101,26 @@
             // 
             this.txtTelephone.Location = new System.Drawing.Point(164, 244);
             this.txtTelephone.Name = "txtTelephone";
-            this.txtTelephone.Size = new System.Drawing.Size(132, 22);
+            this.txtTelephone.Size = new System.Drawing.Size(144, 22);
             this.txtTelephone.TabIndex = 10;
             // 
             // txtCp
             // 
-            this.txtCp.Location = new System.Drawing.Point(164, 210);
+            this.txtCp.Location = new System.Drawing.Point(164, 202);
             this.txtCp.Name = "txtCp";
             this.txtCp.Size = new System.Drawing.Size(144, 22);
             this.txtCp.TabIndex = 9;
             // 
             // txt2Adresse
             // 
-            this.txt2Adresse.Location = new System.Drawing.Point(164, 163);
+            this.txt2Adresse.Location = new System.Drawing.Point(164, 162);
             this.txt2Adresse.Name = "txt2Adresse";
             this.txt2Adresse.Size = new System.Drawing.Size(354, 22);
             this.txt2Adresse.TabIndex = 8;
             // 
             // txt1Adresse
             // 
-            this.txt1Adresse.Location = new System.Drawing.Point(164, 134);
+            this.txt1Adresse.Location = new System.Drawing.Point(164, 124);
             this.txt1Adresse.Name = "txt1Adresse";
             this.txt1Adresse.Size = new System.Drawing.Size(354, 22);
             this.txt1Adresse.TabIndex = 7;
@@ -144,7 +151,7 @@
             // lblCpVille
             // 
             this.lblCpVille.AutoSize = true;
-            this.lblCpVille.Location = new System.Drawing.Point(33, 217);
+            this.lblCpVille.Location = new System.Drawing.Point(33, 210);
             this.lblCpVille.Name = "lblCpVille";
             this.lblCpVille.Size = new System.Drawing.Size(57, 14);
             this.lblCpVille.TabIndex = 3;
@@ -153,7 +160,7 @@
             // lblAdresse
             // 
             this.lblAdresse.AutoSize = true;
-            this.lblAdresse.Location = new System.Drawing.Point(23, 134);
+            this.lblAdresse.Location = new System.Drawing.Point(23, 124);
             this.lblAdresse.Name = "lblAdresse";
             this.lblAdresse.Size = new System.Drawing.Size(67, 14);
             this.lblAdresse.TabIndex = 2;
@@ -207,14 +214,14 @@
             // 
             // txtCA
             // 
-            this.txtCA.Location = new System.Drawing.Point(142, 197);
+            this.txtCA.Location = new System.Drawing.Point(142, 205);
             this.txtCA.Name = "txtCA";
             this.txtCA.Size = new System.Drawing.Size(100, 22);
             this.txtCA.TabIndex = 8;
             // 
             // txtActivite
             // 
-            this.txtActivite.Location = new System.Drawing.Point(142, 142);
+            this.txtActivite.Location = new System.Drawing.Point(142, 127);
             this.txtActivite.Name = "txtActivite";
             this.txtActivite.Size = new System.Drawing.Size(100, 22);
             this.txtActivite.TabIndex = 7;
@@ -230,7 +237,7 @@
             // 
             // txtEffectif
             // 
-            this.txtEffectif.Location = new System.Drawing.Point(142, 81);
+            this.txtEffectif.Location = new System.Drawing.Point(142, 76);
             this.txtEffectif.Name = "txtEffectif";
             this.txtEffectif.Size = new System.Drawing.Size(100, 22);
             this.txtEffectif.TabIndex = 5;
@@ -238,7 +245,7 @@
             // chBoxPrivé
             // 
             this.chBoxPrivé.AutoSize = true;
-            this.chBoxPrivé.Location = new System.Drawing.Point(25, 49);
+            this.chBoxPrivé.Location = new System.Drawing.Point(23, 38);
             this.chBoxPrivé.Name = "chBoxPrivé";
             this.chBoxPrivé.Size = new System.Drawing.Size(57, 18);
             this.chBoxPrivé.TabIndex = 4;
@@ -248,7 +255,7 @@
             // lblChiffreAffaires
             // 
             this.lblChiffreAffaires.AutoSize = true;
-            this.lblChiffreAffaires.Location = new System.Drawing.Point(25, 200);
+            this.lblChiffreAffaires.Location = new System.Drawing.Point(25, 205);
             this.lblChiffreAffaires.Name = "lblChiffreAffaires";
             this.lblChiffreAffaires.Size = new System.Drawing.Size(33, 14);
             this.lblChiffreAffaires.TabIndex = 3;
@@ -257,7 +264,7 @@
             // lblActivité
             // 
             this.lblActivité.AutoSize = true;
-            this.lblActivité.Location = new System.Drawing.Point(22, 142);
+            this.lblActivité.Location = new System.Drawing.Point(25, 127);
             this.lblActivité.Name = "lblActivité";
             this.lblActivité.Size = new System.Drawing.Size(61, 14);
             this.lblActivité.TabIndex = 2;
@@ -266,7 +273,7 @@
             // lblEffectif
             // 
             this.lblEffectif.AutoSize = true;
-            this.lblEffectif.Location = new System.Drawing.Point(22, 84);
+            this.lblEffectif.Location = new System.Drawing.Point(22, 81);
             this.lblEffectif.Name = "lblEffectif";
             this.lblEffectif.Size = new System.Drawing.Size(58, 14);
             this.lblEffectif.TabIndex = 1;
@@ -276,7 +283,7 @@
             // 
             this.btnModifClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnModifClient.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModifClient.Location = new System.Drawing.Point(103, 437);
+            this.btnModifClient.Location = new System.Drawing.Point(103, 529);
             this.btnModifClient.Name = "btnModifClient";
             this.btnModifClient.Size = new System.Drawing.Size(170, 45);
             this.btnModifClient.TabIndex = 3;
@@ -287,7 +294,7 @@
             // 
             this.btnNouveauContact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnNouveauContact.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNouveauContact.Location = new System.Drawing.Point(366, 437);
+            this.btnNouveauContact.Location = new System.Drawing.Point(366, 529);
             this.btnNouveauContact.Name = "btnNouveauContact";
             this.btnNouveauContact.Size = new System.Drawing.Size(161, 45);
             this.btnNouveauContact.TabIndex = 4;
@@ -298,12 +305,60 @@
             // 
             this.btnFermer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnFermer.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFermer.Location = new System.Drawing.Point(660, 437);
+            this.btnFermer.Location = new System.Drawing.Point(660, 529);
             this.btnFermer.Name = "btnFermer";
             this.btnFermer.Size = new System.Drawing.Size(152, 45);
             this.btnFermer.TabIndex = 5;
             this.btnFermer.Text = "Fermer";
             this.btnFermer.UseVisualStyleBackColor = false;
+            // 
+            // dataGridContact
+            // 
+            this.dataGridContact.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridContact.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridContact.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColNom,
+            this.ColPrenom,
+            this.ColTelephone,
+            this.ColEmail,
+            this.ColFonction});
+            this.dataGridContact.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridContact.Location = new System.Drawing.Point(9, 371);
+            this.dataGridContact.Name = "dataGridContact";
+            this.dataGridContact.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridContact.Size = new System.Drawing.Size(870, 139);
+            this.dataGridContact.TabIndex = 6;
+            // 
+            // ColNom
+            // 
+            this.ColNom.HeaderText = "Nom";
+            this.ColNom.Name = "ColNom";
+            this.ColNom.Width = 150;
+            // 
+            // ColPrenom
+            // 
+            this.ColPrenom.FillWeight = 120F;
+            this.ColPrenom.HeaderText = "Prenom";
+            this.ColPrenom.Name = "ColPrenom";
+            this.ColPrenom.Width = 150;
+            // 
+            // ColTelephone
+            // 
+            this.ColTelephone.HeaderText = "Téléphone";
+            this.ColTelephone.Name = "ColTelephone";
+            this.ColTelephone.Width = 90;
+            // 
+            // ColEmail
+            // 
+            this.ColEmail.HeaderText = "Email";
+            this.ColEmail.Name = "ColEmail";
+            this.ColEmail.Width = 250;
+            // 
+            // ColFonction
+            // 
+            this.ColFonction.HeaderText = "Fonction";
+            this.ColFonction.Name = "ColFonction";
+            this.ColFonction.Width = 150;
             // 
             // FormConsultClient
             // 
@@ -311,6 +366,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(931, 629);
+            this.Controls.Add(this.dataGridContact);
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.btnNouveauContact);
             this.Controls.Add(this.btnModifClient);
@@ -325,6 +381,7 @@
             this.boxIdentification.PerformLayout();
             this.boxCaractéristique.ResumeLayout(false);
             this.boxCaractéristique.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridContact)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -357,5 +414,11 @@
         private System.Windows.Forms.Button btnModifClient;
         private System.Windows.Forms.Button btnNouveauContact;
         private System.Windows.Forms.Button btnFermer;
+        private System.Windows.Forms.DataGridView dataGridContact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrenom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTelephone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColFonction;
     }
 }

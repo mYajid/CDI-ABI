@@ -16,6 +16,7 @@ namespace GestionCommercialeDll
         private string _fonction;
 
 
+
         public string Nom
         {
             get { return _nom; }

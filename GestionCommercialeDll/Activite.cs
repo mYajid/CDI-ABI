@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PrincipalScreenMDI
+namespace GestionCommercialeDll
 {
-    class Activite
+    public  enum Nature { Principale = 1, Secondaire = 2, Ancienne = 3 }
+   public class Activite
     {
         private string _nom;
 
@@ -23,26 +24,6 @@ namespace PrincipalScreenMDI
                 _nom = value;
             }
         }
-
-        enum activite { Bovins,Restauration,plomberie,electricite,mecanique,coiffure,}
-
-    
-        private class Nature
-        {
-            private string _name;
-            enum nature { Principale,Secondaire}
-
-        }
-
-
-
-        public static void main(string[] args)
-        {
-
-           
-
-        }
-
 
 
     }

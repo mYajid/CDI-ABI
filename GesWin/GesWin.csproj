@@ -45,7 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activite.cs" />
     <Compile Include="ConsultClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +135,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-informatique-05-1-638.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GestionCommercialeDll\GestionCommercialeDll.csproj">
+      <Project>{295658a2-391c-42b7-bc37-a939fc9d613d}</Project>
+      <Name>GestionCommercialeDll</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

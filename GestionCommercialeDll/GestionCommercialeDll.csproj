@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="Activite.cs" />
     <Compile Include="Client.cs" />
-    <Compile Include="Fonction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

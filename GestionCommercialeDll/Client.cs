@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestionCommercialeDll
 {
-    public class Class1
-    {
-
+   
         public class Client
         {
             private int _idClient;
@@ -209,6 +207,6 @@ namespace GestionCommercialeDll
 
 
         }
-        }
-    }
+      }
+  
     

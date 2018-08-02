@@ -14,7 +14,7 @@ namespace GestionCommercialeDll
         private int _telephone;
         private string _email;
         private string _fonction;
-
+        
 
 
         public string Nom

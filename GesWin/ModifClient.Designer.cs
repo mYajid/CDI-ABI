@@ -1,4 +1,4 @@
-﻿namespace WinForm_ABI_Nouveau_Client
+﻿namespace GesWin
 {
     partial class FormModificationClient
     {

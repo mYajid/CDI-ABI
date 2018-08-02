@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WFabiP
+namespace GesWin
 {
     public partial class FormListeClients : Form
     {

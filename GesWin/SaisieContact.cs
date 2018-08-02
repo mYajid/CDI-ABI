@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinForm_ABI_Nouveau_Client
+namespace GesWin
 {
-    public partial class FormModificationClient : Form
+    public partial class FormNouveauContact : Form
     {
-        public FormModificationClient()
+        public FormNouveauContact()
         {
             InitializeComponent();
         }

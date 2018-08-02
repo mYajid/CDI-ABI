@@ -1,4 +1,4 @@
-﻿namespace WFabiP
+﻿namespace GesWin
 {
     partial class FormListeClients
     {

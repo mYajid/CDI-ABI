@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinForm_ABI_Nouveau_Client
+namespace GesWin
 {
     static class Program
     {
@@ -14,9 +14,22 @@ namespace WinForm_ABI_Nouveau_Client
         [STAThread]
         static void Main()
         {
+
+            //Lancement fenetre principale
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MDI());
+
+
+            //Lancement fenêtre Liste clients
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new FormListeClients());
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormSaisieNouveauClient());
+
         }
     }
 }

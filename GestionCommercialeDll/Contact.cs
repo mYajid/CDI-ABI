@@ -6,43 +6,50 @@ using System.Threading.Tasks;
 
 namespace GestionCommercialeDll
 {
-    public enum Fonction { Dirigeant, Comptable, ResponsableRH, Commercial}
+    public enum Fonction { Dirigeant, Comptable, ResponsableRH, Commercial }
     public class Contact
-    
+
     {
-        private string _nom;
-        private string _prenom;
-        private int _telephone;
-        private string _email;
-        
+        private int _idClient;
+        private string _nomContact;
+        private string _prenomContact;
+        private int _telephoneContact;
+        private string _emailContact;
 
 
-        public string Nom
+        public int IdClient
         {
-            get { return _nom; }
-            set { _nom = value; } 
-               
+            get { return _idClient; }
+            set { _idClient = value; }
         }
-        public string Prenom
+
+        public string NomContact
         {
-            get { return _prenom; }
-            set { _prenom = value; }
+            get { return _nomContact; }
+            set { _nomContact = value; }
+        }
+        public string PrenomContact
+        {
+            get { return _prenomContact; }
+            set { _prenomContact = value; }
         }
         public int Telephone
         {
-            get { return _telephone; }
-            set { _telephone = value; }
+            get { return _telephoneContact; }
+            set { _telephoneContact = value; }
         }
         public string Email
         {
-            get { return _email; }
-            set { _email = value; }
+            get { return _emailContact; }
+            set { _emailContact = value; }
         }
         public Fonction fonction
         {
             get { return fonction; }
             set { fonction = value; }
         }
+                
+
         public bool IsNomPrenomValide(string value)
         {
             if (value == null || value.Length > 32)
@@ -55,21 +62,22 @@ namespace GestionCommercialeDll
                 }
             }
             return true;
-
         }
         public bool IsTelephoneValide(string value)
         {
             if (value == null || value.Length > 15)
                 return false;
-            for (int i = 0; i < value.Length-1; i++)
+            for (int i = 0; i < value.Length - 1; i++)
             {
                 if (char.IsLetter(value[i]))
                 {
                     return false;
-                }                   
+                }
             }
             return true;
         }
-        
+
+        public Client Client { get; set; }
     }
 }
+

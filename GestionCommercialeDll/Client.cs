@@ -47,6 +47,10 @@ namespace GestionCommercialeDll
                 }
                 set
                 {
+                    if (!IsNumeroTelephoneClientValid (value))
+                    {
+                        throw new Exception(string.Format("Le numero saisie {0} n'est pas valide", value));
+                    }
                     _telephoneClient = value;
                 }
 
@@ -191,6 +195,16 @@ namespace GestionCommercialeDll
                 return true;
 
             }
+            public bool IsNumeroTelephoneClientValid(int value)
+            {
+                if( value > 15)
+                { 
+                    return false;
+                }
+                return true;
+            }
+
+
 
         }
       }

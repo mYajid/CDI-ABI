@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestionCommercialeDll
 {
+    public enum Fonction { Dirigeant, Comptable, ResponsableRH, Commercial}
     public class Contact
     
     {
@@ -13,7 +14,7 @@ namespace GestionCommercialeDll
         private string _prenom;
         private int _telephone;
         private string _email;
-        private string _fonction;
+        
 
 
         public string Nom
@@ -37,10 +38,10 @@ namespace GestionCommercialeDll
             get { return _email; }
             set { _email = value; }
         }
-        public string Fonction
+        public Fonction fonction
         {
-            get { return _fonction; }
-            set { _fonction = value; }
+            get { return fonction; }
+            set { fonction = value; }
         }
         public bool IsNomPrenomValide(string value)
         {

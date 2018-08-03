@@ -6,207 +6,251 @@ using System.Threading.Tasks;
 
 namespace GestionCommercialeDll
 {
-   
-        public class Client
+
+    public class Client
+    {
+        private int _idClient;
+        private string _raisonSociale;
+        private string _adresse1;
+        private string _adresse2;
+        private int _telephoneClient;
+        private int _effectif;
+        private decimal _CA;
+        private string _typeSociete;
+        private string _ville;
+        private int _CP;
+        /// <summary>
+        /// L'id de mon client
+        /// </summary>
+        public int IdClient
         {
-            private int _idClient;
-            private string _raisonSociale;
-            private string _adresse1;
-            private string _adresse2;
-            private int _telephoneClient;
-            private int _effectif;
-            private decimal _CA;
-            private string _typeSociete;
-            private string _ville;
-            private int _CP;
-            /// <summary>
-            /// L'id de mon client
-            /// </summary>
-            public int IdClient
+            get
             {
-                get
+                return _idClient;
+            }
+            set
+            {
+                if (!IsIdClientValid(value))
                 {
-                    return _idClient;
+                    throw new Exception(string.Format("La valeur saisie {0} n'est pas valide", value));
+
                 }
-                set
+                _idClient = value;
+            }
+
+        }
+
+        /// <summary>
+        /// Numero de telephone client
+        /// </summary>
+
+        public int TelephoneClient
+        {
+            get
+            {
+                return _telephoneClient;
+            }
+            set
+            {
+                if (!IsTelephoneClientValid(value))
                 {
-                    _idClient = value;
+                    throw new Exception(string.Format("Le numero saisie {0} n'est pas valide", value));
                 }
+                _telephoneClient = value;
+            }
+
+        }
+        /// <summary>
+        /// L'effectif de mon client
+        /// </summary>
+        public int Effectif
+        {
+            get
+            {
+                return _effectif;
+            }
+            set
+            {
+                _effectif = value;
+            }
+
+        }
+        /// <summary>
+        /// La chiffre d'affaire de mon client 
+        /// </summary>
+        public decimal CA
+        {
+            get
+            {
+                return _CA;
+            }
+            set
+            {
+                _CA = value;
+            }
+
+        }
+        /// <summary>
+        /// Type Societe client
+        /// </summary>
+        public string TypeSociete
+        {
+            get
+            {
+                return _typeSociete;
+            }
+            set
+            {
+
+                _typeSociete = value;
 
             }
 
-            /// <summary>
-            /// Numero de telephone client
-            /// </summary>
-
-            public int TelephoneClient
+        }
+        /// <summary>
+        /// Raison Sociale client 
+        /// </summary>
+        public string RaisonSociale
+        {
+            get
             {
-                get
-                {
-                    return _telephoneClient;
-                }
-                set
-                {
-                    if (!IsNumeroTelephoneClientValid (value))
-                    {
-                        throw new Exception(string.Format("Le numero saisie {0} n'est pas valide", value));
-                    }
-                    _telephoneClient = value;
-                }
-
+                return _raisonSociale;
             }
-            /// <summary>
-            /// L'effectif de mon client
-            /// </summary>
-            public int Effectif
+            set
             {
-                get
+                if (!IsRaisonSocialeValide(value))
                 {
-                    return _effectif;
+                    throw new Exception(string.Format("La Raison Sociale {0} n'est pas valide", value));
                 }
-                set
-                {
-                    _effectif = value;
-                }
-
+                _raisonSociale = value;
             }
-            /// <summary>
-            /// La chiffre d'affaire de mon client 
-            /// </summary>
-            public decimal CA
-            {
-                get
-                {
-                    return _CA;
-                }
-                set
-                {
-                    _CA = value;
-                }
 
+        }
+        /// <summary>
+        /// Adresse client
+        /// </summary>
+        public string Adresse1
+        {
+            get
+            {
+                return _adresse1;
             }
-            /// <summary>
-            /// Type Societe client
-            /// </summary>
-            public string TypeSociete
+            set
             {
-                get
-                {
-                    return _typeSociete;
-                }
-                set
-                {
-
-                    _typeSociete = value;
-
-                }
-
+                _adresse1 = value;
             }
-            /// <summary>
-            /// Raison Sociale client 
-            /// </summary>
-            public string RaisonSociale
-            {
-                get
-                {
-                    return _raisonSociale;
-                }
-                set
-                {
-                    _raisonSociale = value;
-                }
 
+        }
+        public string Adresse2
+        {
+            get
+            {
+                return _adresse2;
             }
-            /// <summary>
-            /// Adresse client
-            /// </summary>
-            public string Adresse1
+            set
             {
-                get
-                {
-                    return _adresse1;
-                }
-                set
-                {
-                    _adresse1 = value;
-                }
-
+                _adresse2 = value;
             }
-            public string Adresse2
-            {
-                get
-                {
-                    return _adresse2;
-                }
-                set
-                {
-                    _adresse2 = value;
-                }
 
+        }
+        /// <summary>
+        /// Cod Postal Client
+        /// </summary>
+        public int CodPostal
+        {
+            get
+            {
+                return _CP;
             }
-            /// <summary>
-            /// Cod Postal Client
-            /// </summary>
-            public int CodPostal
+            set
             {
-                get
-                {
-                    return _CP;
-                }
-                set
-                {
-                    _CP = value;
-
-                }
-
-            }
-            /// <summary>
-            /// Ville client 
-            /// </summary>
-            public string Ville
-            {
-                get
-                {
-                    return _ville;
-                }
-                set
-                {
-
-                    _ville = value;
-                }
+                _CP = value;
 
             }
 
-            public bool IsRaisonSocialeValide(string mot)
+        }
+        /// <summary>
+        /// Ville client 
+        /// </summary>
+        public string Ville
+        {
+            get
+            {
+                return _ville;
+            }
+            set
             {
 
-                if (mot.Length > 32)
+                _ville = value;
+            }
+
+        }
+
+        public bool IsRaisonSocialeValide(string value)
+        {
+            if (value == null || value.Length > 32)
+
+                return false;
+
+            for (int i = 0; i < value.Length - 1; i++)
+            {
+                if (!char.IsLetter(value[i]))
                 {
                     return false;
                 }
-                for (int i = 0; i < mot.Length - 1; i++)
-                {
-                    if (!Char.IsLetter(mot[i]))
-                    {
-                        return false;
-                    }
-
-                }
-                return true;
-
             }
-            public bool IsNumeroTelephoneClientValid(int value)
+            return true;
+
+        }
+        public bool IsTelephoneClientValid(int value)
+        {
+
+            string valeur = value.ToString();
+
+            if (valeur == null || valeur.Length > 15)
+
+                return false;
+
+            for (int i = 0; i < valeur.Length - 1; i++)
             {
-                if( value > 15)
-                { 
+                if (!char.IsDigit(valeur[i]))
+                {
                     return false;
                 }
-                return true;
             }
+            return true;
+
 
 
 
         }
-      }
-  
-    
+
+        public bool IsIdClientValid(int value)
+            
+        {
+            string valeur = value.ToString();
+
+            if (valeur == null || valeur.Length > 4)
+
+                return false;
+
+            for (int i = 0; i < valeur.Length - 1; i++)
+            {
+                if (!char.IsDigit(valeur[i]))
+                {
+                    return false;
+                }
+            }
+            return true;
+
+
+        }
+
+
+
+        public HashSet<Contact> ListContact {get; set;}
+
+
+
+    }
+}  

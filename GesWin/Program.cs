@@ -25,6 +25,8 @@ namespace GesWin
             //client1.Effectif = 23;
             //client1.CA = 248000;
 
+            //Contact contact1 = new Contact();
+            //contact1.Client.
 
 
 
@@ -36,7 +38,7 @@ namespace GesWin
 
 
 
-            
+
 
 
         }

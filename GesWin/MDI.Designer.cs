@@ -56,7 +56,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1454, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1156, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "Principal Screen";
             // 
@@ -78,6 +78,7 @@
             this.cToolStripMenuItem.Name = "cToolStripMenuItem";
             this.cToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cToolStripMenuItem.Text = "Client";
+            this.cToolStripMenuItem.Click += new System.EventHandler(this.btnSaisieClient);
             // 
             // contactToolStripMenuItem
             // 
@@ -85,6 +86,7 @@
             this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
             this.contactToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.contactToolStripMenuItem.Text = "Contact";
+            this.contactToolStripMenuItem.Click += new System.EventHandler(this.btnSaisieContact);
             // 
             // activiteToolStripMenuItem
             // 
@@ -145,6 +147,7 @@
             this.clientToolStripMenuItem1.Name = "clientToolStripMenuItem1";
             this.clientToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.clientToolStripMenuItem1.Text = "Client";
+            this.clientToolStripMenuItem1.Click += new System.EventHandler(this.btnConsultClient);
             // 
             // contactToolStripMenuItem2
             // 
@@ -152,6 +155,7 @@
             this.contactToolStripMenuItem2.Name = "contactToolStripMenuItem2";
             this.contactToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.contactToolStripMenuItem2.Text = "Contact";
+            this.contactToolStripMenuItem2.Click += new System.EventHandler(this.btnConsultContact);
             // 
             // activiteToolStripMenuItem2
             // 
@@ -166,6 +170,7 @@
             this.listeDesClientsToolStripMenuItem.Name = "listeDesClientsToolStripMenuItem";
             this.listeDesClientsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listeDesClientsToolStripMenuItem.Text = "Liste des clients";
+            this.listeDesClientsToolStripMenuItem.Click += new System.EventHandler(this.btnListClients);
             // 
             // MDI
             // 
@@ -174,7 +179,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1454, 653);
+            this.ClientSize = new System.Drawing.Size(1156, 653);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;

@@ -140,9 +140,6 @@
             // lstFonctionContact
             // 
             this.lstFonctionContact.FormattingEnabled = true;
-            this.lstFonctionContact.Items.AddRange(new object[] {
-            "Dirigeant",
-            "Comptable"});
             this.lstFonctionContact.Location = new System.Drawing.Point(138, 300);
             this.lstFonctionContact.Name = "lstFonctionContact";
             this.lstFonctionContact.ScrollAlwaysVisible = true;
@@ -166,7 +163,6 @@
             this.btnAnnulerContact.TabIndex = 4;
             this.btnAnnulerContact.Text = "Annuler";
             this.btnAnnulerContact.UseVisualStyleBackColor = true;
-  
             // 
             // lblClientContact
             // 

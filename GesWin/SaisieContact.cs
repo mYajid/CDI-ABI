@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GestionCommercialeDll;
 
 namespace GesWin
 {
@@ -15,6 +16,7 @@ namespace GesWin
         public FormNouveauContact()
         {
             InitializeComponent();
+            lstFonctionContact.Items.AddRange(typeof(Fonction).GetEnumNames());
         }
     }
 }

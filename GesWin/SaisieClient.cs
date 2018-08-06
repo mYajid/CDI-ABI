@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GestionCommercialeDll;
 
 namespace GesWin
 {
@@ -43,6 +44,11 @@ namespace GesWin
         {
             var contact = new FormNouveauContact();
             contact.Show();
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

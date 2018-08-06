@@ -31,11 +31,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbxrechclt = new System.Windows.Forms.GroupBox();
-            this.btnListeCliente = new System.Windows.Forms.Button();
-            this.btnRecherche = new System.Windows.Forms.Button();
-            this.datgwListeClients = new System.Windows.Forms.DataGridView();
-            this.txtRecherche = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtRecherche = new System.Windows.Forms.TextBox();
+            this.btnRecherche = new System.Windows.Forms.Button();
+            this.btnListeCliente = new System.Windows.Forms.Button();
+            this.datgwListeClients = new System.Windows.Forms.DataGridView();
             this.RaisonSociale = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VilleClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodePostalClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,14 +63,22 @@
             this.gbxrechclt.TabStop = false;
             this.gbxrechclt.Text = "Recherche";
             // 
-            // btnListeCliente
+            // label1
             // 
-            this.btnListeCliente.Location = new System.Drawing.Point(410, 33);
-            this.btnListeCliente.Name = "btnListeCliente";
-            this.btnListeCliente.Size = new System.Drawing.Size(87, 30);
-            this.btnListeCliente.TabIndex = 0;
-            this.btnListeCliente.Text = "Tous";
-            this.btnListeCliente.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
+            // 
+            // txtRecherche
+            // 
+            this.txtRecherche.Location = new System.Drawing.Point(75, 37);
+            this.txtRecherche.Name = "txtRecherche";
+            this.txtRecherche.Size = new System.Drawing.Size(234, 20);
+            this.txtRecherche.TabIndex = 2;
+            this.txtRecherche.TextChanged += new System.EventHandler(this.txtRecherche_TextChanged);
             // 
             // btnRecherche
             // 
@@ -80,6 +88,15 @@
             this.btnRecherche.TabIndex = 1;
             this.btnRecherche.Text = "Rechercher";
             this.btnRecherche.UseVisualStyleBackColor = true;
+            // 
+            // btnListeCliente
+            // 
+            this.btnListeCliente.Location = new System.Drawing.Point(410, 33);
+            this.btnListeCliente.Name = "btnListeCliente";
+            this.btnListeCliente.Size = new System.Drawing.Size(87, 30);
+            this.btnListeCliente.TabIndex = 0;
+            this.btnListeCliente.Text = "Tous";
+            this.btnListeCliente.UseVisualStyleBackColor = true;
             // 
             // datgwListeClients
             // 
@@ -114,23 +131,6 @@
             this.datgwListeClients.TabIndex = 1;
             this.datgwListeClients.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datgwListeClients_CellDoubleClick);
             this.datgwListeClients.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.datgwListeClients_CellEnter);
-            // 
-            // txtRecherche
-            // 
-            this.txtRecherche.Location = new System.Drawing.Point(75, 37);
-            this.txtRecherche.Name = "txtRecherche";
-            this.txtRecherche.Size = new System.Drawing.Size(234, 20);
-            this.txtRecherche.TabIndex = 2;
-            this.txtRecherche.TextChanged += new System.EventHandler(this.txtRecherche_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
             // 
             // RaisonSociale
             // 
@@ -216,6 +216,7 @@
             this.Controls.Add(this.gbxrechclt);
             this.Name = "FormListeClients";
             this.Text = "Liste des clients";
+            this.Load += new System.EventHandler(this.FormListeClients_Load);
             this.gbxrechclt.ResumeLayout(false);
             this.gbxrechclt.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datgwListeClients)).EndInit();

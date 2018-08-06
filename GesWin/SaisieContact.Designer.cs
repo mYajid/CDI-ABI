@@ -143,23 +143,25 @@
             this.lstFonctionContact.Location = new System.Drawing.Point(138, 300);
             this.lstFonctionContact.Name = "lstFonctionContact";
             this.lstFonctionContact.ScrollAlwaysVisible = true;
-            this.lstFonctionContact.Size = new System.Drawing.Size(155, 17);
+            this.lstFonctionContact.Size = new System.Drawing.Size(155, 30);
             this.lstFonctionContact.TabIndex = 2;
+            this.lstFonctionContact.SelectedIndexChanged += new System.EventHandler(this.lstFonctionContact_SelectedIndexChanged);
             // 
             // btnOKContact
             // 
-            this.btnOKContact.Location = new System.Drawing.Point(357, 331);
+            this.btnOKContact.Location = new System.Drawing.Point(347, 321);
             this.btnOKContact.Name = "btnOKContact";
-            this.btnOKContact.Size = new System.Drawing.Size(39, 23);
+            this.btnOKContact.Size = new System.Drawing.Size(49, 33);
             this.btnOKContact.TabIndex = 3;
             this.btnOKContact.Text = "OK";
             this.btnOKContact.UseVisualStyleBackColor = true;
+            this.btnOKContact.Click += new System.EventHandler(this.btnOKContact_Click);
             // 
             // btnAnnulerContact
             // 
-            this.btnAnnulerContact.Location = new System.Drawing.Point(433, 331);
+            this.btnAnnulerContact.Location = new System.Drawing.Point(424, 321);
             this.btnAnnulerContact.Name = "btnAnnulerContact";
-            this.btnAnnulerContact.Size = new System.Drawing.Size(104, 23);
+            this.btnAnnulerContact.Size = new System.Drawing.Size(113, 33);
             this.btnAnnulerContact.TabIndex = 4;
             this.btnAnnulerContact.Text = "Annuler";
             this.btnAnnulerContact.UseVisualStyleBackColor = true;

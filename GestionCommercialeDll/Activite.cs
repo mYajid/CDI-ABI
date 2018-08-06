@@ -10,25 +10,21 @@ namespace GestionCommercialeDll
    public class Activite
     {
         private string _nom;
-        private Nature _nature;
+        public Activite() : this("Defaut")
+            { }
         
+
+
 
         public Nature NatureAct
         { get; set; }
-        public string Nom
+        public Client Client { get; set; }
+        public string Nom { get => _nom; set => _nom = value; }
+
+        public Activite (string Nom)
         {
-            get
-            {
-                return _nom;
-            }
-
-            set
-            {
-                
-                _nom = value;
-            }
+            this.Nom = Nom;
         }
-
 
     }
 

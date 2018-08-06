@@ -13,16 +13,18 @@ namespace GesWin
 {
     public partial class FormListeClients : Form
     {
+       
+
         public FormListeClients()
         {
             InitializeComponent();
             btnSuprimeClient.Enabled = false;
             btnListeCliente.Enabled = false;
 
-            List<Client> clientsHS = new List<Client>();
+            HashSet<Client> clientsHS = new HashSet<Client>();
             HashSet<Contact> contactsHS = new HashSet<Contact>();
 
-
+          
             Client client1 = new Client();
             client1.IdClient = 1234;
             client1.RaisonSociale = "Exploitation Legoff";
@@ -30,12 +32,25 @@ namespace GesWin
             client1.Adresse2 = "Route de Ploubazlanec";
             client1.CodPostal = 22500;
             client1.Ville = "Paimpol";
+            client1.TypeSociete = true;
             client1.TelephoneClient = 0299010203;
+            client1.Effectif = 12;
+            client1.CA = 275000;
+            Activite activite1 = new Activite();
+            activite1.Nom = "Bovins";
+            activite1.NatureAct = Nature.Principale;
+            client1.Activite  = activite1;
+            
             client1.ListContact = contactsHS;
             clientsHS.Add(client1);
 
+            foreach (var item in clientsHS)
+            {
+                item
+            }
 
-            this.datgwListeClients.Rows.Add(client1.IdClient.ToString(), client1.RaisonSociale, client1.Ville, client1.CodPostal, client1.Effectif, client1.CA);
+           datgwListeClients.DataSource = clientsHS;
+           // this.datgwListeClients.Rows.Add(client1.RaisonSociale, client1.Ville, client1.CodPostal, client1.TypeSociete, client1.Activite.Nom, client1.Activite.NatureAct);
 
 
         }

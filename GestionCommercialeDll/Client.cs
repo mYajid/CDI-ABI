@@ -16,9 +16,10 @@ namespace GestionCommercialeDll
         private int _telephoneClient;
         private int _effectif;
         private decimal _CA;
-        private string _typeSociete;
+        private bool _typeSociete;
         private string _ville;
         private int _CP;
+        private Activite _activite;
         /// <summary>
         /// L'id de mon client
         /// </summary>
@@ -93,7 +94,7 @@ namespace GestionCommercialeDll
         /// <summary>
         /// Type Societe client
         /// </summary>
-        public string TypeSociete
+        public bool TypeSociete
         {
             get
             {
@@ -250,7 +251,10 @@ namespace GestionCommercialeDll
 
 
         public HashSet<Contact> ListContact {get; set;}
-
+        public Activite  Activite
+        {
+            get;set;
+        } 
 
 
     }

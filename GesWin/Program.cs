@@ -44,7 +44,7 @@ namespace GesWin
             //Lancement fenetre principale
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LstClient());
+            Application.Run(new FormListeClients());
 
 
 

@@ -36,16 +36,16 @@
             this.btnRecherche = new System.Windows.Forms.Button();
             this.btnListeCliente = new System.Windows.Forms.Button();
             this.datgwListeClients = new System.Windows.Forms.DataGridView();
-            this.RaisonSociale = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VilleClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodePostalClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PriveClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ActiviteClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NatureClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNouveauClient = new System.Windows.Forms.Button();
             this.btnSuprimeClient = new System.Windows.Forms.Button();
             this.btnFermerListeClient = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.RaisonSociale = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VilleClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodePostalClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriveClient = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ActiviteClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NatureClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxrechclt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datgwListeClients)).BeginInit();
             this.SuspendLayout();
@@ -132,37 +132,6 @@
             this.datgwListeClients.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datgwListeClients_CellDoubleClick);
             this.datgwListeClients.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.datgwListeClients_CellEnter);
             // 
-            // RaisonSociale
-            // 
-            this.RaisonSociale.HeaderText = "Raison Sociale";
-            this.RaisonSociale.MaxInputLength = 60;
-            this.RaisonSociale.Name = "RaisonSociale";
-            // 
-            // VilleClient
-            // 
-            this.VilleClient.HeaderText = "Ville";
-            this.VilleClient.Name = "VilleClient";
-            // 
-            // CodePostalClient
-            // 
-            this.CodePostalClient.HeaderText = "Code Postal";
-            this.CodePostalClient.Name = "CodePostalClient";
-            // 
-            // PriveClient
-            // 
-            this.PriveClient.HeaderText = "Privé";
-            this.PriveClient.Name = "PriveClient";
-            // 
-            // ActiviteClient
-            // 
-            this.ActiviteClient.HeaderText = "Activite";
-            this.ActiviteClient.Name = "ActiviteClient";
-            // 
-            // NatureClient
-            // 
-            this.NatureClient.HeaderText = "Nature";
-            this.NatureClient.Name = "NatureClient";
-            // 
             // btnNouveauClient
             // 
             this.btnNouveauClient.Location = new System.Drawing.Point(472, 417);
@@ -202,6 +171,39 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Double-clic pour consulter/modifier";
             // 
+            // RaisonSociale
+            // 
+            this.RaisonSociale.HeaderText = "Raison Sociale";
+            this.RaisonSociale.MaxInputLength = 60;
+            this.RaisonSociale.Name = "RaisonSociale";
+            // 
+            // VilleClient
+            // 
+            this.VilleClient.HeaderText = "Ville";
+            this.VilleClient.Name = "VilleClient";
+            // 
+            // CodePostalClient
+            // 
+            this.CodePostalClient.HeaderText = "Code Postal";
+            this.CodePostalClient.Name = "CodePostalClient";
+            // 
+            // PriveClient
+            // 
+            this.PriveClient.HeaderText = "Privé";
+            this.PriveClient.Name = "PriveClient";
+            this.PriveClient.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.PriveClient.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // ActiviteClient
+            // 
+            this.ActiviteClient.HeaderText = "Activite";
+            this.ActiviteClient.Name = "ActiviteClient";
+            // 
+            // NatureClient
+            // 
+            this.NatureClient.HeaderText = "Nature";
+            this.NatureClient.Name = "NatureClient";
+            // 
             // FormListeClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,16 +235,16 @@
         private System.Windows.Forms.DataGridView datgwListeClients;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtRecherche;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RaisonSociale;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VilleClient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodePostalClient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PriveClient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ActiviteClient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NatureClient;
         private System.Windows.Forms.Button btnNouveauClient;
         private System.Windows.Forms.Button btnSuprimeClient;
         private System.Windows.Forms.Button btnFermerListeClient;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RaisonSociale;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VilleClient;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodePostalClient;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn PriveClient;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActiviteClient;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NatureClient;
     }
 }
 

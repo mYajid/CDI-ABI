@@ -36,16 +36,16 @@
             this.btnRecherche = new System.Windows.Forms.Button();
             this.btnListeCliente = new System.Windows.Forms.Button();
             this.datgwListeClients = new System.Windows.Forms.DataGridView();
-            this.btnNouveauClient = new System.Windows.Forms.Button();
-            this.btnSuprimeClient = new System.Windows.Forms.Button();
-            this.btnFermerListeClient = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.RaisonSociale = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VilleClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodePostalClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriveClient = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ActiviteClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NatureClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnNouveauClient = new System.Windows.Forms.Button();
+            this.btnSuprimeClient = new System.Windows.Forms.Button();
+            this.btnFermerListeClient = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.gbxrechclt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datgwListeClients)).BeginInit();
             this.SuspendLayout();
@@ -124,52 +124,13 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Chocolate;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.datgwListeClients.DefaultCellStyle = dataGridViewCellStyle2;
-            this.datgwListeClients.Location = new System.Drawing.Point(34, 130);
+            this.datgwListeClients.Location = new System.Drawing.Point(34, 134);
             this.datgwListeClients.Name = "datgwListeClients";
             this.datgwListeClients.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.datgwListeClients.Size = new System.Drawing.Size(723, 281);
+            this.datgwListeClients.Size = new System.Drawing.Size(642, 281);
             this.datgwListeClients.TabIndex = 1;
             this.datgwListeClients.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datgwListeClients_CellDoubleClick);
             this.datgwListeClients.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.datgwListeClients_CellEnter);
-            // 
-            // btnNouveauClient
-            // 
-            this.btnNouveauClient.Location = new System.Drawing.Point(472, 417);
-            this.btnNouveauClient.Name = "btnNouveauClient";
-            this.btnNouveauClient.Size = new System.Drawing.Size(101, 24);
-            this.btnNouveauClient.TabIndex = 2;
-            this.btnNouveauClient.Text = "Nouveau Client";
-            this.btnNouveauClient.UseVisualStyleBackColor = true;
-            this.btnNouveauClient.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnSuprimeClient
-            // 
-            this.btnSuprimeClient.Location = new System.Drawing.Point(579, 417);
-            this.btnSuprimeClient.Name = "btnSuprimeClient";
-            this.btnSuprimeClient.Size = new System.Drawing.Size(97, 23);
-            this.btnSuprimeClient.TabIndex = 3;
-            this.btnSuprimeClient.Text = "Supprimer";
-            this.btnSuprimeClient.UseVisualStyleBackColor = true;
-            // 
-            // btnFermerListeClient
-            // 
-            this.btnFermerListeClient.Location = new System.Drawing.Point(682, 417);
-            this.btnFermerListeClient.Name = "btnFermerListeClient";
-            this.btnFermerListeClient.Size = new System.Drawing.Size(75, 23);
-            this.btnFermerListeClient.TabIndex = 4;
-            this.btnFermerListeClient.Text = "Fermer";
-            this.btnFermerListeClient.UseVisualStyleBackColor = true;
-            this.btnFermerListeClient.Click += new System.EventHandler(this.btnFermerListeClient_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 421);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Double-clic pour consulter/modifier";
             // 
             // RaisonSociale
             // 
@@ -204,12 +165,51 @@
             this.NatureClient.HeaderText = "Nature";
             this.NatureClient.Name = "NatureClient";
             // 
+            // btnNouveauClient
+            // 
+            this.btnNouveauClient.Location = new System.Drawing.Point(391, 421);
+            this.btnNouveauClient.Name = "btnNouveauClient";
+            this.btnNouveauClient.Size = new System.Drawing.Size(101, 24);
+            this.btnNouveauClient.TabIndex = 2;
+            this.btnNouveauClient.Text = "Nouveau Client";
+            this.btnNouveauClient.UseVisualStyleBackColor = true;
+            this.btnNouveauClient.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnSuprimeClient
+            // 
+            this.btnSuprimeClient.Location = new System.Drawing.Point(498, 421);
+            this.btnSuprimeClient.Name = "btnSuprimeClient";
+            this.btnSuprimeClient.Size = new System.Drawing.Size(97, 23);
+            this.btnSuprimeClient.TabIndex = 3;
+            this.btnSuprimeClient.Text = "Supprimer";
+            this.btnSuprimeClient.UseVisualStyleBackColor = true;
+            // 
+            // btnFermerListeClient
+            // 
+            this.btnFermerListeClient.Location = new System.Drawing.Point(601, 421);
+            this.btnFermerListeClient.Name = "btnFermerListeClient";
+            this.btnFermerListeClient.Size = new System.Drawing.Size(75, 23);
+            this.btnFermerListeClient.TabIndex = 4;
+            this.btnFermerListeClient.Text = "Fermer";
+            this.btnFermerListeClient.UseVisualStyleBackColor = true;
+            this.btnFermerListeClient.Click += new System.EventHandler(this.btnFermerListeClient_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(38, 421);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(171, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Double-clic pour consulter/modifier";
+            // 
             // FormListeClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(688, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnFermerListeClient);
             this.Controls.Add(this.btnSuprimeClient);

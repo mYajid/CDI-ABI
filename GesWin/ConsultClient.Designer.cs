@@ -94,6 +94,7 @@
             // 
             this.txtVille.Location = new System.Drawing.Point(347, 202);
             this.txtVille.Name = "txtVille";
+            this.txtVille.ReadOnly = true;
             this.txtVille.Size = new System.Drawing.Size(128, 22);
             this.txtVille.TabIndex = 11;
             // 
@@ -101,6 +102,7 @@
             // 
             this.txtTelephone.Location = new System.Drawing.Point(164, 244);
             this.txtTelephone.Name = "txtTelephone";
+            this.txtTelephone.ReadOnly = true;
             this.txtTelephone.Size = new System.Drawing.Size(144, 22);
             this.txtTelephone.TabIndex = 10;
             // 
@@ -108,6 +110,7 @@
             // 
             this.txtCp.Location = new System.Drawing.Point(164, 202);
             this.txtCp.Name = "txtCp";
+            this.txtCp.ReadOnly = true;
             this.txtCp.Size = new System.Drawing.Size(144, 22);
             this.txtCp.TabIndex = 9;
             // 
@@ -115,6 +118,7 @@
             // 
             this.txt2Adresse.Location = new System.Drawing.Point(164, 162);
             this.txt2Adresse.Name = "txt2Adresse";
+            this.txt2Adresse.ReadOnly = true;
             this.txt2Adresse.Size = new System.Drawing.Size(354, 22);
             this.txt2Adresse.TabIndex = 8;
             // 
@@ -122,6 +126,7 @@
             // 
             this.txt1Adresse.Location = new System.Drawing.Point(164, 124);
             this.txt1Adresse.Name = "txt1Adresse";
+            this.txt1Adresse.ReadOnly = true;
             this.txt1Adresse.Size = new System.Drawing.Size(354, 22);
             this.txt1Adresse.TabIndex = 7;
             // 
@@ -129,6 +134,7 @@
             // 
             this.txtRaisonSociale.Location = new System.Drawing.Point(164, 81);
             this.txtRaisonSociale.Name = "txtRaisonSociale";
+            this.txtRaisonSociale.ReadOnly = true;
             this.txtRaisonSociale.Size = new System.Drawing.Size(181, 22);
             this.txtRaisonSociale.TabIndex = 6;
             // 
@@ -136,6 +142,7 @@
             // 
             this.txtNumeroClient.Location = new System.Drawing.Point(164, 34);
             this.txtNumeroClient.Name = "txtNumeroClient";
+            this.txtNumeroClient.ReadOnly = true;
             this.txtNumeroClient.Size = new System.Drawing.Size(100, 22);
             this.txtNumeroClient.TabIndex = 5;
             // 
@@ -209,6 +216,7 @@
             // 
             this.txtNature.Location = new System.Drawing.Point(142, 249);
             this.txtNature.Name = "txtNature";
+            this.txtNature.ReadOnly = true;
             this.txtNature.Size = new System.Drawing.Size(100, 22);
             this.txtNature.TabIndex = 9;
             // 
@@ -216,6 +224,7 @@
             // 
             this.txtCA.Location = new System.Drawing.Point(142, 205);
             this.txtCA.Name = "txtCA";
+            this.txtCA.ReadOnly = true;
             this.txtCA.Size = new System.Drawing.Size(100, 22);
             this.txtCA.TabIndex = 8;
             // 
@@ -223,6 +232,7 @@
             // 
             this.txtActivite.Location = new System.Drawing.Point(142, 127);
             this.txtActivite.Name = "txtActivite";
+            this.txtActivite.ReadOnly = true;
             this.txtActivite.Size = new System.Drawing.Size(100, 22);
             this.txtActivite.TabIndex = 7;
             // 
@@ -239,6 +249,8 @@
             // 
             this.txtEffectif.Location = new System.Drawing.Point(142, 76);
             this.txtEffectif.Name = "txtEffectif";
+            this.txtEffectif.ReadOnly = true;
+            this.txtEffectif.ShortcutsEnabled = false;
             this.txtEffectif.Size = new System.Drawing.Size(100, 22);
             this.txtEffectif.TabIndex = 5;
             // 
@@ -289,6 +301,7 @@
             this.btnModifClient.TabIndex = 3;
             this.btnModifClient.Text = "Modifier client";
             this.btnModifClient.UseVisualStyleBackColor = false;
+            this.btnModifClient.Click += new System.EventHandler(this.btnModifClient_Click);
             // 
             // btnNouveauContact
             // 
@@ -300,6 +313,7 @@
             this.btnNouveauContact.TabIndex = 4;
             this.btnNouveauContact.Text = "Nouveau Contact";
             this.btnNouveauContact.UseVisualStyleBackColor = false;
+            this.btnNouveauContact.Click += new System.EventHandler(this.btnNouveauContact_Click);
             // 
             // btnFermer
             // 
@@ -311,6 +325,7 @@
             this.btnFermer.TabIndex = 5;
             this.btnFermer.Text = "Fermer";
             this.btnFermer.UseVisualStyleBackColor = false;
+            this.btnFermer.Click += new System.EventHandler(this.btnFermer_Click);
             // 
             // dataGridContact
             // 

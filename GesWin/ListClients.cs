@@ -10,7 +10,12 @@ using System.Windows.Forms;
 using GestionCommercialeDll;
 
 namespace GesWin
+
+    
 {
+
+
+
     public partial class FormListeClients : Form
     {
        
@@ -37,7 +42,7 @@ namespace GesWin
             client1.Effectif = 12;
             client1.CA = 275000;
             Activite activite1 = new Activite();
-            activite1.Nom = "Bovins";
+            activite1.Activit = Metier.Boissons;
             activite1.NatureAct = Nature.Principale;
             client1.Activite  = activite1;
             
@@ -46,11 +51,12 @@ namespace GesWin
 
             foreach (var item in clientsHS)
             {
-                item
+                this.datgwListeClients.Rows.Add(item.RaisonSociale, item.Ville, item.CodPostal, item.TypeSociete, item.Activite.Activit, item.Activite.NatureAct);
+                
             }
 
-           datgwListeClients.DataSource = clientsHS;
-           // this.datgwListeClients.Rows.Add(client1.RaisonSociale, client1.Ville, client1.CodPostal, client1.TypeSociete, client1.Activite.Nom, client1.Activite.NatureAct);
+             // datgwListeClients.DataSource = clientsHS;
+             // this.datgwListeClients.Rows.Add(client1.RaisonSociale, client1.Ville, client1.CodPostal, client1.TypeSociete, client1.Activite.Nom, client1.Activite.NatureAct);
 
 
         }
@@ -73,6 +79,8 @@ namespace GesWin
         private void datgwListeClients_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //note affichage du formulaire détail du client
+            FormConsultClient ConsultClient = new FormConsultClient();
+            ConsultClient.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -83,7 +91,7 @@ namespace GesWin
         }
 
         List<Client> clientsHS = new List<Client>();
-        HashSet<Contact> contactsHS = new HashSet<Contact>();
+      public static  HashSet<Contact> contactsHS = new HashSet<Contact>();
 
         private void FormListeClients_Load(object sender, EventArgs e)
         {

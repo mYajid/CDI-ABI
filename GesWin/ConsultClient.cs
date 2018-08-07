@@ -19,12 +19,17 @@ namespace GesWin
             //string[] row0 = { "Legoff", "Alain", "06631234", "alain@legoffbretagne.fr", "Dirigeant" };
             //dataGridContact.Rows.Add(row0); 
 
-            Contact contact1 = new Contact();
-            contact1.IdClient = 1234;
-            contact1.NomContact = "Neymar";
-            contact1.PrenomContact = "Jean";
-            contact1.Telephone = 0101015555;
-            FormListeClients.contactsHS.Add(contact1);
+            //Contact contact1 = new Contact();
+            //contact1.IdClient = 1234;
+            //contact1.NomContact = "Neymar";
+            //contact1.PrenomContact = "Jean";
+            //contact1.Telephone = 0101015555;
+            
+
+            foreach (var item in FormListeClients.contactsHS)
+            {
+                this.dataGridContact.Rows.Add(item.NomContact, item.NomContact, item.Telephone, item.Email, item.FonctionSetting);
+            }
         }
 
         private void btnModifClient_Click(object sender, EventArgs e)

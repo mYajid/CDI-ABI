@@ -44,8 +44,7 @@ namespace GestionCommercialeDll
             set { _emailContact = value; }
         }
         public Fonction FonctionSetting
-        {get;
-            set;      }
+        {get; set;  }
 
 
         public bool IsNomPrenomValide(string value)

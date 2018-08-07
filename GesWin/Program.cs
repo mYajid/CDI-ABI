@@ -13,8 +13,15 @@ namespace GesWin
         /// Point d'entrée principal de l'application.
         /// </summary>
         [STAThread]
+
+
+
+
         static void Main()
         {
+
+
+
 
             //HashSet<Client> clientsHS = new HashSet<Client>();
             //HashSet<Contact> contactsHS = new HashSet<Contact>();
@@ -42,7 +49,16 @@ namespace GesWin
 
 
             //Lancement fenetre principale
-            Application.EnableVisualStyles();
+
+
+               HashSet<Client> clientsHS = new HashSet<Client>();
+
+             HashSet<Contact> contactsHS = new HashSet<Contact>();
+
+
+
+
+        Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormListeClients());
 

@@ -22,14 +22,14 @@ namespace GesWin
 
         public FormListeClients()
         {
+
+                                   
             InitializeComponent();
             btnSuprimeClient.Enabled = false;
             btnListeCliente.Enabled = false;
 
-            HashSet<Client> clientsHS = new HashSet<Client>();
-            HashSet<Contact> contactsHS = new HashSet<Contact>();
 
-          
+            
             Client client1 = new Client();
             client1.IdClient = 1234;
             client1.RaisonSociale = "Exploitation Legoff";
@@ -41,11 +41,25 @@ namespace GesWin
             client1.TelephoneClient = 0299010203;
             client1.Effectif = 12;
             client1.CA = 275000;
+
+            /// instanciation de la classe activité
             Activite activite1 = new Activite();
             activite1.Activit = Metier.Boissons;
             activite1.NatureAct = Nature.Principale;
             client1.Activite  = activite1;
+
+
+            Contact contact1 = new Contact();
+            contact1.IdClient = 1234;
+            contact1.NomContact = "Legoff";
+            contact1.PrenomContact = "Alain";
+            contact1.Telephone = 0661564555;
+            contact1.Email = "alain@LegoffBretagne";
+            contact1.FonctionSetting = Fonction.Dirigeant;
+
             
+            contactsHS.Add(contact1);
+
             client1.ListContact = contactsHS;
             clientsHS.Add(client1);
 

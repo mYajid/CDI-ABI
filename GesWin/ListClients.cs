@@ -9,69 +9,59 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GestionCommercialeDll;
 
-namespace GesWin
-
-    
-{
-
-
-
+namespace GesWin       
+{    
     public partial class FormListeClients : Form
-    {
-       
+    {      
 
         public FormListeClients()
-        {
-
-                                   
+        {                                   
             InitializeComponent();
             btnSuprimeClient.Enabled = false;
             btnListeCliente.Enabled = false;
 
 
-            
-            Client client1 = new Client();
-            client1.IdClient = 1234;
-            client1.RaisonSociale = "Exploitation Legoff";
-            client1.Adresse1 = "Le Hameau";
-            client1.Adresse2 = "Route de Ploubazlanec";
-            client1.CodPostal = 22500;
-            client1.Ville = "Paimpol";
-            client1.TypeSociete = true;
-            client1.TelephoneClient = 0299010203;
-            client1.Effectif = 12;
-            client1.CA = 275000;
 
-            /// instanciation de la classe activité
-            Activite activite1 = new Activite();
-            activite1.Activit = Metier.Boissons;
-            activite1.NatureAct = Nature.Principale;
-            client1.Activite  = activite1;
+            //Client client1 = new Client();
+            //client1.IdClient = 1234;
+            //client1.RaisonSociale = "Exploitation Legoff";
+            //client1.Adresse1 = "Le Hameau";
+            //client1.Adresse2 = "Route de Ploubazlanec";
+            //client1.CodPostal = 22500;
+            //client1.Ville = "Paimpol";
+            //client1.TypeSociete = true;
+            //client1.TelephoneClient = 0299010203;
+            //client1.Effectif = 12;
+            //client1.CA = 275000;
+
+            ///// instanciation de la classe activité
+            //Activite activite1 = new Activite();
+            //activite1.Activit = Metier.Boissons;
+            //activite1.NatureAct = Nature.Principale;
+            //client1.Activite  = activite1;
 
 
-            Contact contact1 = new Contact();
-            contact1.IdClient = 1234;
-            contact1.NomContact = "Legoff";
-            contact1.PrenomContact = "Alain";
-            contact1.Telephone = 0661564555;
-            contact1.Email = "alain@LegoffBretagne";
-            contact1.FonctionSetting = Fonction.Dirigeant;
+            //Contact contact1 = new Contact();
+            //contact1.IdClient = 1234;
+            //contact1.NomContact = "Legoff";
+            //contact1.PrenomContact = "Alain";
+            //contact1.Telephone = 0661564555;
+            //contact1.Email = "alain@LegoffBretagne";
+            //contact1.FonctionSetting = Fonction.Dirigeant;
 
-            
-            contactsHS.Add(contact1);
 
-            client1.ListContact = contactsHS;
-            clientsHS.Add(client1);
+            //contactsHS.Add(contact1);
 
-            foreach (var item in clientsHS)
+            //client1.ListContact = contactsHS;
+            //clientsHS.Add(client1);
+           
+            foreach (var item in  Client.clientsHS)
             {
                 this.datgwListeClients.Rows.Add(item.RaisonSociale, item.Ville, item.CodPostal, item.TypeSociete, item.Activite.Activit, item.Activite.NatureAct);
                 
             }
 
-             // datgwListeClients.DataSource = clientsHS;
-             // this.datgwListeClients.Rows.Add(client1.RaisonSociale, client1.Ville, client1.CodPostal, client1.TypeSociete, client1.Activite.Nom, client1.Activite.NatureAct);
-
+            
 
         }
 
@@ -93,7 +83,7 @@ namespace GesWin
         private void datgwListeClients_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //note affichage du formulaire détail du client
-            FormConsultClient ConsultClient = new FormConsultClient();
+            FormConsultClient ConsultClient = new FormConsultClient(e.);
             ConsultClient.Show();
         }
 

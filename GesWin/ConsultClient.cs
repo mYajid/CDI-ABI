@@ -25,10 +25,10 @@ namespace GesWin
             //contact1.PrenomContact = "Jean";
             //contact1.Telephone = 0101015555;
             
-
-            foreach (var item in FormListeClients.contactsHS)
+            
+            foreach (var item in Client.contactsHS )
             {
-                this.dataGridContact.Rows.Add(item.NomContact, item.NomContact, item.Telephone, item.Email, item.FonctionSetting);
+                this.dataGridContact.Rows.Add(item.NomContact, item.PrenomContact, item.Telephone, item.Email, item.FonctionSetting);
             }
         }
 

@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace GestionCommercialeDll
 {
-
+   
+    
     public class Client
     {
+
+        public static HashSet<Client> clientsHS = new HashSet<Client>();
+        public static HashSet<Contact> contactsHS = new HashSet<Contact>();
         private int _idClient;
         private string _raisonSociale;
         private string _adresse1;

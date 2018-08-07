@@ -19,7 +19,7 @@ namespace GestionCommercialeDll
         private bool _typeSociete;
         private string _ville;
         private int _CP;
-        private Activite _activite;
+       
         /// <summary>
         /// L'id de mon client
         /// </summary>
@@ -251,11 +251,8 @@ namespace GestionCommercialeDll
 
 
         public HashSet<Contact> ListContact {get; set;}
-        public Activite  Activite
-        {
-            get;set;
-        } 
-
+        public Activite Activite { get; set; }
+        
 
     }
 }  

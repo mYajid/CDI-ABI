@@ -16,20 +16,20 @@ namespace GesWin
         public FormConsultClient()
         {
             InitializeComponent();
-            //string[] row0 = { "Legoff", "Alain", "06631234", "alain@legoffbretagne.fr", "Dirigeant" };
-            //dataGridContact.Rows.Add(row0); 
 
-            //Contact contact1 = new Contact();
-            //contact1.IdClient = 1234;
-            //contact1.NomContact = "Neymar";
-            //contact1.PrenomContact = "Jean";
-            //contact1.Telephone = 0101015555;
-            
-            
-            foreach (var item in Client.contactsHS )
+            int x = int.Parse(txtNumeroClient.Text);
+
+            foreach (var item in Client.contactsHS)
             {
-                this.dataGridContact.Rows.Add(item.NomContact, item.PrenomContact, item.Telephone, item.Email, item.FonctionSetting);
+                if (item.IdClient == x)
+                {
+                    this.dataGridContact.Rows.Add(item.NomContact, item.PrenomContact, item.Telephone, item.Email, item.FonctionSetting);
+                }
+
             }
+
+
+
         }
 
         private void btnModifClient_Click(object sender, EventArgs e)

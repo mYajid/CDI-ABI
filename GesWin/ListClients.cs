@@ -54,7 +54,7 @@ namespace GesWin
 
             //client1.ListContact = contactsHS;
             //clientsHS.Add(client1);
-           
+            
             foreach (var item in  Client.clientsHS)
             {
                 this.datgwListeClients.Rows.Add(item.RaisonSociale, item.Ville, item.CodPostal, item.TypeSociete, item.Activite.Activit, item.Activite.NatureAct);
@@ -83,8 +83,23 @@ namespace GesWin
         private void datgwListeClients_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //note affichage du formulaire détail du client
-            FormConsultClient ConsultClient = new FormConsultClient(e.);
-            ConsultClient.Show();
+            Client selectedClient = new Client();
+
+           selectedClient.RaisonSociale = (string) datgwListeClients.CurrentRow.Cells["RaisonSociale"].Value;
+
+            foreach (var item in Client.clientsHS)
+            {
+                if(item.RaisonSociale==selectedClient.RaisonSociale)
+                {
+                    FormConsultClient ConsultClient = new FormConsultClient();
+                    ConsultClient.txtNumeroClient.Text = item.IdClient.ToString();
+                    ConsultClient.Show();
+
+                }
+            }
+
+
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

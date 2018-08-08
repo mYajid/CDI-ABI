@@ -420,7 +420,7 @@
         private System.Windows.Forms.TextBox txt2Adresse;
         private System.Windows.Forms.TextBox txt1Adresse;
         private System.Windows.Forms.TextBox txtRaisonSociale;
-        private System.Windows.Forms.TextBox txtNumeroClient;
+        public System.Windows.Forms.TextBox txtNumeroClient;
         private System.Windows.Forms.TextBox txtNature;
         private System.Windows.Forms.TextBox txtCA;
         private System.Windows.Forms.TextBox txtActivite;

@@ -392,6 +392,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormConsultClient";
             this.Text = "Bretagne Informatique - Consultation client";
+            this.Load += new System.EventHandler(this.FormConsultClient_Load);
             this.boxIdentification.ResumeLayout(false);
             this.boxIdentification.PerformLayout();
             this.boxCaractéristique.ResumeLayout(false);

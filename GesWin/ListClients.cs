@@ -93,6 +93,8 @@ namespace GesWin
                 {
                     FormConsultClient ConsultClient = new FormConsultClient();
                     ConsultClient.txtNumeroClient.Text = item.IdClient.ToString();
+                   
+
                     ConsultClient.Show();
 
                 }

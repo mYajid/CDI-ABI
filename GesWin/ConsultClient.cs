@@ -17,20 +17,17 @@ namespace GesWin
         {
             InitializeComponent();
 
-            int x = int.Parse(txtNumeroClient.Text);
 
-            foreach (var item in Client.contactsHS)
-            {
-                if (item.IdClient == x)
-                {
-                    this.dataGridContact.Rows.Add(item.NomContact, item.PrenomContact, item.Telephone, item.Email, item.FonctionSetting);
-                }
-
-            }
 
 
 
         }
+
+        public static void ViewContacts()
+        {
+           
+        }
+
 
         private void btnModifClient_Click(object sender, EventArgs e)
         {
@@ -47,6 +44,22 @@ namespace GesWin
         private void btnFermer_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormConsultClient_Load(object sender, EventArgs e)
+        {
+
+            int x = int.Parse(txtNumeroClient.Text);
+            
+            foreach (var item in Client.contactsHS)
+            {
+                if (item.IdClient == x)
+                {
+                    this.dataGridContact.Rows.Add(item.NomContact, item.PrenomContact, item.Telephone, item.Email, item.FonctionSetting);
+                }
+                
+
+            }
         }
     }
 }

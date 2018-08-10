@@ -21,39 +21,7 @@ namespace GesWin
             btnListeCliente.Enabled = false;
 
 
-
-            //Client client1 = new Client();
-            //client1.IdClient = 1234;
-            //client1.RaisonSociale = "Exploitation Legoff";
-            //client1.Adresse1 = "Le Hameau";
-            //client1.Adresse2 = "Route de Ploubazlanec";
-            //client1.CodPostal = 22500;
-            //client1.Ville = "Paimpol";
-            //client1.TypeSociete = true;
-            //client1.TelephoneClient = 0299010203;
-            //client1.Effectif = 12;
-            //client1.CA = 275000;
-
-            ///// instanciation de la classe activité
-            //Activite activite1 = new Activite();
-            //activite1.Activit = Metier.Boissons;
-            //activite1.NatureAct = Nature.Principale;
-            //client1.Activite  = activite1;
-
-
-            //Contact contact1 = new Contact();
-            //contact1.IdClient = 1234;
-            //contact1.NomContact = "Legoff";
-            //contact1.PrenomContact = "Alain";
-            //contact1.Telephone = 0661564555;
-            //contact1.Email = "alain@LegoffBretagne";
-            //contact1.FonctionSetting = Fonction.Dirigeant;
-
-
-            //contactsHS.Add(contact1);
-
-            //client1.ListContact = contactsHS;
-            //clientsHS.Add(client1);
+            
             
             foreach (var item in  Client.clientsHS)
             {

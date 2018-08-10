@@ -16,11 +16,7 @@ namespace GesWin
         public FormConsultClient()
         {
             InitializeComponent();
-
-
-
-
-
+            
         }
 
         public static void ViewContacts()
@@ -51,11 +47,17 @@ namespace GesWin
 
             int x = int.Parse(txtNumeroClient.Text);
             
-            foreach (var item in Client.contactsHS)
+            foreach (var item in Client.clientsHS)
             {
                 if (item.IdClient == x)
                 {
-                    this.dataGridContact.Rows.Add(item.NomContact, item.PrenomContact, item.Telephone, item.Email, item.FonctionSetting);
+                    HashSet <Contact> kontact = item.ListContact;
+
+                    foreach (var cont in kontact)
+                    {
+                        this.dataGridContact.Rows.Add(cont.NomContact, cont.PrenomContact, cont.Telephone, cont.Email, cont.FonctionSetting);
+
+                    }
                 }
                 
 

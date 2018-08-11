@@ -47,11 +47,27 @@ namespace GesWin
 
             int x = int.Parse(txtNumeroClient.Text);
             
+            
             foreach (var item in Client.clientsHS)
             {
+                
                 if (item.IdClient == x)
                 {
-                    HashSet <Contact> kontact = item.ListContact;
+                    txtRaisonSociale.Text = item.RaisonSociale;
+                    txt1Adresse.Text = item.Adresse1;
+                    txt2Adresse.Text = item.Adresse2;
+                    txtVille.Text = item.Ville;
+                    txtCp.Text = item.CodPostal.ToString();
+                    txtTelephone.Text = item.TelephoneClient.ToString();
+                    txtEffectif.Text = item.Effectif.ToString();
+                    chBoxPrivé.Checked = item.TypeSociete;
+                    txtActivite.Text = item.Activite.Activit.ToString();
+                    txtNature.Text = item.Activite.NatureAct.ToString();
+                    txtCA.Text = item.CA.ToString();
+
+
+
+                    HashSet<Contact> kontact = item.ListContact;
 
                     foreach (var cont in kontact)
                     {

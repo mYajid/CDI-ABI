@@ -27,8 +27,39 @@ namespace GesWin
 
         private void btnModifClient_Click(object sender, EventArgs e)
         {
+
             FormModificationClient modificationClient = new FormModificationClient();
-            modificationClient.Show();
+
+            modificationClient.lblId.Text = this.txtNumeroClient.Text;
+            modificationClient.txtRaisonSocialeModif.Text = this.txtRaisonSociale.Text;
+            modificationClient.txtAdresse1Modif.Text = this.txt1Adresse.Text;
+            modificationClient.txtAdresse2Modif.Text = this.txt2Adresse.Text;
+            modificationClient.txtCPModif.Text = this.txtCp.Text;
+            modificationClient.txtVilleModif.Text = this.txtVille.Text;
+            modificationClient.txtTelephoneModif.Text = this.txtTelephone.Text;
+            modificationClient.chBoxPriveModif.Checked = this.chBoxPrivé.Checked;
+            modificationClient.txtEffectifModif.Text = this.txtEffectif.Text;
+
+            if (modificationClient.lstActiviteModif.SelectedIndex < modificationClient.lstActiviteModif.Items.Count - 1)
+            { modificationClient.lstActiviteModif.SelectedIndex += 1; }
+            modificationClient.lstActiviteModif.Items[modificationClient.lstActiviteModif.SelectedIndex] = this.txtActivite.Text;
+            modificationClient.txtCAModif.Text = this.txtCA.Text;
+
+            if (modificationClient.lstNatureModif.SelectedIndex < modificationClient.lstNatureModif.Items.Count - 1)
+            { modificationClient.lstNatureModif.SelectedIndex += 1; }
+            modificationClient.lstNatureModif.Items[modificationClient.lstNatureModif.SelectedIndex] = this.txtNature.Text;
+            //modificationClient.lstNatureModif.SelectedItem = this.txtNature.Text;
+
+
+            if (modificationClient.ShowDialog()== DialogResult.OK)
+            {
+                modificationClient.Refresh();
+                // this.Refresh(); 
+            }
+            else
+            {
+                this.Refresh();
+            }
         }
 
         private void btnNouveauContact_Click(object sender, EventArgs e)
@@ -78,6 +109,11 @@ namespace GesWin
                 
 
             }
+        }
+
+        private void txtActivite_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

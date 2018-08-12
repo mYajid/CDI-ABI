@@ -127,6 +127,7 @@
             this.datgwListeClients.Location = new System.Drawing.Point(34, 134);
             this.datgwListeClients.Name = "datgwListeClients";
             this.datgwListeClients.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.datgwListeClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datgwListeClients.Size = new System.Drawing.Size(642, 281);
             this.datgwListeClients.TabIndex = 1;
             this.datgwListeClients.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datgwListeClients_CellDoubleClick);

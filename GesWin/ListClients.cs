@@ -51,17 +51,17 @@ namespace GesWin
         private void datgwListeClients_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //note affichage du formulaire détail du client
-            Client selectedClient = new Client();
 
-           selectedClient.RaisonSociale = (string) datgwListeClients.CurrentRow.Cells["RaisonSociale"].Value;
+             Client selectedClient = new Client();
+
+            selectedClient.RaisonSociale = (string)datgwListeClients.CurrentRow.Cells["RaisonSociale"].Value;
 
             foreach (var item in Client.clientsHS)
             {
-                if(item.RaisonSociale==selectedClient.RaisonSociale)
+                if (item.RaisonSociale == selectedClient.RaisonSociale)
                 {
                     FormConsultClient ConsultClient = new FormConsultClient();
                     ConsultClient.txtNumeroClient.Text = item.IdClient.ToString();
-                   
 
                     ConsultClient.Show();
 
@@ -69,7 +69,8 @@ namespace GesWin
             }
 
 
-            
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -79,27 +80,13 @@ namespace GesWin
             nouveauClient.Show();
         }
 
-        List<Client> clientsHS = new List<Client>();
-      public static  HashSet<Contact> contactsHS = new HashSet<Contact>();
+      //  List<Client> clientsHS = new List<Client>();
+      //public static  HashSet<Contact> contactsHS = new HashSet<Contact>();
 
         private void FormListeClients_Load(object sender, EventArgs e)
         {
-
-          
-
-
-            //Contact contact1 = new Contact();
-            //contact1.IdClient = 1234;
-            //contact1.NomContact = "Neymar";
-            //contact1.PrenomContact = "Jean";
-            //contact1.Telephone = 0101015555;
-            //contact1.FonctionSetting = Fonction.Commercial;
-            //contactsHS.Add(contact1);
-
-
-           
-
-
+                               
+            
         }
     }
 }

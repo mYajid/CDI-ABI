@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gBoxIdentificationModif = new System.Windows.Forms.GroupBox();
+            this.lblId = new System.Windows.Forms.Label();
+            this.txtVilleModif = new System.Windows.Forms.TextBox();
             this.txtTelephoneModif = new System.Windows.Forms.TextBox();
             this.txtCPModif = new System.Windows.Forms.TextBox();
             this.txtAdresse2Modif = new System.Windows.Forms.TextBox();
@@ -43,6 +46,7 @@
             this.gBoxCaracteristiquesModif = new System.Windows.Forms.GroupBox();
             this.lstNatureModif = new System.Windows.Forms.ListBox();
             this.lstActiviteModif = new System.Windows.Forms.ListBox();
+            this.activiteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblNature = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblActiviteModif = new System.Windows.Forms.Label();
@@ -53,13 +57,14 @@
             this.chBoxPriveModif = new System.Windows.Forms.CheckBox();
             this.btnOKModif = new System.Windows.Forms.Button();
             this.btnAnnulerModif = new System.Windows.Forms.Button();
-            this.txtVilleModif = new System.Windows.Forms.TextBox();
             this.gBoxIdentificationModif.SuspendLayout();
             this.gBoxCaracteristiquesModif.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.activiteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gBoxIdentificationModif
             // 
+            this.gBoxIdentificationModif.Controls.Add(this.lblId);
             this.gBoxIdentificationModif.Controls.Add(this.txtVilleModif);
             this.gBoxIdentificationModif.Controls.Add(this.txtTelephoneModif);
             this.gBoxIdentificationModif.Controls.Add(this.txtCPModif);
@@ -78,6 +83,21 @@
             this.gBoxIdentificationModif.TabIndex = 0;
             this.gBoxIdentificationModif.TabStop = false;
             this.gBoxIdentificationModif.Text = "Identification";
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(118, 31);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(0, 13);
+            this.lblId.TabIndex = 12;
+            // 
+            // txtVilleModif
+            // 
+            this.txtVilleModif.Location = new System.Drawing.Point(227, 145);
+            this.txtVilleModif.Name = "txtVilleModif";
+            this.txtVilleModif.Size = new System.Drawing.Size(306, 20);
+            this.txtVilleModif.TabIndex = 11;
             // 
             // txtTelephoneModif
             // 
@@ -119,9 +139,8 @@
             this.lblIDModif.AutoSize = true;
             this.lblIDModif.Location = new System.Drawing.Point(118, 31);
             this.lblIDModif.Name = "lblIDModif";
-            this.lblIDModif.Size = new System.Drawing.Size(18, 13);
+            this.lblIDModif.Size = new System.Drawing.Size(0, 13);
             this.lblIDModif.TabIndex = 5;
-            this.lblIDModif.Text = "ID";
             // 
             // lblTelephoneModif
             // 
@@ -201,17 +220,24 @@
             // 
             // lstActiviteModif
             // 
+            this.lstActiviteModif.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.activiteBindingSource, "Activit", true));
             this.lstActiviteModif.FormattingEnabled = true;
             this.lstActiviteModif.Items.AddRange(new object[] {
-            "Céréales",
-            "Boissons",
             "Administration",
             "Bovins",
-            "Laiterie"});
+            "Cereales",
+            "Boissons",
+            "laiterie",
+            "pêche",
+            "Mecanique"});
             this.lstActiviteModif.Location = new System.Drawing.Point(91, 98);
             this.lstActiviteModif.Name = "lstActiviteModif";
             this.lstActiviteModif.Size = new System.Drawing.Size(107, 17);
             this.lstActiviteModif.TabIndex = 8;
+            // 
+            // activiteBindingSource
+            // 
+            this.activiteBindingSource.DataSource = typeof(GestionCommercialeDll.Activite);
             // 
             // lblNature
             // 
@@ -289,6 +315,7 @@
             this.btnOKModif.TabIndex = 2;
             this.btnOKModif.Text = "OK";
             this.btnOKModif.UseVisualStyleBackColor = true;
+            this.btnOKModif.Click += new System.EventHandler(this.btnOKModif_Click);
             // 
             // btnAnnulerModif
             // 
@@ -298,13 +325,7 @@
             this.btnAnnulerModif.TabIndex = 3;
             this.btnAnnulerModif.Text = "Annuler";
             this.btnAnnulerModif.UseVisualStyleBackColor = true;
-            // 
-            // txtVilleModif
-            // 
-            this.txtVilleModif.Location = new System.Drawing.Point(227, 145);
-            this.txtVilleModif.Name = "txtVilleModif";
-            this.txtVilleModif.Size = new System.Drawing.Size(306, 20);
-            this.txtVilleModif.TabIndex = 11;
+            this.btnAnnulerModif.Click += new System.EventHandler(this.btnAnnulerModif_Click);
             // 
             // FormModificationClient
             // 
@@ -323,37 +344,39 @@
             this.gBoxIdentificationModif.PerformLayout();
             this.gBoxCaracteristiquesModif.ResumeLayout(false);
             this.gBoxCaracteristiquesModif.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.activiteBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox gBoxIdentificationModif;
-        private System.Windows.Forms.GroupBox gBoxCaracteristiquesModif;
-        private System.Windows.Forms.ListBox lstNatureModif;
-        private System.Windows.Forms.ListBox lstActiviteModif;
         private System.Windows.Forms.Label lblNature;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblActiviteModif;
-        private System.Windows.Forms.TextBox txtCAModif;
-        private System.Windows.Forms.TextBox txtEffectifModif;
         private System.Windows.Forms.Label lblEffectifModif;
         private System.Windows.Forms.Label lblPriveModif;
-        private System.Windows.Forms.CheckBox chBoxPriveModif;
-        private System.Windows.Forms.Button btnOKModif;
-        private System.Windows.Forms.Button btnAnnulerModif;
-        private System.Windows.Forms.TextBox txtTelephoneModif;
-        private System.Windows.Forms.TextBox txtCPModif;
-        private System.Windows.Forms.TextBox txtAdresse2Modif;
-        private System.Windows.Forms.TextBox txtAdresse1Modif;
-        private System.Windows.Forms.TextBox txtRaisonSocialeModif;
         private System.Windows.Forms.Label lblIDModif;
         private System.Windows.Forms.Label lblTelephoneModif;
         private System.Windows.Forms.Label lblCpVilleModif;
         private System.Windows.Forms.Label lblAdresseModif;
         private System.Windows.Forms.Label lblRaisonSocialeModif;
         private System.Windows.Forms.Label lblNumeroClientModif;
-        private System.Windows.Forms.TextBox txtVilleModif;
+        public System.Windows.Forms.GroupBox gBoxIdentificationModif;
+        public System.Windows.Forms.GroupBox gBoxCaracteristiquesModif;
+        public System.Windows.Forms.Button btnOKModif;
+        public System.Windows.Forms.Button btnAnnulerModif;
+        public System.Windows.Forms.ListBox lstNatureModif;
+        public System.Windows.Forms.ListBox lstActiviteModif;
+        public System.Windows.Forms.TextBox txtCAModif;
+        public System.Windows.Forms.TextBox txtEffectifModif;
+        public System.Windows.Forms.CheckBox chBoxPriveModif;
+        public System.Windows.Forms.TextBox txtTelephoneModif;
+        public System.Windows.Forms.TextBox txtCPModif;
+        public System.Windows.Forms.TextBox txtAdresse2Modif;
+        public System.Windows.Forms.TextBox txtAdresse1Modif;
+        public System.Windows.Forms.TextBox txtRaisonSocialeModif;
+        public System.Windows.Forms.TextBox txtVilleModif;
+        public System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.BindingSource activiteBindingSource;
     }
 }

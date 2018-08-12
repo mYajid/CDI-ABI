@@ -57,12 +57,6 @@
     <Compile Include="ListClients.Designer.cs">
       <DependentUpon>ListClients.cs</DependentUpon>
     </Compile>
-    <Compile Include="LstClient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LstClient.Designer.cs">
-      <DependentUpon>LstClient.cs</DependentUpon>
-    </Compile>
     <Compile Include="MDI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,9 +89,6 @@
     <EmbeddedResource Include="ListClients.resx">
       <DependentUpon>ListClients.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LstClient.resx">
-      <DependentUpon>LstClient.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MDI.resx">
       <DependentUpon>MDI.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +111,7 @@
     <EmbeddedResource Include="SaisieContact.resx">
       <DependentUpon>SaisieContact.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\GestionCommercialeDll.Activite.datasource" />
     <None Include="Properties\DataSources\GestionCommercialeDll.Client.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

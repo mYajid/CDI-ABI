@@ -235,6 +235,7 @@
             this.txtActivite.ReadOnly = true;
             this.txtActivite.Size = new System.Drawing.Size(100, 22);
             this.txtActivite.TabIndex = 7;
+            this.txtActivite.TextChanged += new System.EventHandler(this.txtActivite_TextChanged);
             // 
             // lblNature
             // 
@@ -403,9 +404,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox boxIdentification;
-        private System.Windows.Forms.GroupBox boxCaractéristique;
         private System.Windows.Forms.Label labTelephone;
         private System.Windows.Forms.Label lblCpVille;
         private System.Windows.Forms.Label lblAdresse;
@@ -427,14 +425,16 @@
         private System.Windows.Forms.TextBox txtActivite;
         private System.Windows.Forms.Label lblNature;
         private System.Windows.Forms.TextBox txtVille;
-        private System.Windows.Forms.Button btnModifClient;
-        private System.Windows.Forms.Button btnNouveauContact;
-        private System.Windows.Forms.Button btnFermer;
-        private System.Windows.Forms.DataGridView dataGridContact;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNom;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPrenom;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTelephone;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColFonction;
+        public System.Windows.Forms.GroupBox boxIdentification;
+        public System.Windows.Forms.GroupBox boxCaractéristique;
+        public System.Windows.Forms.Button btnModifClient;
+        public System.Windows.Forms.Button btnNouveauContact;
+        public System.Windows.Forms.Button btnFermer;
+        public System.Windows.Forms.DataGridView dataGridContact;
     }
 }

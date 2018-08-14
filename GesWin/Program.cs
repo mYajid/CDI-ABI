@@ -32,7 +32,7 @@ namespace GesWin
             /// instanciation de la classe activité
             Activite activite1 = new Activite();
             activite1.Activit = Metier.Boissons;
-            activite1.NatureAct = Nature.Principale;
+            activite1.NatureAct = Natur.Principale;
             client1.Activite = activite1;
 
 
@@ -67,7 +67,7 @@ namespace GesWin
             /// instanciation de la classe activité
             Activite activite2 = new Activite();
             activite2.Activit = Metier.Administration;
-            activite2.NatureAct = Nature.Principale;
+            activite2.NatureAct = Natur.Principale;
             client2.Activite = activite2;
 
 

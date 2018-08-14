@@ -13,10 +13,40 @@ namespace GesWin
 {
     public partial class FormConsultClient : Form
     {
-        public FormConsultClient()
+        public FormConsultClient(int x)
         {
             InitializeComponent();
-            
+           // int x = int.Parse(txtNumeroClient.Text);
+
+            foreach (var item in Client.clientsHS)
+            {
+
+                if (item.IdClient == x)
+                {
+                    txtNumeroClient.Text = item.IdClient.ToString();
+                    txtRaisonSociale.Text = item.RaisonSociale;
+                    txt1Adresse.Text = item.Adresse1;
+                    txt2Adresse.Text = item.Adresse2;
+                    txtVille.Text = item.Ville;
+                    txtCp.Text = item.CodPostal.ToString();
+                    txtTelephone.Text = item.TelephoneClient.ToString();
+                    txtEffectif.Text = item.Effectif.ToString();
+                    chBoxPrivé.Checked = item.TypeSociete;
+                    txtActivite.Text = item.Activite.Activit.ToString();
+                    txtNature.Text = item.Activite.NatureAct.ToString();
+                    txtCA.Text = item.CA.ToString();
+
+                    HashSet<Contact> kontact = item.ListContact;
+
+                    foreach (var cont in kontact)
+                    {
+                        this.dataGridContact.Rows.Add(cont.NomContact, cont.PrenomContact, cont.Telephone, cont.Email, cont.FonctionSetting);
+
+                    }
+                }
+
+
+            }
         }
 
         public static void ViewContacts()
@@ -76,39 +106,35 @@ namespace GesWin
         private void FormConsultClient_Load(object sender, EventArgs e)
         {
 
-            int x = int.Parse(txtNumeroClient.Text);
+            //int x = int.Parse(txtNumeroClient.Text);            
             
-            
-            foreach (var item in Client.clientsHS)
-            {
+            //foreach (var item in Client.clientsHS)            {
                 
-                if (item.IdClient == x)
-                {
-                    txtRaisonSociale.Text = item.RaisonSociale;
-                    txt1Adresse.Text = item.Adresse1;
-                    txt2Adresse.Text = item.Adresse2;
-                    txtVille.Text = item.Ville;
-                    txtCp.Text = item.CodPostal.ToString();
-                    txtTelephone.Text = item.TelephoneClient.ToString();
-                    txtEffectif.Text = item.Effectif.ToString();
-                    chBoxPrivé.Checked = item.TypeSociete;
-                    txtActivite.Text = item.Activite.Activit.ToString();
-                    txtNature.Text = item.Activite.NatureAct.ToString();
-                    txtCA.Text = item.CA.ToString();
+            //    if (item.IdClient == x)
+            //    {
+            //        txtRaisonSociale.Text = item.RaisonSociale;
+            //        txt1Adresse.Text = item.Adresse1;
+            //        txt2Adresse.Text = item.Adresse2;
+            //        txtVille.Text = item.Ville;
+            //        txtCp.Text = item.CodPostal.ToString();
+            //        txtTelephone.Text = item.TelephoneClient.ToString();
+            //        txtEffectif.Text = item.Effectif.ToString();
+            //        chBoxPrivé.Checked = item.TypeSociete;
+            //        txtActivite.Text = item.Activite.Activit.ToString();
+            //        txtNature.Text = item.Activite.NatureAct.ToString();
+            //        txtCA.Text = item.CA.ToString();
 
+            //        HashSet<Contact> kontact = item.ListContact;
 
+            //        foreach (var cont in kontact)
+            //        {
+            //            this.dataGridContact.Rows.Add(cont.NomContact, cont.PrenomContact, cont.Telephone, cont.Email, cont.FonctionSetting);
 
-                    HashSet<Contact> kontact = item.ListContact;
-
-                    foreach (var cont in kontact)
-                    {
-                        this.dataGridContact.Rows.Add(cont.NomContact, cont.PrenomContact, cont.Telephone, cont.Email, cont.FonctionSetting);
-
-                    }
-                }
+            //        }
+            //    }
                 
 
-            }
+            //}
         }
 
         private void txtActivite_TextChanged(object sender, EventArgs e)

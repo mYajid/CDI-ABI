@@ -44,7 +44,6 @@
             this.lblRaisonSocialeModif = new System.Windows.Forms.Label();
             this.lblNumeroClientModif = new System.Windows.Forms.Label();
             this.gBoxCaracteristiquesModif = new System.Windows.Forms.GroupBox();
-            this.lstNatureModif = new System.Windows.Forms.ListBox();
             this.lstActiviteModif = new System.Windows.Forms.ListBox();
             this.activiteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblNature = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@
             this.chBoxPriveModif = new System.Windows.Forms.CheckBox();
             this.btnOKModif = new System.Windows.Forms.Button();
             this.btnAnnulerModif = new System.Windows.Forms.Button();
+            this.lstNatureModif = new System.Windows.Forms.ListBox();
             this.gBoxIdentificationModif.SuspendLayout();
             this.gBoxCaracteristiquesModif.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activiteBindingSource)).BeginInit();
@@ -206,18 +206,6 @@
             this.gBoxCaracteristiquesModif.TabStop = false;
             this.gBoxCaracteristiquesModif.Text = "Caractéristiques";
             // 
-            // lstNatureModif
-            // 
-            this.lstNatureModif.FormattingEnabled = true;
-            this.lstNatureModif.Items.AddRange(new object[] {
-            "Principale",
-            "Secondaire",
-            "Ancienne"});
-            this.lstNatureModif.Location = new System.Drawing.Point(334, 98);
-            this.lstNatureModif.Name = "lstNatureModif";
-            this.lstNatureModif.Size = new System.Drawing.Size(101, 17);
-            this.lstNatureModif.TabIndex = 9;
-            // 
             // lstActiviteModif
             // 
             this.lstActiviteModif.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.activiteBindingSource, "Activit", true));
@@ -327,6 +315,19 @@
             this.btnAnnulerModif.UseVisualStyleBackColor = true;
             this.btnAnnulerModif.Click += new System.EventHandler(this.btnAnnulerModif_Click);
             // 
+            // lstNatureModif
+            // 
+            this.lstNatureModif.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.activiteBindingSource, "Activit", true));
+            this.lstNatureModif.FormattingEnabled = true;
+            this.lstNatureModif.Items.AddRange(new object[] {
+            "Principale",
+            "Secondaire",
+            "Ancienne "});
+            this.lstNatureModif.Location = new System.Drawing.Point(347, 98);
+            this.lstNatureModif.Name = "lstNatureModif";
+            this.lstNatureModif.Size = new System.Drawing.Size(107, 17);
+            this.lstNatureModif.TabIndex = 9;
+            // 
             // FormModificationClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,7 +366,6 @@
         public System.Windows.Forms.GroupBox gBoxCaracteristiquesModif;
         public System.Windows.Forms.Button btnOKModif;
         public System.Windows.Forms.Button btnAnnulerModif;
-        public System.Windows.Forms.ListBox lstNatureModif;
         public System.Windows.Forms.ListBox lstActiviteModif;
         public System.Windows.Forms.TextBox txtCAModif;
         public System.Windows.Forms.TextBox txtEffectifModif;
@@ -378,5 +378,6 @@
         public System.Windows.Forms.TextBox txtVilleModif;
         public System.Windows.Forms.Label lblId;
         private System.Windows.Forms.BindingSource activiteBindingSource;
+        public System.Windows.Forms.ListBox lstNatureModif;
     }
 }

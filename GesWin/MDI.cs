@@ -30,8 +30,9 @@ namespace GesWin
 
         private void btnConsultClient(object sender, EventArgs e)
         {
-            FormConsultClient formConsultClient = new FormConsultClient();
-            formConsultClient.Show();
+
+            //FormConsultClient formConsultClient = new FormConsultClient();
+            //formConsultClient.Show();
         }
 
         private void btnConsultContact(object sender, EventArgs e)

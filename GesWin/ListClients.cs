@@ -52,16 +52,17 @@ namespace GesWin
         {
             //note affichage du formulaire détail du client
 
-             Client selectedClient = new Client();
+            string RS = (string)datgwListeClients.CurrentRow.Cells["RaisonSociale"].Value;
 
-            selectedClient.RaisonSociale = (string)datgwListeClients.CurrentRow.Cells["RaisonSociale"].Value;
+
 
             foreach (var item in Client.clientsHS)
             {
-                if (item.RaisonSociale == selectedClient.RaisonSociale)
+                if (item.RaisonSociale == RS)
                 {
-                    FormConsultClient ConsultClient = new FormConsultClient();
-                    ConsultClient.txtNumeroClient.Text = item.IdClient.ToString();
+                    int x = item.IdClient;
+                    //ConsultClient.txtNumeroClient.Text = item.IdClient.ToString();
+                    FormConsultClient ConsultClient = new FormConsultClient(x);
 
                     ConsultClient.Show();
 

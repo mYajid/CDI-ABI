@@ -41,7 +41,7 @@ namespace GesWin
                     item.Effectif = int.Parse(txtEffectifModif.Text);
                     item.CA = int.Parse(txtCAModif.Text);
                     item.Activite.Activit = (Metier)lstActiviteModif.SelectedIndex;
-                    item.Activite.NatureAct = (Nature)lstNatureModif.SelectedIndex;
+                    item.Activite.NatureAct = (Natur)lstNatureModif.SelectedIndex;
 
                     this.DialogResult = DialogResult.OK;
                 }

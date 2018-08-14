@@ -44,8 +44,9 @@
             this.lblRaisonSocialeModif = new System.Windows.Forms.Label();
             this.lblNumeroClientModif = new System.Windows.Forms.Label();
             this.gBoxCaracteristiquesModif = new System.Windows.Forms.GroupBox();
-            this.lstActiviteModif = new System.Windows.Forms.ListBox();
+            this.lstNatureModif = new System.Windows.Forms.ListBox();
             this.activiteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lstActiviteModif = new System.Windows.Forms.ListBox();
             this.lblNature = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblActiviteModif = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.chBoxPriveModif = new System.Windows.Forms.CheckBox();
             this.btnOKModif = new System.Windows.Forms.Button();
             this.btnAnnulerModif = new System.Windows.Forms.Button();
-            this.lstNatureModif = new System.Windows.Forms.ListBox();
             this.gBoxIdentificationModif.SuspendLayout();
             this.gBoxCaracteristiquesModif.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activiteBindingSource)).BeginInit();
@@ -206,6 +206,23 @@
             this.gBoxCaracteristiquesModif.TabStop = false;
             this.gBoxCaracteristiquesModif.Text = "Caractéristiques";
             // 
+            // lstNatureModif
+            // 
+            this.lstNatureModif.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.activiteBindingSource, "Activit", true));
+            this.lstNatureModif.FormattingEnabled = true;
+            this.lstNatureModif.Items.AddRange(new object[] {
+            "Principale",
+            "Secondaire",
+            "Ancienne "});
+            this.lstNatureModif.Location = new System.Drawing.Point(347, 85);
+            this.lstNatureModif.Name = "lstNatureModif";
+            this.lstNatureModif.Size = new System.Drawing.Size(107, 30);
+            this.lstNatureModif.TabIndex = 9;
+            // 
+            // activiteBindingSource
+            // 
+            this.activiteBindingSource.DataSource = typeof(GestionCommercialeDll.Activite);
+            // 
             // lstActiviteModif
             // 
             this.lstActiviteModif.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.activiteBindingSource, "Activit", true));
@@ -218,14 +235,10 @@
             "laiterie",
             "pêche",
             "Mecanique"});
-            this.lstActiviteModif.Location = new System.Drawing.Point(91, 98);
+            this.lstActiviteModif.Location = new System.Drawing.Point(91, 85);
             this.lstActiviteModif.Name = "lstActiviteModif";
-            this.lstActiviteModif.Size = new System.Drawing.Size(107, 17);
+            this.lstActiviteModif.Size = new System.Drawing.Size(107, 30);
             this.lstActiviteModif.TabIndex = 8;
-            // 
-            // activiteBindingSource
-            // 
-            this.activiteBindingSource.DataSource = typeof(GestionCommercialeDll.Activite);
             // 
             // lblNature
             // 
@@ -314,19 +327,6 @@
             this.btnAnnulerModif.Text = "Annuler";
             this.btnAnnulerModif.UseVisualStyleBackColor = true;
             this.btnAnnulerModif.Click += new System.EventHandler(this.btnAnnulerModif_Click);
-            // 
-            // lstNatureModif
-            // 
-            this.lstNatureModif.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.activiteBindingSource, "Activit", true));
-            this.lstNatureModif.FormattingEnabled = true;
-            this.lstNatureModif.Items.AddRange(new object[] {
-            "Principale",
-            "Secondaire",
-            "Ancienne "});
-            this.lstNatureModif.Location = new System.Drawing.Point(347, 98);
-            this.lstNatureModif.Name = "lstNatureModif";
-            this.lstNatureModif.Size = new System.Drawing.Size(107, 17);
-            this.lstNatureModif.TabIndex = 9;
             // 
             // FormModificationClient
             // 

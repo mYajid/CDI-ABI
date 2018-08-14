@@ -216,22 +216,21 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox gBoxIdentiteContact;
         private System.Windows.Forms.Label lblNomContact;
         private System.Windows.Forms.Label lblPrenomContact;
         private System.Windows.Forms.Label lblTelephoneContact;
-        private System.Windows.Forms.TextBox txtEmailContact;
-        private System.Windows.Forms.TextBox txtTelephoneContact;
-        private System.Windows.Forms.TextBox txtPrenomContact;
-        private System.Windows.Forms.TextBox txtNomContact;
         private System.Windows.Forms.Label lblEmailContact;
-        private System.Windows.Forms.Label lblFonctionContact;
-        private System.Windows.Forms.ListBox lstFonctionContact;
-        private System.Windows.Forms.Button btnOKContact;
-        private System.Windows.Forms.Button btnAnnulerContact;
-        private System.Windows.Forms.Label lblClientContact;
-        private System.Windows.Forms.Label lblIDContact;
-        private System.Windows.Forms.Label lblRaisonSocialeContact;
+        public System.Windows.Forms.GroupBox gBoxIdentiteContact;
+        public System.Windows.Forms.TextBox txtEmailContact;
+        public System.Windows.Forms.TextBox txtTelephoneContact;
+        public System.Windows.Forms.TextBox txtPrenomContact;
+        public System.Windows.Forms.TextBox txtNomContact;
+        public System.Windows.Forms.Label lblFonctionContact;
+        public System.Windows.Forms.ListBox lstFonctionContact;
+        public System.Windows.Forms.Button btnOKContact;
+        public System.Windows.Forms.Button btnAnnulerContact;
+        public System.Windows.Forms.Label lblClientContact;
+        public System.Windows.Forms.Label lblIDContact;
+        public System.Windows.Forms.Label lblRaisonSocialeContact;
     }
 }

@@ -16,7 +16,7 @@ namespace GesWin
         public FormConsultClient(int x)
         {
             InitializeComponent();
-           // int x = int.Parse(txtNumeroClient.Text);
+           
 
             foreach (var item in Client.clientsHS)
             {
@@ -83,8 +83,8 @@ namespace GesWin
 
             if (modificationClient.ShowDialog()== DialogResult.OK)
             {
-                modificationClient.Refresh();
-                // this.Refresh(); 
+                // modificationClient.Refresh();
+                 this.Refresh(); 
             }
             else
             {
@@ -95,6 +95,15 @@ namespace GesWin
         private void btnNouveauContact_Click(object sender, EventArgs e)
         {
             FormNouveauContact nouveauContact = new FormNouveauContact();
+
+            
+
+
+
+
+
+
+
             nouveauContact.Show();
         }
 
@@ -106,35 +115,6 @@ namespace GesWin
         private void FormConsultClient_Load(object sender, EventArgs e)
         {
 
-            //int x = int.Parse(txtNumeroClient.Text);            
-            
-            //foreach (var item in Client.clientsHS)            {
-                
-            //    if (item.IdClient == x)
-            //    {
-            //        txtRaisonSociale.Text = item.RaisonSociale;
-            //        txt1Adresse.Text = item.Adresse1;
-            //        txt2Adresse.Text = item.Adresse2;
-            //        txtVille.Text = item.Ville;
-            //        txtCp.Text = item.CodPostal.ToString();
-            //        txtTelephone.Text = item.TelephoneClient.ToString();
-            //        txtEffectif.Text = item.Effectif.ToString();
-            //        chBoxPrivé.Checked = item.TypeSociete;
-            //        txtActivite.Text = item.Activite.Activit.ToString();
-            //        txtNature.Text = item.Activite.NatureAct.ToString();
-            //        txtCA.Text = item.CA.ToString();
-
-            //        HashSet<Contact> kontact = item.ListContact;
-
-            //        foreach (var cont in kontact)
-            //        {
-            //            this.dataGridContact.Rows.Add(cont.NomContact, cont.PrenomContact, cont.Telephone, cont.Email, cont.FonctionSetting);
-
-            //        }
-            //    }
-                
-
-            //}
         }
 
         private void txtActivite_TextChanged(object sender, EventArgs e)

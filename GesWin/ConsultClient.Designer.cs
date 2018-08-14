@@ -140,6 +140,7 @@
             // 
             // txtNumeroClient
             // 
+            this.txtNumeroClient.Enabled = false;
             this.txtNumeroClient.Location = new System.Drawing.Point(164, 34);
             this.txtNumeroClient.Name = "txtNumeroClient";
             this.txtNumeroClient.ReadOnly = true;
@@ -258,6 +259,7 @@
             // chBoxPrivé
             // 
             this.chBoxPrivé.AutoSize = true;
+            this.chBoxPrivé.Enabled = false;
             this.chBoxPrivé.Location = new System.Drawing.Point(23, 38);
             this.chBoxPrivé.Name = "chBoxPrivé";
             this.chBoxPrivé.Size = new System.Drawing.Size(57, 18);

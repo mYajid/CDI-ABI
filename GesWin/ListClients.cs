@@ -56,13 +56,13 @@ namespace GesWin
 
 
 
-            foreach (var item in Client.clientsHS)
+            foreach (var client in Client.clientsHS)
             {
-                if (item.RaisonSociale == RS)
+                if (client.RaisonSociale == RS)
                 {
-                    int x = item.IdClient;
-                    //ConsultClient.txtNumeroClient.Text = item.IdClient.ToString();
-                    FormConsultClient ConsultClient = new FormConsultClient(x);
+                    //int x = client.IdClient;
+                   
+                    FormConsultClient ConsultClient = new FormConsultClient(client);
 
                     ConsultClient.Show();
 

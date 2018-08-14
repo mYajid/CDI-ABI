@@ -13,11 +13,29 @@ namespace GesWin
 {
     public partial class FormModificationClient : Form
     {
-        public FormModificationClient()
+        public FormModificationClient(Client client)
         {            
             InitializeComponent();
-                      
+            lblId.Text = client.IdClient.ToString();
+            txtRaisonSocialeModif.Text = client.RaisonSociale;
+            txtAdresse1Modif.Text = client.Adresse1;
+            txtAdresse2Modif.Text = client.Adresse2;
+            txtCPModif.Text = client.CodPostal.ToString();
+            txtVilleModif.Text= client.Ville;
+            txtTelephoneModif.Text = client.TelephoneClient.ToString();
+            chBoxPriveModif.Checked = client.TypeSociete;
+            txtEffectifModif.Text = client.Effectif.ToString();
+            txtCAModif.Text = client.CA.ToString();
+
+           if (lstActiviteModif.SelectedIndex < lstActiviteModif.Items.Count - 1)
+           { lstActiviteModif.SelectedIndex += 1; }
+            lstActiviteModif.Items[lstActiviteModif.SelectedIndex] = client.Activite.Activit;
+
+           if (lstNatureModif.SelectedIndex < lstNatureModif.Items.Count - 1)
+           { lstNatureModif.SelectedIndex += 1; }
+            lstNatureModif.Items[lstNatureModif.SelectedIndex] = client.Activite.NatureAct;
             
+
         }
 
         private void btnAnnulerModif_Click(object sender, EventArgs e)

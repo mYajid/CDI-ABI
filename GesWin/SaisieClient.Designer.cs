@@ -192,7 +192,6 @@
             this.gBoxCaracteristiques.TabIndex = 1;
             this.gBoxCaracteristiques.TabStop = false;
             this.gBoxCaracteristiques.Text = "Caractéristiques";
-            this.gBoxCaracteristiques.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // lblNature
             // 
@@ -251,23 +250,23 @@
             this.lstNature.ScrollAlwaysVisible = true;
             this.lstNature.Size = new System.Drawing.Size(143, 17);
             this.lstNature.TabIndex = 4;
-            this.lstNature.SelectedIndexChanged += new System.EventHandler(this.lstNature_SelectedIndexChanged);
             // 
             // lstActivite
             // 
             this.lstActivite.FormattingEnabled = true;
             this.lstActivite.Items.AddRange(new object[] {
-            "Céréales",
-            "Boissons",
             "Administration",
             "Bovins",
-            "Laiterie"});
+            "Cereales",
+            "Boissons",
+            "Laiterie",
+            "pêche",
+            "Mecanique"});
             this.lstActivite.Location = new System.Drawing.Point(135, 93);
             this.lstActivite.Name = "lstActivite";
             this.lstActivite.ScrollAlwaysVisible = true;
             this.lstActivite.Size = new System.Drawing.Size(142, 17);
             this.lstActivite.TabIndex = 3;
-            this.lstActivite.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // txtCA
             // 
@@ -335,7 +334,6 @@
             this.MinimizeBox = false;
             this.Name = "FormSaisieNouveauClient";
             this.Text = "Saisie nouveau client";
-            this.Load += new System.EventHandler(this.FormSaisieNouveauClient_Load);
             this.gBoxIdentification.ResumeLayout(false);
             this.gBoxIdentification.PerformLayout();
             this.gBoxCaracteristiques.ResumeLayout(false);

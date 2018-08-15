@@ -78,7 +78,17 @@ namespace GesWin
         {
             //note affichage du formulaire création client
             FormSaisieNouveauClient nouveauClient = new FormSaisieNouveauClient();
-            nouveauClient.Show();
+            if (nouveauClient.ShowDialog()==DialogResult.OK)
+            {
+                Rafraichir();
+            }
+            else
+            {
+                Refresh();
+            }
+           
+
+
         }
 
       
@@ -90,13 +100,16 @@ namespace GesWin
         }
         public void Rafraichir()
         {
+            datgwListeClients.Rows.Clear();
 
             foreach (var item in Client.clientsHS)
             {
+               
                 this.datgwListeClients.Rows.Add(item.RaisonSociale, item.Ville, item.CodPostal, item.TypeSociete, item.Activite.Activit, item.Activite.NatureAct);
 
             }
 
         }
+        
     }
 }

@@ -20,25 +20,12 @@ namespace GesWin
             InitializeComponent();
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
+        
 
-        }
+       
+       
 
-        private void FormSaisieNouveauClient_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lstNature_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnContacts_Click(object sender, EventArgs e)
         {
@@ -55,7 +42,25 @@ namespace GesWin
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-           
+            Client _client = new Client();
+            _client.IdClient = int.Parse(txtNumeroClient.Text);
+            _client.RaisonSociale = txtRaisonSociale.Text;
+            _client.Adresse1 = txtAdresse1.Text;
+            _client.Adresse2 = txtAdresse2.Text;
+            _client.CodPostal = int.Parse(txtCP.Text);
+            _client.Ville = txtVille.Text;
+            _client.TelephoneClient = int.Parse(txtTelephone.Text);
+            _client.TypeSociete = chBoxPrive.Checked;
+            _client.Effectif = int.Parse(txtEffectif.Text);
+            _client.CA = decimal.Parse(txtCA.Text);
+
+            //nouveau client donc nouvelle instance de la classe Activité
+            Activite activite = new Activite();
+            activite.Activit= (Metier)lstActivite.SelectedIndex;
+            activite.NatureAct= (Natur)lstNature.SelectedIndex;
+
+            _client.Activite = activite;
+
         }
     }
 }

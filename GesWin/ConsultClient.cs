@@ -17,8 +17,6 @@ namespace GesWin
         {
             InitializeComponent();
            
-
-
                     txtNumeroClient.Text = client.IdClient.ToString();
                     txtRaisonSociale.Text = client.RaisonSociale;
                     txt1Adresse.Text = client.Adresse1;
@@ -32,23 +30,16 @@ namespace GesWin
                     txtNature.Text = client.Activite.NatureAct.ToString();
                     txtCA.Text = client.CA.ToString();
 
-                    HashSet<Contact> kontact = client.ListContact;
-
-                    foreach (var cont in kontact)
+                  
+                    foreach (var cont in client.ListContact)
                     {
                         this.dataGridContact.Rows.Add(cont.NomContact, cont.PrenomContact, cont.Telephone, cont.Email, cont.FonctionSetting);
 
                     }
-                
-
-
-            
+                                                
         }
 
-        public static void ViewContacts()
-        {
-           
-        }
+       
 
 
         private void btnModifClient_Click(object sender, EventArgs e)
@@ -97,12 +88,30 @@ namespace GesWin
                 if (item.IdClient == int.Parse(txtNumeroClient.Text)) 
                 {
                     FormNouveauContact nouveauContact = new FormNouveauContact(item);
+                    if (nouveauContact.ShowDialog() == DialogResult.OK)
+                    {
 
-                    nouveauContact.Show();
+                        RafraichirContact(item);
+                    }
+                    else
+                    {
+                        this.Refresh();
+                    }
                 }
             }
                                 
                        
+        }
+        private void RafraichirContact(Client client)
+        {
+            dataGridContact.Rows.Clear();
+
+            foreach (var cont in client.ListContact)
+            {
+               
+                this.dataGridContact.Rows.Add(cont.NomContact, cont.PrenomContact, cont.Telephone, cont.Email, cont.FonctionSetting);
+               
+            }
         }
 
         private void btnFermer_Click(object sender, EventArgs e)

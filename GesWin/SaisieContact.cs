@@ -53,10 +53,10 @@ namespace GesWin
 
                     _client.ListContact.Add(contact);
 
-                   
+                    this.DialogResult = DialogResult.OK;
                 }
             }
-            this.Close();
+            
         }
 
         private void btnAnnulerContact_Click(object sender, EventArgs e)

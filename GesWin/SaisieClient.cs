@@ -42,8 +42,15 @@ namespace GesWin
 
         private void btnContacts_Click(object sender, EventArgs e)
         {
-            var contact = new FormNouveauContact();
-            contact.Show();
+            foreach (var item in Client.clientsHS)
+            {
+                if (item.IdClient==int.Parse(txtNumeroClient.Text))
+                {
+                    var contact = new FormNouveauContact(item);
+                    contact.Show();
+                }
+            }
+            
         }
 
         private void btnOK_Click(object sender, EventArgs e)

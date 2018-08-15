@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestionCommercialeDll
 {
-    public enum Fonction { Dirigeant, Comptable, ResponsableRH, Commercial }
+    public enum Fonction {Dirigeant, Comptable, ResponsableRH, Commercial }
     public class Contact
 
     {

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GestionCommercialeDll;
 
 namespace GesWin
 {
@@ -48,8 +49,7 @@ namespace GesWin
 
         private void btnSaisieContact(object sender, EventArgs e)
         {
-            FormNouveauContact formSaisieContact = new FormNouveauContact();
-            formSaisieContact.Show();
+           
         }
     }
 }

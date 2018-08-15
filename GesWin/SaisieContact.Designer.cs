@@ -140,12 +140,17 @@
             // lstFonctionContact
             // 
             this.lstFonctionContact.FormattingEnabled = true;
+            this.lstFonctionContact.Items.AddRange(new object[] {
+            "Dirigeant",
+            "Comptable",
+            "ResponsableRH",
+            "Commercial"});
             this.lstFonctionContact.Location = new System.Drawing.Point(138, 300);
             this.lstFonctionContact.Name = "lstFonctionContact";
             this.lstFonctionContact.ScrollAlwaysVisible = true;
             this.lstFonctionContact.Size = new System.Drawing.Size(155, 30);
             this.lstFonctionContact.TabIndex = 2;
-            this.lstFonctionContact.SelectedIndexChanged += new System.EventHandler(this.lstFonctionContact_SelectedIndexChanged);
+          
             // 
             // btnOKContact
             // 
@@ -165,6 +170,7 @@
             this.btnAnnulerContact.TabIndex = 4;
             this.btnAnnulerContact.Text = "Annuler";
             this.btnAnnulerContact.UseVisualStyleBackColor = true;
+            this.btnAnnulerContact.Click += new System.EventHandler(this.btnAnnulerContact_Click);
             // 
             // lblClientContact
             // 

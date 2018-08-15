@@ -91,24 +91,18 @@ namespace GesWin
         }
 
         private void btnNouveauContact_Click(object sender, EventArgs e)
-        {
-            FormNouveauContact nouveauContact = new FormNouveauContact();
+        {           
             foreach (var item in Client.clientsHS)
             {
                 if (item.IdClient == int.Parse(txtNumeroClient.Text)) 
                 {
-                    nouveauContact.Show(item);
+                    FormNouveauContact nouveauContact = new FormNouveauContact(item);
+
+                    nouveauContact.Show();
                 }
             }
-            
-
-
-
-
-
-
-
-            nouveauContact.Show();
+                                
+                       
         }
 
         private void btnFermer_Click(object sender, EventArgs e)

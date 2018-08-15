@@ -93,7 +93,13 @@ namespace GesWin
         private void btnNouveauContact_Click(object sender, EventArgs e)
         {
             FormNouveauContact nouveauContact = new FormNouveauContact();
-
+            foreach (var item in Client.clientsHS)
+            {
+                if (item.IdClient == int.Parse(txtNumeroClient.Text)) 
+                {
+                    nouveauContact.Show(item);
+                }
+            }
             
 
 

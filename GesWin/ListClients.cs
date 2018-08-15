@@ -21,15 +21,15 @@ namespace GesWin
             btnListeCliente.Enabled = false;
 
 
-            
-            
-            foreach (var item in  Client.clientsHS)
+
+
+            foreach (var item in Client.clientsHS)
             {
                 this.datgwListeClients.Rows.Add(item.RaisonSociale, item.Ville, item.CodPostal, item.TypeSociete, item.Activite.Activit, item.Activite.NatureAct);
-                
+
             }
 
-            
+            // datgwListeClients.DataSource = Client.clientsHS.ToList();
 
         }
 
@@ -60,7 +60,7 @@ namespace GesWin
             {
                 if (client.RaisonSociale == RS)
                 {
-                    //int x = client.IdClient;
+                    
                    
                     FormConsultClient ConsultClient = new FormConsultClient(client);
 
@@ -81,13 +81,22 @@ namespace GesWin
             nouveauClient.Show();
         }
 
-      //  List<Client> clientsHS = new List<Client>();
-      //public static  HashSet<Contact> contactsHS = new HashSet<Contact>();
+      
 
         private void FormListeClients_Load(object sender, EventArgs e)
         {
                                
             
+        }
+        public void Rafraichir()
+        {
+
+            foreach (var item in Client.clientsHS)
+            {
+                this.datgwListeClients.Rows.Add(item.RaisonSociale, item.Ville, item.CodPostal, item.TypeSociete, item.Activite.Activit, item.Activite.NatureAct);
+
+            }
+
         }
     }
 }

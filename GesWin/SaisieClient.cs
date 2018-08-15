@@ -60,7 +60,12 @@ namespace GesWin
             activite.NatureAct= (Natur)lstNature.SelectedIndex;
 
             _client.Activite = activite;
+            this.DialogResult = DialogResult.OK;
+        }
 
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }

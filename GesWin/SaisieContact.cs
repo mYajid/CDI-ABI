@@ -61,7 +61,7 @@ namespace GesWin
 
         private void btnAnnulerContact_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }

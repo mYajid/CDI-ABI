@@ -53,13 +53,14 @@ namespace GesWin
             _client.TypeSociete = chBoxPrive.Checked;
             _client.Effectif = int.Parse(txtEffectif.Text);
             _client.CA = decimal.Parse(txtCA.Text);
-
+            
             //nouveau client donc nouvelle instance de la classe Activité
             Activite activite = new Activite();
             activite.Activit= (Metier)lstActivite.SelectedIndex;
             activite.NatureAct= (Natur)lstNature.SelectedIndex;
 
             _client.Activite = activite;
+            Client.clientsHS.Add(_client);
             this.DialogResult = DialogResult.OK;
         }
 

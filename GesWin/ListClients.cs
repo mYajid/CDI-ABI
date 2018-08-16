@@ -90,14 +90,9 @@ namespace GesWin
 
 
         }
-
-      
-
-        private void FormListeClients_Load(object sender, EventArgs e)
-        {
-                               
             
-        }
+
+       
         public void Rafraichir()
         {
             datgwListeClients.Rows.Clear();

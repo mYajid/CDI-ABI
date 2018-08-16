@@ -219,7 +219,7 @@
             this.Controls.Add(this.gbxrechclt);
             this.Name = "FormListeClients";
             this.Text = "Liste des clients";
-            this.Load += new System.EventHandler(this.FormListeClients_Load);
+           
             this.gbxrechclt.ResumeLayout(false);
             this.gbxrechclt.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datgwListeClients)).EndInit();

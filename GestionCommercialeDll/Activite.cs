@@ -9,7 +9,7 @@ namespace GestionCommercialeDll
     public  enum Natur { Principale, Secondaire,Ancienne}
    public class Activite
     {
-        //private string _nom;
+        
               
 
 
@@ -18,7 +18,7 @@ namespace GestionCommercialeDll
 
         public Client Client { get; set; }
        
-       // public string Nom { get; set; }
+       
 
 
 

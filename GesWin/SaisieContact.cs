@@ -23,19 +23,19 @@ namespace GesWin
 
 
             //On crée un tableau avec les enumération de Fonction
-           //Array enumArray = typeof(Fonction).GetEnumValues();
+            Array enumArray = typeof(Fonction).GetEnumValues();
 
-            //On rentre chaque objet du tableau dans la collection lstFonctionContact
-            //foreach (Object obj in enumArray)
-            //{
-            //    lstFonctionContact.Items.Add(obj);
-            //}
+           // On rentre chaque objet du tableau dans la collection lstFonctionContact
+            foreach (Object obj in enumArray)
+            {
+                lstFonctionContact.Items.Add(obj);
+            }
         }
 
-        //private void lstFonctionContact_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    Fonction fonction = (Fonction)lstFonctionContact.SelectedItem;
-        //}
+        private void lstFonctionContact_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Fonction fonction = (Fonction)lstFonctionContact.SelectedItem;
+        }
 
         private void btnOKContact_Click(object sender, EventArgs e)
         {
@@ -49,7 +49,7 @@ namespace GesWin
                     contact.PrenomContact = txtPrenomContact.Text;
                     contact.Telephone = int.Parse(txtTelephoneContact.Text);
                     contact.Email = txtEmailContact.Text;
-                    contact.FonctionSetting = (Fonction)lstFonctionContact.SelectedIndex;
+                    contact.FonctionSetting = (Fonction)lstFonctionContact.SelectedItem;
 
                     _client.ListContact.Add(contact);
 

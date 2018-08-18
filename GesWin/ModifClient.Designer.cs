@@ -210,14 +210,11 @@
             // 
             this.lstNatureModif.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.activiteBindingSource, "Activit", true));
             this.lstNatureModif.FormattingEnabled = true;
-            this.lstNatureModif.Items.AddRange(new object[] {
-            "Principale",
-            "Secondaire",
-            "Ancienne "});
             this.lstNatureModif.Location = new System.Drawing.Point(347, 85);
             this.lstNatureModif.Name = "lstNatureModif";
             this.lstNatureModif.Size = new System.Drawing.Size(107, 30);
             this.lstNatureModif.TabIndex = 9;
+            this.lstNatureModif.SelectedIndexChanged += new System.EventHandler(this.lstNatureModif_SelectedIndexChanged);
             // 
             // activiteBindingSource
             // 
@@ -227,18 +224,11 @@
             // 
             this.lstActiviteModif.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.activiteBindingSource, "Activit", true));
             this.lstActiviteModif.FormattingEnabled = true;
-            this.lstActiviteModif.Items.AddRange(new object[] {
-            "Administration",
-            "Bovins",
-            "Cereales",
-            "Boissons",
-            "laiterie",
-            "pêche",
-            "Mecanique"});
             this.lstActiviteModif.Location = new System.Drawing.Point(91, 85);
             this.lstActiviteModif.Name = "lstActiviteModif";
             this.lstActiviteModif.Size = new System.Drawing.Size(107, 30);
             this.lstActiviteModif.TabIndex = 8;
+            this.lstActiviteModif.SelectedIndexChanged += new System.EventHandler(this.lstActiviteModif_SelectedIndexChanged);
             // 
             // lblNature
             // 

@@ -16,6 +16,25 @@ namespace GesWin
         public FormModificationClient(Client client)
         {            
             InitializeComponent();
+
+
+            Array arrayMetier = Enum.GetValues(typeof(Metier));
+
+            foreach (var item in arrayMetier)
+            {
+                lstActiviteModif.Items.Add(item);
+            }
+
+            Array arrayNatur = Enum.GetValues(typeof(Natur));
+
+            foreach (var item in arrayNatur)
+            {
+                lstNatureModif.Items.Add(item);
+            }
+
+
+
+
             lblId.Text = client.IdClient.ToString();
             txtRaisonSocialeModif.Text = client.RaisonSociale;
             txtAdresse1Modif.Text = client.Adresse1;
@@ -27,12 +46,12 @@ namespace GesWin
             txtEffectifModif.Text = client.Effectif.ToString();
             txtCAModif.Text = client.CA.ToString();
 
-           if (lstActiviteModif.SelectedIndex < lstActiviteModif.Items.Count - 1)
-           { lstActiviteModif.SelectedIndex += 1; }
+            if (lstActiviteModif.SelectedIndex < lstActiviteModif.Items.Count - 1)
+            { lstActiviteModif.SelectedIndex += 1; }
             lstActiviteModif.Items[lstActiviteModif.SelectedIndex] = client.Activite.Activit;
 
-           if (lstNatureModif.SelectedIndex < lstNatureModif.Items.Count - 1)
-           { lstNatureModif.SelectedIndex += 1; }
+            if (lstNatureModif.SelectedIndex < lstNatureModif.Items.Count - 1)
+            { lstNatureModif.SelectedIndex += 1; }
             lstNatureModif.Items[lstNatureModif.SelectedIndex] = client.Activite.NatureAct;
             
 
@@ -58,14 +77,24 @@ namespace GesWin
                     item.TypeSociete = chBoxPriveModif.Checked;
                     item.Effectif = int.Parse(txtEffectifModif.Text);
                     item.CA = int.Parse(txtCAModif.Text);
-                    item.Activite.Activit = (Metier)lstActiviteModif.SelectedIndex;
-                    item.Activite.NatureAct = (Natur)lstNatureModif.SelectedIndex;
+                    item.Activite.Activit = (Metier)lstActiviteModif.SelectedItem;
+                    item.Activite.NatureAct = (Natur)lstNatureModif.SelectedItem;
 
                     this.DialogResult = DialogResult.OK;
                 }
             }
 
 
+        }
+
+        private void lstActiviteModif_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Metier metier = (Metier)lstActiviteModif.SelectedItem;
+        }
+
+        private void lstNatureModif_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Metier metier = (Metier)lstNatureModif.SelectedItem;
         }
     }
 }

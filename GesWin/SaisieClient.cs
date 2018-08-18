@@ -18,6 +18,23 @@ namespace GesWin
         public FormSaisieNouveauClient()
         {
             InitializeComponent();
+
+            Array arrayMetier = Enum.GetValues(typeof(Metier));
+
+            foreach (var item in arrayMetier)
+            {
+                lstActivite.Items.Add(item);
+            }
+
+            Array arrayNatur = Enum.GetValues(typeof(Natur));
+
+            foreach (var item in arrayNatur)
+            {
+                lstNature.Items.Add(item);
+            }
+
+
+
         }
 
         
@@ -56,17 +73,30 @@ namespace GesWin
             
             //nouveau client donc nouvelle instance de la classe Activité
             Activite activite = new Activite();
-            activite.Activit= (Metier)lstActivite.SelectedIndex;
-            activite.NatureAct= (Natur)lstNature.SelectedIndex;
+
+            activite.Activit= (Metier)lstActivite.SelectedItem;
+
+            activite.NatureAct= (Natur)lstNature.SelectedItem;
 
             _client.Activite = activite;
             Client.clientsHS.Add(_client);
+
             this.DialogResult = DialogResult.OK;
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void lstActivite_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Metier metier = (Metier)lstActivite.SelectedItem;
+        }
+
+        private void lstNature_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Natur natur = (Natur)lstNature.SelectedItem;
         }
     }
 }

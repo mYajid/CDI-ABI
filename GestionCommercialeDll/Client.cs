@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GestionCommercialeDll
 {
    
-    
+    [Serializable()]
     public class Client
     {
 
@@ -23,7 +23,14 @@ namespace GestionCommercialeDll
         private bool _typeSociete;
         private string _ville;
         private int _CP;
-       
+
+
+
+        public Client()
+        {
+
+        }
+
         /// <summary>
         /// L'id de mon client
         /// </summary>
@@ -46,8 +53,13 @@ namespace GestionCommercialeDll
         }
 
         /// <summary>
+        ///          
+        /// 
         /// Numero de telephone client
         /// </summary>
+        /// 
+
+       
 
         public int TelephoneClient
         {

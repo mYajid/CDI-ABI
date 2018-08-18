@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace GestionCommercialeDll
 {
     public enum Fonction {Dirigeant, Comptable, ResponsableRH, Commercial }
+
+    [Serializable]
     public class Contact
 
     {

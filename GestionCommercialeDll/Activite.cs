@@ -10,8 +10,7 @@ namespace GestionCommercialeDll
    public class Activite
     {
         //private string _nom;
-       
-        
+              
 
 
         public Metier Activit { get; set; }

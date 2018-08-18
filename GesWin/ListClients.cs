@@ -40,6 +40,7 @@ namespace GesWin
 
         private void btnFermerListeClient_Click(object sender, EventArgs e)
         {
+            Fichier.WriteToFile();
             this.Close();
         }
 

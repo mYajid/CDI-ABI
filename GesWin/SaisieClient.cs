@@ -32,17 +32,9 @@ namespace GesWin
             {
                 lstNature.Items.Add(item);
             }
-
-
-
-        }
-
-        
-
-       
-       
-
-       
+                        
+        }             
+                          
 
         private void btnContacts_Click(object sender, EventArgs e)
         {

@@ -30,12 +30,15 @@ namespace GesWin
                     txtNature.Text = client.Activite.NatureAct.ToString();
                     txtCA.Text = client.CA.ToString();
 
-                  
-                    foreach (var cont in client.ListContact)
-                    {
-                        this.dataGridContact.Rows.Add(cont.NomContact, cont.PrenomContact, cont.Telephone, cont.Email, cont.FonctionSetting);
+            if (client.ListContact!=null)
+            {
 
-                    }
+                foreach (var cont in client.ListContact)
+                {
+                    this.dataGridContact.Rows.Add(cont.NomContact, cont.PrenomContact, cont.Telephone, cont.Email, cont.FonctionSetting);
+
+                }
+            }
                                                 
         }
 
@@ -65,7 +68,7 @@ namespace GesWin
                                
             
         }
-        private void Rafraichir(Client client)
+         void Rafraichir(Client client)
         {
             txtNumeroClient.Text = client.IdClient.ToString();
             txtRaisonSociale.Text = client.RaisonSociale;

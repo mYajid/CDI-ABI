@@ -18,9 +18,9 @@ namespace GesWin
         static void Main()
         {
 
-            //List<Client> clientList = Fichier.ReadFromFile();
+           // List<Client> clientList = Fichier.ReadFromFile();
 
-            //Client.clientsHS = new HashSet<Client>(clientList);
+          //  Client.clientsHS = new HashSet<Client>(clientList);
 
 
 
@@ -96,7 +96,7 @@ namespace GesWin
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormListeClients());
+            Application.Run(new MDI());
 
 
 

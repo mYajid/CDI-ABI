@@ -20,6 +20,11 @@ namespace GesWin
             //dataGridContact.Rows.Add(row0);    
         }
 
+        private void btnFermer_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
+       
     }
 }

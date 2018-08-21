@@ -9,6 +9,9 @@ namespace GestionCommercialeDll
 
     public class Client
     {
+        // creation instance liste clients
+        public static HashSet<Client> clientsHS = new HashSet<Client>();
+
         private int _idClient;
         private string _raisonSociale;
         private string _adresse1;
@@ -194,7 +197,7 @@ namespace GestionCommercialeDll
 
             for (int i = 0; i < value.Length - 1; i++)
             {
-                if (!char.IsLetter(value[i]))
+                if (!char.IsLetter(value[i]) || !char.IsWhiteSpace(value[i]))
                 {
                     return false;
                 }
@@ -226,7 +229,7 @@ namespace GestionCommercialeDll
         }
 
         public bool IsIdClientValid(int value)
-            
+
         {
             string valeur = value.ToString();
 
@@ -248,9 +251,29 @@ namespace GestionCommercialeDll
 
 
 
-        public HashSet<Contact> ListContact {get; set;}
+        public HashSet<Contact> ListContact { get; set; }
+
+        public Activite Activite { get; set; }
+
+        /// Surcharge ( override ) de la fonction héritée Equals 
+        ///Elle doit renvoyer la comparaison de deux IdClients
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            { return false; }
+
+            if (!(obj is Client))
+            { return false; }
 
 
+            return this.IdClient == ((Client)obj).IdClient;
+                                   
+           }
 
+        public override int GetHashCode()
+        {
+            return this.IdClient.GetHashCode();
+        }
     }
-}  
+
+}

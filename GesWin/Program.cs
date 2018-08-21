@@ -31,9 +31,9 @@ namespace GesWin
 
 
             //Lancement fenetre principale
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new MDI());
+           Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+           Application.Run(new MDI());
 
 
 

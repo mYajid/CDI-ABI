@@ -36,13 +36,12 @@
             this.activiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contactToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.activiteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.contactToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.activiteToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.listeDesClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnQuitter = new System.Windows.Forms.Button();
+            this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.créationClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultationClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +51,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripMenuItem,
             this.modificationToolStripMenuItem,
-            this.consultationToolStripMenuItem});
+            this.consultationToolStripMenuItem,
+            this.aideToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
@@ -69,75 +69,58 @@
             this.newToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.newToolStripMenuItem.Text = "Creation";
-            // 
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.newToolStripMenuItem.Text = "Fichier";
+           
             // cToolStripMenuItem
             // 
             this.cToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
             this.cToolStripMenuItem.Name = "cToolStripMenuItem";
             this.cToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cToolStripMenuItem.Text = "Client";
+            this.cToolStripMenuItem.Text = "Nouveau Client";
+            this.cToolStripMenuItem.Click += new System.EventHandler(this.cToolStripMenuItem_Click);
             // 
             // contactToolStripMenuItem
             // 
             this.contactToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
             this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
             this.contactToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.contactToolStripMenuItem.Text = "Contact";
+            this.contactToolStripMenuItem.Text = "Creation Activité";
             // 
             // activiteToolStripMenuItem
             // 
             this.activiteToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
             this.activiteToolStripMenuItem.Name = "activiteToolStripMenuItem";
             this.activiteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.activiteToolStripMenuItem.Text = "Activite";
+            this.activiteToolStripMenuItem.Text = "Creation Nature";
             // 
             // modificationToolStripMenuItem
             // 
             this.modificationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientToolStripMenuItem,
-            this.contactToolStripMenuItem1,
-            this.activiteToolStripMenuItem1});
+            this.clientToolStripMenuItem});
             this.modificationToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modificationToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
-            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
-            this.modificationToolStripMenuItem.Text = "Modification";
+            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.modificationToolStripMenuItem.Text = "Edition";
             // 
             // clientToolStripMenuItem
             // 
             this.clientToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
             this.clientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.clientToolStripMenuItem.Text = "Client";
-            // 
-            // contactToolStripMenuItem1
-            // 
-            this.contactToolStripMenuItem1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.contactToolStripMenuItem1.Name = "contactToolStripMenuItem1";
-            this.contactToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.contactToolStripMenuItem1.Text = "Contact";
-            // 
-            // activiteToolStripMenuItem1
-            // 
-            this.activiteToolStripMenuItem1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.activiteToolStripMenuItem1.Name = "activiteToolStripMenuItem1";
-            this.activiteToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.activiteToolStripMenuItem1.Text = "Activite";
+            this.clientToolStripMenuItem.Text = "Liste des Clients";
+            this.clientToolStripMenuItem.Click += new System.EventHandler(this.clientToolStripMenuItem_Click_1);
             // 
             // consultationToolStripMenuItem
             // 
             this.consultationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientToolStripMenuItem1,
-            this.contactToolStripMenuItem2,
-            this.activiteToolStripMenuItem2,
-            this.listeDesClientsToolStripMenuItem});
+            this.clientToolStripMenuItem1});
             this.consultationToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consultationToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.consultationToolStripMenuItem.Name = "consultationToolStripMenuItem";
-            this.consultationToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
-            this.consultationToolStripMenuItem.Text = "Consultation";
+            this.consultationToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.consultationToolStripMenuItem.Text = "Fenêtre";
             // 
             // clientToolStripMenuItem1
             // 
@@ -145,27 +128,45 @@
             this.clientToolStripMenuItem1.Name = "clientToolStripMenuItem1";
             this.clientToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.clientToolStripMenuItem1.Text = "Client";
+            this.clientToolStripMenuItem1.Click += new System.EventHandler(this.clientToolStripMenuItem1_Click);
             // 
-            // contactToolStripMenuItem2
+            // btnQuitter
             // 
-            this.contactToolStripMenuItem2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.contactToolStripMenuItem2.Name = "contactToolStripMenuItem2";
-            this.contactToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.contactToolStripMenuItem2.Text = "Contact";
+            this.btnQuitter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnQuitter.ForeColor = System.Drawing.Color.Blue;
+            this.btnQuitter.Location = new System.Drawing.Point(1329, 602);
+            this.btnQuitter.Name = "btnQuitter";
+            this.btnQuitter.Size = new System.Drawing.Size(125, 51);
+            this.btnQuitter.TabIndex = 3;
+            this.btnQuitter.Text = "Quitter";
+            this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitte_Click);
+            this.btnQuitter.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
+            this.btnQuitter.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
-            // activiteToolStripMenuItem2
+            // aideToolStripMenuItem
             // 
-            this.activiteToolStripMenuItem2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.activiteToolStripMenuItem2.Name = "activiteToolStripMenuItem2";
-            this.activiteToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.activiteToolStripMenuItem2.Text = "Activite";
+            this.aideToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.créationClientToolStripMenuItem,
+            this.consultationClientToolStripMenuItem});
+            this.aideToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
+            this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.aideToolStripMenuItem.Text = "Aide";
             // 
-            // listeDesClientsToolStripMenuItem
+            // créationClientToolStripMenuItem
             // 
-            this.listeDesClientsToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.listeDesClientsToolStripMenuItem.Name = "listeDesClientsToolStripMenuItem";
-            this.listeDesClientsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.listeDesClientsToolStripMenuItem.Text = "Liste des clients";
+            this.créationClientToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.créationClientToolStripMenuItem.Name = "créationClientToolStripMenuItem";
+            this.créationClientToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.créationClientToolStripMenuItem.Text = "Création Client";
+            // 
+            // consultationClientToolStripMenuItem
+            // 
+            this.consultationClientToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.consultationClientToolStripMenuItem.Name = "consultationClientToolStripMenuItem";
+            this.consultationClientToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.consultationClientToolStripMenuItem.Text = "Consultation client";
             // 
             // MDI
             // 
@@ -174,7 +175,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1454, 653);
+            this.ClientSize = new System.Drawing.Size(1454, 648);
+            this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -203,12 +205,11 @@
         private System.Windows.Forms.ToolStripMenuItem activiteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contactToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem activiteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem consultationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem contactToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem activiteToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem listeDesClientsToolStripMenuItem;
+        private System.Windows.Forms.Button btnQuitter;
+        private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem créationClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultationClientToolStripMenuItem;
     }
 }

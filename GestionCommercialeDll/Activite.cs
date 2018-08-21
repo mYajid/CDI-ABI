@@ -6,30 +6,21 @@ using System.Threading.Tasks;
 
 namespace GestionCommercialeDll
 {
+
+
+    public enum Metier { Boisson  = 1, laiterie, Administration }
     public  enum Nature { Principale = 1, Secondaire , Ancienne  }
+
    public class Activite
     {
-        private string _nom;
-        private Nature _nature;
+       
         
 
-        public Nature NatureAct
+        public Metier ActiviteAct
         { get; set; }
-        public string Nom
-        {
-            get
-            {
-                return _nom;
-            }
+      public Nature nature { get; set; }
 
-            set
-            {
-                
-                _nom = value;
-            }
-        }
-
-
+        public Client client { get; set; }
     }
 
 

@@ -21,5 +21,87 @@ namespace GesWin
         {
 
         }
+
+        private void clientToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormConsultClient form = new FormConsultClient();
+            form.Show();
+        }
+        // AJOUT
+        private void clientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //var Appel = new Form Form3();
+            //Appel.Show();
+        }
+
+       
+
+        private void contactToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form enf = new FormNouveauContact();
+            enf.MdiParent = this;
+            enf.Visible = true;
+        }
+
+       // private void MenuTool(object sender, EventArgs e)
+        //{
+           // ToolStripMenuItem frmMdi = (ToolStripMenuItem)sender;
+           // if (frmMdi.Text == "Client")
+            //{
+        //        Form enf = new Saisieclient(); enf.MdiParent = this; enf.Visible = true;
+        //    }
+        //    else // donc frmMdi.Text == "Contact"
+        //    {
+        //        Form enf = new Formcontact(); enf.MdiParent = this; enf.Visible = true;
+        //    }
+
+        //}
+
+        
+
+        private void btnQuitte_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //private void détailClientsToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    Form enf = new ConsultClient("1230");
+        //    enf.MdiParent = this;
+        //    enf.Visible = true;
+        //}
+        private void btnColor_MouseEnter(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.BackColor = Color.LightSteelBlue;
+            btn.ForeColor = Color.Red;
+        }
+
+        private void btnColor_MouseLeave(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.BackColor = Color.LightGray;
+            btn.ForeColor = Color.Black;
+        }
+
+       
+
+        private void clientToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            // Lance la liste des clients
+            Form enf = new FormListeClients();
+            enf.MdiParent = this;
+            enf.Visible = true;
+        }
+
+        private void cToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           // Appel la saisie nouveau client
+            Form enf = new FormSaisieNouveauClient();
+            enf.MdiParent = this;
+            enf.Visible = true;
+        }
     }
 }
+    
+

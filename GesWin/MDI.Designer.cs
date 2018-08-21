@@ -38,10 +38,10 @@
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnQuitter = new System.Windows.Forms.Button();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.créationClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultationClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnQuitter = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +71,7 @@
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.newToolStripMenuItem.Text = "Fichier";
-           
+            // 
             // cToolStripMenuItem
             // 
             this.cToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -108,7 +108,7 @@
             // 
             this.clientToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.clientToolStripMenuItem.Text = "Liste des Clients";
             this.clientToolStripMenuItem.Click += new System.EventHandler(this.clientToolStripMenuItem_Click_1);
             // 
@@ -126,23 +126,9 @@
             // 
             this.clientToolStripMenuItem1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.clientToolStripMenuItem1.Name = "clientToolStripMenuItem1";
-            this.clientToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.clientToolStripMenuItem1.Size = new System.Drawing.Size(110, 22);
             this.clientToolStripMenuItem1.Text = "Client";
             this.clientToolStripMenuItem1.Click += new System.EventHandler(this.clientToolStripMenuItem1_Click);
-            // 
-            // btnQuitter
-            // 
-            this.btnQuitter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQuitter.ForeColor = System.Drawing.Color.Blue;
-            this.btnQuitter.Location = new System.Drawing.Point(1329, 602);
-            this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(125, 51);
-            this.btnQuitter.TabIndex = 3;
-            this.btnQuitter.Text = "Quitter";
-            this.btnQuitter.UseVisualStyleBackColor = true;
-            this.btnQuitter.Click += new System.EventHandler(this.btnQuitte_Click);
-            this.btnQuitter.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
-            this.btnQuitter.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
             // aideToolStripMenuItem
             // 
@@ -168,6 +154,20 @@
             this.consultationClientToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.consultationClientToolStripMenuItem.Text = "Consultation client";
             // 
+            // btnQuitter
+            // 
+            this.btnQuitter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnQuitter.ForeColor = System.Drawing.Color.Blue;
+            this.btnQuitter.Location = new System.Drawing.Point(1329, 602);
+            this.btnQuitter.Name = "btnQuitter";
+            this.btnQuitter.Size = new System.Drawing.Size(125, 51);
+            this.btnQuitter.TabIndex = 3;
+            this.btnQuitter.Text = "Quitter";
+            this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitte_Click);
+            this.btnQuitter.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
+            this.btnQuitter.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
+            // 
             // MDI
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
@@ -188,6 +188,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Projet Bretagne Informatique";
             this.TransparencyKey = System.Drawing.Color.PaleTurquoise;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MDI_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

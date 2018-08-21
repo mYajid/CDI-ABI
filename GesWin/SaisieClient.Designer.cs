@@ -170,6 +170,7 @@
             // txtNumeroClient
             // 
             this.txtNumeroClient.Location = new System.Drawing.Point(135, 19);
+            this.txtNumeroClient.MaxLength = 4;
             this.txtNumeroClient.Name = "txtNumeroClient";
             this.txtNumeroClient.Size = new System.Drawing.Size(96, 20);
             this.txtNumeroClient.TabIndex = 0;

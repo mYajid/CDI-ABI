@@ -9,9 +9,12 @@ namespace GestionCommercialeDll
 
     public class Client
     {
-        // creation instance liste clients
+        /// <summary>
+        /// Creation instance liste clients
+        /// </summary>
         public static HashSet<Client> clientsHS = new HashSet<Client>();
 
+       
         private int _idClient;
         private string _raisonSociale;
         private string _adresse1;
@@ -22,6 +25,7 @@ namespace GestionCommercialeDll
         private string _typeSociete;
         private string _ville;
         private int _CP;
+
         /// <summary>
         /// L'id de mon client
         /// </summary>
@@ -188,7 +192,12 @@ namespace GestionCommercialeDll
             }
 
         }
-
+        /// <summary>
+        /// Verification du format de la valeur _raisonSociale
+        /// Longueur maxi 32 , elle doit permettre des espaces   
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public bool IsRaisonSocialeValide(string value)
         {
             if (value == null || value.Length > 32)
@@ -203,8 +212,16 @@ namespace GestionCommercialeDll
                 }
             }
             return true;
-
+        
+            
         }
+                /// <summary>
+        /// Vérification du format de la valeur _telephoneClient
+        /// Longueur maximum 15 chiffre, ne doit pas contenir des lettres
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        /// 
         public bool IsTelephoneClientValid(int value)
         {
 
@@ -222,11 +239,14 @@ namespace GestionCommercialeDll
                 }
             }
             return true;
-
-
-
-
         }
+
+        /// <summary>
+        ///  Vérification du format de la valeur _idClient
+        ///  Longueur maxi 4, ne doit pas permettre des lettres
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
 
         public bool IsIdClientValid(int value)
 
@@ -249,14 +269,13 @@ namespace GestionCommercialeDll
 
         }
 
-
-
         public HashSet<Contact> ListContact { get; set; }
 
         public Activite Activite { get; set; }
-
+        
         /// Surcharge ( override ) de la fonction héritée Equals 
         ///Elle doit renvoyer la comparaison de deux IdClients
+        ///
         public override bool Equals(object obj)
         {
             if (obj == null)

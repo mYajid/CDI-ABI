@@ -43,8 +43,12 @@ namespace GesWin
 
         private void btnSaisieClient(object sender, EventArgs e)
         {
-            FormSaisieNouveauClient formSaisieClient = new FormSaisieNouveauClient();
-            formSaisieClient.Show();
+            //FormSaisieNouveauClient formSaisieClient = new FormSaisieNouveauClient();
+            //formSaisieClient.Show();
+            Form enf = new FormSaisieNouveauClient();
+            enf.MdiParent = this;
+            enf.Visible = true;
+            
         }
 
         private void btnSaisieContact(object sender, EventArgs e)

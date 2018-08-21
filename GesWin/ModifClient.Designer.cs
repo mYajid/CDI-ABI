@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.gBoxIdentificationModif = new System.Windows.Forms.GroupBox();
             this.lblId = new System.Windows.Forms.Label();
             this.txtVilleModif = new System.Windows.Forms.TextBox();
@@ -45,7 +44,6 @@
             this.lblNumeroClientModif = new System.Windows.Forms.Label();
             this.gBoxCaracteristiquesModif = new System.Windows.Forms.GroupBox();
             this.lstNatureModif = new System.Windows.Forms.ListBox();
-            this.activiteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lstActiviteModif = new System.Windows.Forms.ListBox();
             this.lblNature = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -59,7 +57,6 @@
             this.btnAnnulerModif = new System.Windows.Forms.Button();
             this.gBoxIdentificationModif.SuspendLayout();
             this.gBoxCaracteristiquesModif.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.activiteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gBoxIdentificationModif
@@ -208,7 +205,6 @@
             // 
             // lstNatureModif
             // 
-            this.lstNatureModif.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.activiteBindingSource, "Activit", true));
             this.lstNatureModif.FormattingEnabled = true;
             this.lstNatureModif.Location = new System.Drawing.Point(347, 85);
             this.lstNatureModif.Name = "lstNatureModif";
@@ -216,13 +212,8 @@
             this.lstNatureModif.TabIndex = 9;
             this.lstNatureModif.SelectedIndexChanged += new System.EventHandler(this.lstNatureModif_SelectedIndexChanged);
             // 
-            // activiteBindingSource
-            // 
-            this.activiteBindingSource.DataSource = typeof(GestionCommercialeDll.Activite);
-            // 
             // lstActiviteModif
             // 
-            this.lstActiviteModif.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.activiteBindingSource, "Activit", true));
             this.lstActiviteModif.FormattingEnabled = true;
             this.lstActiviteModif.Location = new System.Drawing.Point(91, 85);
             this.lstActiviteModif.Name = "lstActiviteModif";
@@ -335,7 +326,6 @@
             this.gBoxIdentificationModif.PerformLayout();
             this.gBoxCaracteristiquesModif.ResumeLayout(false);
             this.gBoxCaracteristiquesModif.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.activiteBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -367,7 +357,6 @@
         public System.Windows.Forms.TextBox txtRaisonSocialeModif;
         public System.Windows.Forms.TextBox txtVilleModif;
         public System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.BindingSource activiteBindingSource;
         public System.Windows.Forms.ListBox lstNatureModif;
     }
 }

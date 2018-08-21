@@ -135,22 +135,26 @@
             // 
             // RaisonSociale
             // 
+            this.RaisonSociale.DataPropertyName = "RaisonSociale";
             this.RaisonSociale.HeaderText = "Raison Sociale";
             this.RaisonSociale.MaxInputLength = 60;
             this.RaisonSociale.Name = "RaisonSociale";
             // 
             // VilleClient
             // 
+            this.VilleClient.DataPropertyName = "Ville";
             this.VilleClient.HeaderText = "Ville";
             this.VilleClient.Name = "VilleClient";
             // 
             // CodePostalClient
             // 
+            this.CodePostalClient.DataPropertyName = "CodPostal";
             this.CodePostalClient.HeaderText = "Code Postal";
             this.CodePostalClient.Name = "CodePostalClient";
             // 
             // PriveClient
             // 
+            this.PriveClient.DataPropertyName = "TypeSociete";
             this.PriveClient.HeaderText = "Privé";
             this.PriveClient.Name = "PriveClient";
             this.PriveClient.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -158,6 +162,7 @@
             // 
             // ActiviteClient
             // 
+            this.ActiviteClient.DataPropertyName = "Activite";
             this.ActiviteClient.HeaderText = "Activite";
             this.ActiviteClient.Name = "ActiviteClient";
             // 
@@ -219,7 +224,6 @@
             this.Controls.Add(this.gbxrechclt);
             this.Name = "FormListeClients";
             this.Text = "Liste des clients";
-           
             this.gbxrechclt.ResumeLayout(false);
             this.gbxrechclt.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datgwListeClients)).EndInit();

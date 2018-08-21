@@ -29,7 +29,7 @@ namespace GesWin
 
             }
 
-            // datgwListeClients.DataSource = Client.clientsHS.ToList();
+          //  datgwListeClients.DataSource = Client.clientsHS.ToList();
 
         }
 
@@ -106,6 +106,10 @@ namespace GesWin
             }
 
         }
-        
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

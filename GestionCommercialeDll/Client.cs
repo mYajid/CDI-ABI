@@ -12,7 +12,7 @@ namespace GestionCommercialeDll
     {
 
         public static HashSet<Client> clientsHS = new HashSet<Client>();
-        public static HashSet<Contact> contactsHS = new HashSet<Contact>();
+       
         private int _idClient;
         private string _raisonSociale;
         private string _adresse1;
@@ -260,11 +260,24 @@ namespace GestionCommercialeDll
                 }
             }
             return true;
+            
+        }
+        public override bool Equals(Object obj)
+        {
+            if (obj == null)
+            { return false; }
+
+            if (!(obj is Client))
+            { return false; }
 
 
+            return this.IdClient == ((Client)obj).IdClient;
         }
 
-
+        public override int GetHashCode()
+        {
+            return this.IdClient.GetHashCode();
+        }
 
         public HashSet<Contact> ListContact {get; set;}
         public Activite Activite { get; set; }

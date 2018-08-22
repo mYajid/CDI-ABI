@@ -12,13 +12,21 @@ using GestionCommercialeDll;
 namespace GesWin       
 {    
     public partial class FormListeClients : Form
-    {      
+    {
+        string choix = "";
+        string choix1 = "";
+        int Long = 0;
+        int nbligne = 0;
+        int numcol = 0;
+        int numligne = 0;
+        string arret = "";
 
         public FormListeClients()
         {                                   
             InitializeComponent();
             btnSuprimeClient.Enabled = false;
             btnListeCliente.Enabled = false;
+            chbRecherchePrive.Enabled = false;
 
 
 
@@ -46,7 +54,14 @@ namespace GesWin
 
         private void txtRecherche_TextChanged(object sender, EventArgs e)
         {
-            btnListeCliente.Enabled = true;
+            if (txtRecherche.Text == "")
+            {
+                btnListeCliente.Enabled = false;
+            }
+            else
+            {
+                btnListeCliente.Enabled = true;
+            }
         }
 
         private void datgwListeClients_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -110,6 +125,96 @@ namespace GesWin
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void datgwListeClients_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            // recupération de la dénomination d'entête de la colonne à partir de l'index de colonne
+            lblRecherche.Text = datgwListeClients.Columns[e.ColumnIndex].HeaderText;
+            numcol = e.ColumnIndex;
+            Recherche();
+            //arret = "Pause";
+        }
+
+        private void btnRecherche_Click(object sender, EventArgs e)
+        {
+            choix = txtRecherche.Text;
+            Long = choix.Length;
+            nbligne = datgwListeClients.RowCount;
+            //numcol=
+            for (int Tour =0; Tour < nbligne-1; Tour++)
+            {
+                choix1 = datgwListeClients.Rows[Tour].Cells[numcol].Value.ToString();
+               if (choix1.Length < Long)
+                {
+                    datgwListeClients.Rows[Tour].Visible = false;
+                }
+               else
+                {
+                    choix1 = choix1.Substring(0, Long);
+                    if (choix1 != choix)
+                    {
+                        datgwListeClients.Rows[Tour].Visible = false;
+                       
+                    }
+
+                }
+                // Ne reste que les lignes visibles correpondant au choix de l'utilisateur
+            }
+            
+        }
+
+        private void btnListeCliente_Click(object sender, EventArgs e)
+        {
+            for (int Tour = 0; Tour < nbligne - 1; Tour++)
+            {
+                datgwListeClients.Rows[Tour].Visible = true;
+                txtRecherche.Text = "";
+            }
+            
+        }
+
+        private void btnSuprimeClient_Click(object sender, EventArgs e)
+        {
+            numligne = datgwListeClients.CurrentRow.Index;
+            datgwListeClients.Rows.RemoveAt(numligne);
+        }
+
+        private void chbRecherchePrive_Click(object sender, EventArgs e)
+        {
+            txtRecherche.Text = chbRecherchePrive.Checked.ToString().ToLower();
+        }
+        private void Recherche()
+        {
+            if(lblRecherche.Text != "Privé")
+            {
+                txtRecherche.ReadOnly = false;
+                txtRecherche.Text = "";
+                txtRecherche.BackColor = Color.Empty;
+                chbRecherchePrive.Enabled = false;
+            }
+            else
+            {
+                txtRecherche.ReadOnly = true;
+                txtRecherche.Text = "false";
+                txtRecherche.BackColor = Color.Black;
+                chbRecherchePrive.Enabled = true;
+                chbRecherchePrive.Checked = false;
+            }
+        }
+
+        private void btnColor_MouseEnter(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.BackColor = Color.LightSteelBlue;
+            btn.ForeColor = Color.Blue;
+        }
+
+        private void btnColor_MouseLeave(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.BackColor = Color.Silver;
+            btn.ForeColor = Color.Black;
         }
     }
 }

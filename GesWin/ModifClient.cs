@@ -20,9 +20,9 @@ namespace GesWin
             //  lstActiviteModif.DataSource = client.Activite;
             //Array arrayMetier = Enum.GetValues(typeof(List));
 
-            foreach (var item in Activite.Metiers)
+            foreach (var Activite in Activite.Metiers)
             {
-                lstActiviteModif.Items.Add(item);
+                lstActiviteModif.Items.Add(Activite);
             }
 
             Array arrayNatur = Enum.GetValues(typeof(Natur));
@@ -41,9 +41,9 @@ namespace GesWin
             txtAdresse2Modif.Text = client.Adresse2;
             txtCPModif.Text = client.CodPostal.ToString();
             txtVilleModif.Text= client.Ville;
-            txtTelephoneModif.Text = client.TelephoneClient.ToString();
+            txtTelephoneModif.Text = String.Format("0{0:# ## ## ## ##}", client.TelephoneClient.ToString());
             chBoxPriveModif.Checked = client.TypeSociete;
-            txtEffectifModif.Text = client.Effectif.ToString();
+            txtEffectifModif.Text =  client.Effectif.ToString();
             txtCAModif.Text = client.CA.ToString();
 
             if (lstActiviteModif.SelectedIndex < lstActiviteModif.Items.Count - 1)
@@ -76,7 +76,7 @@ namespace GesWin
                     item.TelephoneClient = int.Parse(txtTelephoneModif.Text);
                     item.TypeSociete = chBoxPriveModif.Checked;
                     item.Effectif = int.Parse(txtEffectifModif.Text);
-                    item.CA = int.Parse(txtCAModif.Text);
+                    item.CA = decimal.Parse(txtCAModif.Text);
                     item.Activite.Activit =(String) lstActiviteModif.SelectedItem;
                     item.Activite.NatureAct = (Natur)lstNatureModif.SelectedItem;
 

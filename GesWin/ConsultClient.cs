@@ -23,8 +23,8 @@ namespace GesWin
                     txt2Adresse.Text = client.Adresse2;
                     txtVille.Text = client.Ville;
                     txtCp.Text = client.CodPostal.ToString();
-                    txtTelephone.Text = client.TelephoneClient.ToString();
-                    txtEffectif.Text = client.Effectif.ToString();
+                    txtTelephone.Text = String.Format("0{0:# ## ## ## ##}", client.TelephoneClient.ToString());
+            txtEffectif.Text = client.Effectif.ToString();
                     chBoxPrivé.Checked = client.TypeSociete;
                     txtActivite.Text = client.Activite.Activit.ToString();
                     txtNature.Text = client.Activite.NatureAct.ToString();

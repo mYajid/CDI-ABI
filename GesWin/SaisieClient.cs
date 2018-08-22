@@ -19,12 +19,15 @@ namespace GesWin
         {
             InitializeComponent();
 
-            Array arrayMetier = Enum.GetValues(typeof(Metier));
 
-            foreach (var item in arrayMetier)
-            {
-                lstActivite.Items.Add(item);
-            }
+            lstActivite.DataSource = Activite.Metiers;
+
+            //Array arrayMetier = Enum.GetValues(typeof(List));
+
+            //foreach (var item in arrayMetier)
+            //{
+            //    lstActivite.Items.Add(item);
+            //}
 
             Array arrayNatur = Enum.GetValues(typeof(Natur));
 
@@ -32,7 +35,7 @@ namespace GesWin
             {
                 lstNature.Items.Add(item);
             }
-                        
+
         }             
                           
 
@@ -66,7 +69,7 @@ namespace GesWin
             //nouveau client donc nouvelle instance de la classe Activité
             Activite activite = new Activite();
 
-            activite.Activit= (Metier)lstActivite.SelectedItem;
+            activite.Activit= (String)lstActivite.SelectedItem;
 
             activite.NatureAct= (Natur)lstNature.SelectedItem;
 
@@ -83,7 +86,7 @@ namespace GesWin
 
         private void lstActivite_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Metier metier = (Metier)lstActivite.SelectedItem;
+          //  String metier = (String)lstActivite.SelectedItem;
         }
 
         private void lstNature_SelectedIndexChanged(object sender, EventArgs e)

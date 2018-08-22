@@ -86,6 +86,7 @@
             this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
             this.contactToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.contactToolStripMenuItem.Text = "Creation Activité";
+            
             // 
             // activiteToolStripMenuItem
             // 
@@ -93,6 +94,7 @@
             this.activiteToolStripMenuItem.Name = "activiteToolStripMenuItem";
             this.activiteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.activiteToolStripMenuItem.Text = "Creation Nature";
+          
             // 
             // modificationToolStripMenuItem
             // 
@@ -108,7 +110,7 @@
             // 
             this.clientToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientToolStripMenuItem.Text = "Liste des Clients";
             this.clientToolStripMenuItem.Click += new System.EventHandler(this.clientToolStripMenuItem_Click_1);
             // 
@@ -126,9 +128,9 @@
             // 
             this.clientToolStripMenuItem1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.clientToolStripMenuItem1.Name = "clientToolStripMenuItem1";
-            this.clientToolStripMenuItem1.Size = new System.Drawing.Size(110, 22);
+            this.clientToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.clientToolStripMenuItem1.Text = "Client";
-            this.clientToolStripMenuItem1.Click += new System.EventHandler(this.clientToolStripMenuItem1_Click);
+          // this.clientToolStripMenuItem1.Click += new System.EventHandler(this.clientToolStripMenuItem1_Click);
             // 
             // aideToolStripMenuItem
             // 

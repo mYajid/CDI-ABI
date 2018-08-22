@@ -22,11 +22,6 @@ namespace GesWin
 
         }
 
-        private void clientToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            FormConsultClient form = new FormConsultClient();
-            form.Show();
-        }
         // AJOUT
         private void clientToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -36,12 +31,7 @@ namespace GesWin
 
        
 
-        private void contactToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form enf = new FormNouveauContact();
-            enf.MdiParent = this;
-            enf.Visible = true;
-        }
+      
 
        // private void MenuTool(object sender, EventArgs e)
         //{
@@ -64,12 +54,7 @@ namespace GesWin
             Application.Exit();
         }
 
-        //private void détailClientsToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    Form enf = new ConsultClient("1230");
-        //    enf.MdiParent = this;
-        //    enf.Visible = true;
-        //}
+       
         private void btnColor_MouseEnter(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
@@ -101,6 +86,10 @@ namespace GesWin
             enf.MdiParent = this;
             enf.Visible = true;
         }
+
+       
+
+       
     }
 }
     

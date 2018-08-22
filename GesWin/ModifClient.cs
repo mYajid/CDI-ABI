@@ -17,10 +17,10 @@ namespace GesWin
         {            
             InitializeComponent();
 
+            //  lstActiviteModif.DataSource = client.Activite;
+            //Array arrayMetier = Enum.GetValues(typeof(List));
 
-            Array arrayMetier = Enum.GetValues(typeof(Metier));
-
-            foreach (var item in arrayMetier)
+            foreach (var item in Activite.Metiers)
             {
                 lstActiviteModif.Items.Add(item);
             }
@@ -77,7 +77,7 @@ namespace GesWin
                     item.TypeSociete = chBoxPriveModif.Checked;
                     item.Effectif = int.Parse(txtEffectifModif.Text);
                     item.CA = int.Parse(txtCAModif.Text);
-                    item.Activite.Activit = (Metier)lstActiviteModif.SelectedItem;
+                    item.Activite.Activit =(String) lstActiviteModif.SelectedItem;
                     item.Activite.NatureAct = (Natur)lstNatureModif.SelectedItem;
 
                     this.DialogResult = DialogResult.OK;
@@ -88,13 +88,13 @@ namespace GesWin
         }
 
         private void lstActiviteModif_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Metier metier = (Metier)lstActiviteModif.SelectedItem;
+        {   
+            String activite = lstActiviteModif.SelectedItem.ToString();
         }
 
         private void lstNatureModif_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Metier metier = (Metier)lstNatureModif.SelectedItem;
+            Natur natur = (Natur)lstNatureModif.SelectedItem;
         }
     }
 }

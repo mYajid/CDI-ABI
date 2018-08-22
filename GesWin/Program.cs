@@ -18,11 +18,12 @@ namespace GesWin
         static void Main()
         {
 
-           // List<Client> clientList = Fichier.ReadFromFile();
+            // List<Client> clientList = Fichier.ReadFromFile();
 
-          //  Client.clientsHS = new HashSet<Client>(clientList);
+            //  Client.clientsHS = new HashSet<Client>(clientList);
 
-
+            //List<String> metiers = new List<string>()
+            //{"Administration", "Bovins", "Cereales", "Boissons", "laiterie", "pêche","Mecanique" };
 
 
             Client client1 = new Client();
@@ -39,7 +40,7 @@ namespace GesWin
 
             /// instanciation de la classe activité
             Activite activite1 = new Activite();
-            activite1.Activit = Metier.Boissons;
+            activite1.Activit = "Boissons";
             activite1.NatureAct = Natur.Principale;
             client1.Activite = activite1;
 
@@ -74,7 +75,7 @@ namespace GesWin
 
             /// instanciation de la classe activité
             Activite activite2 = new Activite();
-            activite2.Activit = Metier.Administration;
+            activite2.Activit = "Administration";
             activite2.NatureAct = Natur.Principale;
             client2.Activite = activite2;
 

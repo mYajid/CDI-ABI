@@ -11,7 +11,7 @@ namespace GestionCommercialeDll
     {
 
         public static List<String> Metiers = new List<String>()
-        { "Administration", "Bovins", "Cereales", "Boissons", "laiterie", "pêche","Mecanique"};
+        { "Administration", "Bovins", "Cereales", "Boissons", "Laiterie", "Pêche","Mecanique"};
 
 
 

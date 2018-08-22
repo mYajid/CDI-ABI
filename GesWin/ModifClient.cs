@@ -20,9 +20,9 @@ namespace GesWin
             //  lstActiviteModif.DataSource = client.Activite;
             //Array arrayMetier = Enum.GetValues(typeof(List));
 
-            foreach (var item in Activite.Metiers)
+            foreach (var Activite in Activite.Metiers)
             {
-                lstActiviteModif.Items.Add(item);
+                lstActiviteModif.Items.Add(Activite);
             }
 
             Array arrayNatur = Enum.GetValues(typeof(Natur));

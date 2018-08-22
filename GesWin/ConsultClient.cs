@@ -112,7 +112,7 @@ namespace GesWin
             foreach (var cont in client.ListContact)
             {
                
-                this.dataGridContact.Rows.Add(cont.NomContact, cont.PrenomContact, cont.Telephone, cont.Email, cont.FonctionSetting);
+                this.dataGridContact.Rows.Add(cont.NomContact, cont.PrenomContact,  cont.Telephone, cont.Email, cont.FonctionSetting);
                
             }
         }

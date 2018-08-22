@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultClient));
             this.boxIdentification = new System.Windows.Forms.GroupBox();
             this.txtVille = new System.Windows.Forms.TextBox();
@@ -362,6 +363,9 @@
             // 
             // ColTelephone
             // 
+            dataGridViewCellStyle1.Format = "0#########";
+            dataGridViewCellStyle1.NullValue = null;
+            this.ColTelephone.DefaultCellStyle = dataGridViewCellStyle1;
             this.ColTelephone.HeaderText = "Téléphone";
             this.ColTelephone.Name = "ColTelephone";
             this.ColTelephone.Width = 90;
@@ -427,16 +431,16 @@
         private System.Windows.Forms.TextBox txtActivite;
         private System.Windows.Forms.Label lblNature;
         private System.Windows.Forms.TextBox txtVille;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrenom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColTelephone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColFonction;
         public System.Windows.Forms.GroupBox boxIdentification;
         public System.Windows.Forms.GroupBox boxCaractéristique;
         public System.Windows.Forms.Button btnModifClient;
         public System.Windows.Forms.Button btnNouveauContact;
         public System.Windows.Forms.Button btnFermer;
         public System.Windows.Forms.DataGridView dataGridContact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrenom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTelephone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColFonction;
     }
 }

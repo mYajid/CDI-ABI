@@ -41,9 +41,9 @@ namespace GesWin
             txtAdresse2Modif.Text = client.Adresse2;
             txtCPModif.Text = client.CodPostal.ToString();
             txtVilleModif.Text= client.Ville;
-            txtTelephoneModif.Text = client.TelephoneClient.ToString();
+            txtTelephoneModif.Text = String.Format("0{0:# ## ## ## ##}", client.TelephoneClient.ToString());
             chBoxPriveModif.Checked = client.TypeSociete;
-            txtEffectifModif.Text = client.Effectif.ToString();
+            txtEffectifModif.Text =  client.Effectif.ToString();
             txtCAModif.Text = client.CA.ToString();
 
             if (lstActiviteModif.SelectedIndex < lstActiviteModif.Items.Count - 1)

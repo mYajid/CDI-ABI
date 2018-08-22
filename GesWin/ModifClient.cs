@@ -76,7 +76,7 @@ namespace GesWin
                     item.TelephoneClient = int.Parse(txtTelephoneModif.Text);
                     item.TypeSociete = chBoxPriveModif.Checked;
                     item.Effectif = int.Parse(txtEffectifModif.Text);
-                    item.CA = int.Parse(txtCAModif.Text);
+                    item.CA = decimal.Parse(txtCAModif.Text);
                     item.Activite.Activit =(String) lstActiviteModif.SelectedItem;
                     item.Activite.NatureAct = (Natur)lstNatureModif.SelectedItem;
 

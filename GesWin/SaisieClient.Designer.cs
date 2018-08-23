@@ -82,6 +82,8 @@
             this.gBoxIdentification.TabIndex = 0;
             this.gBoxIdentification.TabStop = false;
             this.gBoxIdentification.Text = "Identification";
+            this.gBoxIdentification.Validating += new System.ComponentModel.CancelEventHandler(this.gBoxIdentification_Validating);
+            this.gBoxIdentification.Validated += new System.EventHandler(this.gBoxIdentification_Validated);
             // 
             // lblTelephone
             // 
@@ -289,6 +291,7 @@
             // btnOK
             // 
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnOK.Enabled = false;
             this.btnOK.Location = new System.Drawing.Point(344, 440);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(40, 23);

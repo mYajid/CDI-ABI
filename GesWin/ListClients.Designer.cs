@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbxrechclt = new System.Windows.Forms.GroupBox();
             this.chbRecherchePrive = new System.Windows.Forms.CheckBox();
             this.lblRecherche = new System.Windows.Forms.Label();
@@ -37,17 +37,17 @@
             this.btnRecherche = new System.Windows.Forms.Button();
             this.btnListeCliente = new System.Windows.Forms.Button();
             this.datgwListeClients = new System.Windows.Forms.DataGridView();
+            this.btnNouveauClient = new System.Windows.Forms.Button();
+            this.btnSuprimeClient = new System.Windows.Forms.Button();
+            this.btnFermerListeClient = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblRechEntete = new System.Windows.Forms.Label();
             this.RaisonSociale = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VilleClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodePostalClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriveClient = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ActiviteClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NatureClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNouveauClient = new System.Windows.Forms.Button();
-            this.btnSuprimeClient = new System.Windows.Forms.Button();
-            this.btnFermerListeClient = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblRechEntete = new System.Windows.Forms.Label();
             this.gbxrechclt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datgwListeClients)).BeginInit();
             this.SuspendLayout();
@@ -124,14 +124,14 @@
             // 
             // datgwListeClients
             // 
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datgwListeClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datgwListeClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.datgwListeClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datgwListeClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RaisonSociale,
@@ -140,14 +140,14 @@
             this.PriveClient,
             this.ActiviteClient,
             this.NatureClient});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datgwListeClients.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datgwListeClients.DefaultCellStyle = dataGridViewCellStyle2;
             this.datgwListeClients.Location = new System.Drawing.Point(34, 134);
             this.datgwListeClients.Name = "datgwListeClients";
             this.datgwListeClients.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -157,45 +157,6 @@
             this.datgwListeClients.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datgwListeClients_CellDoubleClick);
             this.datgwListeClients.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.datgwListeClients_CellEnter);
             this.datgwListeClients.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datgwListeClients_ColumnHeaderMouseClick);
-            // 
-            // RaisonSociale
-            // 
-            this.RaisonSociale.DataPropertyName = "RaisonSociale";
-            this.RaisonSociale.HeaderText = "Raison Sociale";
-            this.RaisonSociale.MaxInputLength = 60;
-            this.RaisonSociale.Name = "RaisonSociale";
-            this.RaisonSociale.Width = 180;
-            // 
-            // VilleClient
-            // 
-            this.VilleClient.DataPropertyName = "Ville";
-            this.VilleClient.HeaderText = "Ville";
-            this.VilleClient.Name = "VilleClient";
-            // 
-            // CodePostalClient
-            // 
-            this.CodePostalClient.DataPropertyName = "CodPostal";
-            this.CodePostalClient.HeaderText = "Code Postal";
-            this.CodePostalClient.Name = "CodePostalClient";
-            // 
-            // PriveClient
-            // 
-            this.PriveClient.DataPropertyName = "TypeSociete";
-            this.PriveClient.HeaderText = "Privé";
-            this.PriveClient.Name = "PriveClient";
-            this.PriveClient.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PriveClient.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // ActiviteClient
-            // 
-            this.ActiviteClient.DataPropertyName = "Activite";
-            this.ActiviteClient.HeaderText = "Activite";
-            this.ActiviteClient.Name = "ActiviteClient";
-            // 
-            // NatureClient
-            // 
-            this.NatureClient.HeaderText = "Nature";
-            this.NatureClient.Name = "NatureClient";
             // 
             // btnNouveauClient
             // 
@@ -254,6 +215,51 @@
             this.lblRechEntete.Size = new System.Drawing.Size(334, 13);
             this.lblRechEntete.TabIndex = 6;
             this.lblRechEntete.Text = "Cliquez sun une des cellules de l\'entête pour orientez votre recherche";
+            // 
+            // RaisonSociale
+            // 
+            this.RaisonSociale.DataPropertyName = "RaisonSociale";
+            this.RaisonSociale.HeaderText = "Raison Sociale";
+            this.RaisonSociale.MaxInputLength = 60;
+            this.RaisonSociale.Name = "RaisonSociale";
+            this.RaisonSociale.ReadOnly = true;
+            this.RaisonSociale.Width = 180;
+            // 
+            // VilleClient
+            // 
+            this.VilleClient.DataPropertyName = "Ville";
+            this.VilleClient.HeaderText = "Ville";
+            this.VilleClient.Name = "VilleClient";
+            this.VilleClient.ReadOnly = true;
+            // 
+            // CodePostalClient
+            // 
+            this.CodePostalClient.DataPropertyName = "CodPostal";
+            this.CodePostalClient.HeaderText = "Code Postal";
+            this.CodePostalClient.Name = "CodePostalClient";
+            this.CodePostalClient.ReadOnly = true;
+            // 
+            // PriveClient
+            // 
+            this.PriveClient.DataPropertyName = "TypeSociete";
+            this.PriveClient.HeaderText = "Privé";
+            this.PriveClient.Name = "PriveClient";
+            this.PriveClient.ReadOnly = true;
+            this.PriveClient.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.PriveClient.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // ActiviteClient
+            // 
+            this.ActiviteClient.DataPropertyName = "Activite";
+            this.ActiviteClient.HeaderText = "Activite";
+            this.ActiviteClient.Name = "ActiviteClient";
+            this.ActiviteClient.ReadOnly = true;
+            // 
+            // NatureClient
+            // 
+            this.NatureClient.HeaderText = "Nature";
+            this.NatureClient.Name = "NatureClient";
+            this.NatureClient.ReadOnly = true;
             // 
             // FormListeClients
             // 

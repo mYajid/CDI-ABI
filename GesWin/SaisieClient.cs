@@ -22,12 +22,7 @@ namespace GesWin
 
             lstActivite.DataSource = Activite.Metiers;
 
-            //Array arrayMetier = Enum.GetValues(typeof(List));
-
-            //foreach (var item in arrayMetier)
-            //{
-            //    lstActivite.Items.Add(item);
-            //}
+           
 
             Array arrayNatur = Enum.GetValues(typeof(Natur));
 
@@ -56,26 +51,15 @@ namespace GesWin
         {
             Client _client = new Client();
 
-            try
-            {
-                _client.IdClient = int.Parse(txtNumeroClient.Text);
-            }
-            catch (Exception ex)
-            {
-
-                errorProvider1.SetError(txtNumeroClient, ex.Message);
-
-            }
-
            
-
+              _client.IdClient = int.Parse(txtNumeroClient.Text);
+                       
             _client.RaisonSociale = txtRaisonSociale.Text;
             _client.Adresse1 = txtAdresse1.Text;
             _client.Adresse2 = txtAdresse2.Text;
             _client.CodPostal = int.Parse(txtCP.Text);
             _client.Ville = txtVille.Text;
-
-
+            
             _client.TelephoneClient = int.Parse(txtTelephone.Text);
 
             _client.TypeSociete = chBoxPrive.Checked;
@@ -112,10 +96,39 @@ namespace GesWin
 
         private void txtNumeroClient_Validating(object sender, CancelEventArgs e)
         {
-            //    errorProvider1.SetError(txtNumeroClient, string.Empty);
+          
+            // 
+
+        }
+
+        private void gBoxIdentification_Validated(object sender, EventArgs e)
+        {
+          
+        }
+
+       
+
+        private void gBoxIdentification_Validating(object sender, CancelEventArgs e)
+        {
+            Client x = new Client();
+            this.btnOK.Enabled = true;
+            errorProvider1.SetError(txtNumeroClient, string.Empty);
+            try
+            {
+                x.IdClient = int.Parse(txtNumeroClient.Text);
+            }
+            catch (Exception)
+            {
+
+                errorProvider1.SetError(txtNumeroClient, "Le Numero client ne doit comporter que 4 chiffres");
+                MessageBox.Show("le numéro Client saisi n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
+                this.btnOK.Enabled = false;
+            }
 
 
-            //    errorProvider1.SetError(txtNumeroClient, " Numero non valide");
+
+
+
         }
     }
 }

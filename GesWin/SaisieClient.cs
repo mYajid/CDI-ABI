@@ -55,13 +55,29 @@ namespace GesWin
         private void btnOK_Click(object sender, EventArgs e)
         {
             Client _client = new Client();
-            _client.IdClient = int.Parse(txtNumeroClient.Text);
+
+            try
+            {
+                _client.IdClient = int.Parse(txtNumeroClient.Text);
+            }
+            catch (Exception ex)
+            {
+
+                errorProvider1.SetError(txtNumeroClient, ex.Message);
+
+            }
+
+           
+
             _client.RaisonSociale = txtRaisonSociale.Text;
             _client.Adresse1 = txtAdresse1.Text;
             _client.Adresse2 = txtAdresse2.Text;
             _client.CodPostal = int.Parse(txtCP.Text);
             _client.Ville = txtVille.Text;
+
+
             _client.TelephoneClient = int.Parse(txtTelephone.Text);
+
             _client.TypeSociete = chBoxPrive.Checked;
             _client.Effectif = int.Parse(txtEffectif.Text);
             _client.CA = decimal.Parse(txtCA.Text);
@@ -92,6 +108,14 @@ namespace GesWin
         private void lstNature_SelectedIndexChanged(object sender, EventArgs e)
         {
             Natur natur = (Natur)lstNature.SelectedItem;
+        }
+
+        private void txtNumeroClient_Validating(object sender, CancelEventArgs e)
+        {
+            //    errorProvider1.SetError(txtNumeroClient, string.Empty);
+
+
+            //    errorProvider1.SetError(txtNumeroClient, " Numero non valide");
         }
     }
 }

@@ -177,6 +177,7 @@
             this.txtNumeroClient.Name = "txtNumeroClient";
             this.txtNumeroClient.Size = new System.Drawing.Size(96, 20);
             this.txtNumeroClient.TabIndex = 0;
+            this.txtNumeroClient.Validating += new System.ComponentModel.CancelEventHandler(this.txtNumeroClient_Validating);
             // 
             // gBoxCaracteristiques
             // 

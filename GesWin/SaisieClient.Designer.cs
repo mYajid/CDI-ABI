@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gBoxIdentification = new System.Windows.Forms.GroupBox();
+            this.mtbTelephone = new System.Windows.Forms.MaskedTextBox();
             this.lblTelephone = new System.Windows.Forms.Label();
             this.lblCpVille = new System.Windows.Forms.Label();
             this.lblAdresse = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@
             this.btnContacts = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.mtbTelephone = new System.Windows.Forms.MaskedTextBox();
             this.gBoxIdentification.SuspendLayout();
             this.gBoxCaracteristiques.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -84,6 +84,15 @@
             this.gBoxIdentification.TabIndex = 0;
             this.gBoxIdentification.TabStop = false;
             this.gBoxIdentification.Text = "Identification";
+            this.gBoxIdentification.Leave += new System.EventHandler(this.gBoxIdentification_Leave);
+            // 
+            // mtbTelephone
+            // 
+            this.mtbTelephone.Location = new System.Drawing.Point(135, 149);
+            this.mtbTelephone.Mask = "00 00 00 00 00 00 00 0";
+            this.mtbTelephone.Name = "mtbTelephone";
+            this.mtbTelephone.Size = new System.Drawing.Size(124, 20);
+            this.mtbTelephone.TabIndex = 12;
             // 
             // lblTelephone
             // 
@@ -337,14 +346,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // mtbTelephone
-            // 
-            this.mtbTelephone.Location = new System.Drawing.Point(135, 149);
-            this.mtbTelephone.Mask = "00 00 00 00 00 00 00 0";
-            this.mtbTelephone.Name = "mtbTelephone";
-            this.mtbTelephone.Size = new System.Drawing.Size(124, 20);
-            this.mtbTelephone.TabIndex = 12;
             // 
             // FormSaisieNouveauClient
             // 

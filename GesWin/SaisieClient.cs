@@ -140,5 +140,54 @@ namespace GesWin
             btn.BackColor = Color.Silver;
             btn.ForeColor = Color.Black;
         }
-    }
+
+        private void gBoxIdentification_Leave(object sender, EventArgs e)
+        {
+           
+                Client x = new Client();
+
+                errorProvider1.SetError(txtNumeroClient, string.Empty);
+                errorProvider1.SetError(txtCP, string.Empty);
+                errorProvider1.SetError(txtTelephone, string.Empty);
+
+                try
+                {
+                    x.IdClient = int.Parse(txtNumeroClient.Text);
+                    this.btnOK.Enabled = true;
+                }
+                catch (Exception)
+                {
+
+                    errorProvider1.SetError(txtNumeroClient, "Le Numero client ne doit comporter que 4 chiffres");
+                    MessageBox.Show("Le numéro Client saisi n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
+                    this.btnOK.Enabled = false;
+                }
+
+                try
+                {
+                    x.CodPostal = int.Parse(txtCP.Text);
+                    this.btnOK.Enabled = true;
+                }
+                catch (Exception)
+                {
+
+                    errorProvider1.SetError(txtCP, "Le Code Postale doit comporter 5 chiffres");
+                    MessageBox.Show("Le Code Postal n'est pas valide", "ERREUR", MessageBoxButtons.OK);
+                    this.btnOK.Enabled = false;
+                }
+
+                try
+                {
+                    x.TelephoneClient = int.Parse(txtTelephone.Text);
+                    this.btnOK.Enabled = true;
+                }
+                catch (Exception)
+                {
+
+                    errorProvider1.SetError(txtTelephone, "Le Numero de telephone doit comporter 10 chiffres");
+                    MessageBox.Show("Le numéro de Telephone  n'est pas valide", "ERREUR", MessageBoxButtons.OK);
+                    this.btnOK.Enabled = false;
+
+                }
+            }
 }

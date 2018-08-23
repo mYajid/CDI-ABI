@@ -78,7 +78,7 @@
             this.lstActivite.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstActivite.FormattingEnabled = true;
             this.lstActivite.ItemHeight = 14;
-            this.lstActivite.Location = new System.Drawing.Point(412, 66);
+            this.lstActivite.Location = new System.Drawing.Point(413, 66);
             this.lstActivite.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lstActivite.Name = "lstActivite";
             this.lstActivite.ScrollAlwaysVisible = true;
@@ -112,7 +112,7 @@
             // txtNouvelleActivite
             // 
             this.txtNouvelleActivite.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNouvelleActivite.Location = new System.Drawing.Point(20, 60);
+            this.txtNouvelleActivite.Location = new System.Drawing.Point(13, 66);
             this.txtNouvelleActivite.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNouvelleActivite.Name = "txtNouvelleActivite";
             this.txtNouvelleActivite.Size = new System.Drawing.Size(293, 22);
@@ -134,7 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 360);
+            this.ClientSize = new System.Drawing.Size(795, 364);
             this.Controls.Add(this.btnOKActivite);
             this.Controls.Add(this.txtNouvelleActivite);
             this.Controls.Add(this.btnSupprimerActivite);

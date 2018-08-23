@@ -29,9 +29,7 @@ namespace GesWin
             //Appel.Show();
         }
 
-       
-
-      
+           
 
        // private void MenuTool(object sender, EventArgs e)
         //{
@@ -48,12 +46,6 @@ namespace GesWin
         //}
 
         
-
-        private void btnQuitte_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
        
         private void btnColor_MouseEnter(object sender, EventArgs e)
         {
@@ -87,9 +79,10 @@ namespace GesWin
             enf.Visible = true;
         }
 
-       
-
-       
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
     

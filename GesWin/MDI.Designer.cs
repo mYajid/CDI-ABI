@@ -41,7 +41,7 @@
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.créationClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultationClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnQuitter = new System.Windows.Forms.Button();
+            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +56,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1454, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1254, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "Principal Screen";
             // 
@@ -65,7 +65,8 @@
             this.newToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cToolStripMenuItem,
             this.contactToolStripMenuItem,
-            this.activiteToolStripMenuItem});
+            this.activiteToolStripMenuItem,
+            this.quitterToolStripMenuItem});
             this.newToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
@@ -86,7 +87,6 @@
             this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
             this.contactToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.contactToolStripMenuItem.Text = "Creation Activité";
-            
             // 
             // activiteToolStripMenuItem
             // 
@@ -94,7 +94,6 @@
             this.activiteToolStripMenuItem.Name = "activiteToolStripMenuItem";
             this.activiteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.activiteToolStripMenuItem.Text = "Creation Nature";
-          
             // 
             // modificationToolStripMenuItem
             // 
@@ -130,7 +129,6 @@
             this.clientToolStripMenuItem1.Name = "clientToolStripMenuItem1";
             this.clientToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.clientToolStripMenuItem1.Text = "Client";
-          // this.clientToolStripMenuItem1.Click += new System.EventHandler(this.clientToolStripMenuItem1_Click);
             // 
             // aideToolStripMenuItem
             // 
@@ -156,19 +154,14 @@
             this.consultationClientToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.consultationClientToolStripMenuItem.Text = "Consultation client";
             // 
-            // btnQuitter
+            // quitterToolStripMenuItem
             // 
-            this.btnQuitter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQuitter.ForeColor = System.Drawing.Color.Blue;
-            this.btnQuitter.Location = new System.Drawing.Point(1329, 602);
-            this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(125, 51);
-            this.btnQuitter.TabIndex = 3;
-            this.btnQuitter.Text = "Quitter";
-            this.btnQuitter.UseVisualStyleBackColor = true;
-            this.btnQuitter.Click += new System.EventHandler(this.btnQuitte_Click);
-            this.btnQuitter.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
-            this.btnQuitter.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
+            this.quitterToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.quitterToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitterToolStripMenuItem.Text = "Quitter";
+            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
             // MDI
             // 
@@ -177,8 +170,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1454, 648);
-            this.Controls.Add(this.btnQuitter);
+            this.ClientSize = new System.Drawing.Size(1254, 648);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -210,9 +202,9 @@
         private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem1;
-        private System.Windows.Forms.Button btnQuitter;
         private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem créationClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultationClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
     }
 }

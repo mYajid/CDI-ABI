@@ -57,6 +57,7 @@
             this.btnContacts = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.mtbTelephone = new System.Windows.Forms.MaskedTextBox();
             this.gBoxIdentification.SuspendLayout();
             this.gBoxCaracteristiques.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -64,6 +65,7 @@
             // 
             // gBoxIdentification
             // 
+            this.gBoxIdentification.Controls.Add(this.mtbTelephone);
             this.gBoxIdentification.Controls.Add(this.lblTelephone);
             this.gBoxIdentification.Controls.Add(this.lblCpVille);
             this.gBoxIdentification.Controls.Add(this.lblAdresse);
@@ -82,14 +84,12 @@
             this.gBoxIdentification.TabIndex = 0;
             this.gBoxIdentification.TabStop = false;
             this.gBoxIdentification.Text = "Identification";
-            this.gBoxIdentification.Leave += new System.EventHandler(this.gBoxIdentification_Leave);
-            this.gBoxIdentification.Validating += new System.ComponentModel.CancelEventHandler(this.gBoxIdentification_Validating);
-            this.gBoxIdentification.Validated += new System.EventHandler(this.gBoxIdentification_Validated);
             // 
             // lblTelephone
             // 
             this.lblTelephone.AutoSize = true;
-            this.lblTelephone.Location = new System.Drawing.Point(13, 153);
+            this.lblTelephone.ForeColor = System.Drawing.Color.Black;
+            this.lblTelephone.Location = new System.Drawing.Point(13, 156);
             this.lblTelephone.Name = "lblTelephone";
             this.lblTelephone.Size = new System.Drawing.Size(64, 13);
             this.lblTelephone.TabIndex = 11;
@@ -98,6 +98,7 @@
             // lblCpVille
             // 
             this.lblCpVille.AutoSize = true;
+            this.lblCpVille.ForeColor = System.Drawing.Color.Black;
             this.lblCpVille.Location = new System.Drawing.Point(13, 127);
             this.lblCpVille.Name = "lblCpVille";
             this.lblCpVille.Size = new System.Drawing.Size(52, 13);
@@ -107,6 +108,7 @@
             // lblAdresse
             // 
             this.lblAdresse.AutoSize = true;
+            this.lblAdresse.ForeColor = System.Drawing.Color.Black;
             this.lblAdresse.Location = new System.Drawing.Point(13, 71);
             this.lblAdresse.Name = "lblAdresse";
             this.lblAdresse.Size = new System.Drawing.Size(51, 13);
@@ -116,6 +118,7 @@
             // lblRaisonSociale
             // 
             this.lblRaisonSociale.AutoSize = true;
+            this.lblRaisonSociale.ForeColor = System.Drawing.Color.Black;
             this.lblRaisonSociale.Location = new System.Drawing.Point(13, 48);
             this.lblRaisonSociale.Name = "lblRaisonSociale";
             this.lblRaisonSociale.Size = new System.Drawing.Size(84, 13);
@@ -125,6 +128,7 @@
             // lblNumeroClient
             // 
             this.lblNumeroClient.AutoSize = true;
+            this.lblNumeroClient.ForeColor = System.Drawing.Color.Black;
             this.lblNumeroClient.Location = new System.Drawing.Point(13, 23);
             this.lblNumeroClient.Name = "lblNumeroClient";
             this.lblNumeroClient.Size = new System.Drawing.Size(78, 13);
@@ -133,7 +137,7 @@
             // 
             // txtTelephone
             // 
-            this.txtTelephone.Location = new System.Drawing.Point(135, 149);
+            this.txtTelephone.Location = new System.Drawing.Point(402, 165);
             this.txtTelephone.Name = "txtTelephone";
             this.txtTelephone.Size = new System.Drawing.Size(163, 20);
             this.txtTelephone.TabIndex = 6;
@@ -194,6 +198,7 @@
             this.gBoxCaracteristiques.Controls.Add(this.txtCA);
             this.gBoxCaracteristiques.Controls.Add(this.txtEffectif);
             this.gBoxCaracteristiques.Controls.Add(this.chBoxPrive);
+            this.gBoxCaracteristiques.ForeColor = System.Drawing.Color.Black;
             this.gBoxCaracteristiques.Location = new System.Drawing.Point(27, 262);
             this.gBoxCaracteristiques.Name = "gBoxCaracteristiques";
             this.gBoxCaracteristiques.Size = new System.Drawing.Size(590, 149);
@@ -291,40 +296,55 @@
             // 
             // btnOK
             // 
+            this.btnOK.BackColor = System.Drawing.Color.Silver;
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Enabled = false;
+            this.btnOK.ForeColor = System.Drawing.Color.Black;
             this.btnOK.Location = new System.Drawing.Point(344, 440);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(40, 23);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnContacts
             // 
+            this.btnContacts.BackColor = System.Drawing.Color.Silver;
+            this.btnContacts.ForeColor = System.Drawing.Color.Black;
             this.btnContacts.Location = new System.Drawing.Point(409, 440);
             this.btnContacts.Name = "btnContacts";
             this.btnContacts.Size = new System.Drawing.Size(105, 23);
             this.btnContacts.TabIndex = 3;
             this.btnContacts.Text = "Contacts";
-            this.btnContacts.UseVisualStyleBackColor = true;
+            this.btnContacts.UseVisualStyleBackColor = false;
             this.btnContacts.Click += new System.EventHandler(this.btnContacts_Click);
             // 
             // btnAnnuler
             // 
+            this.btnAnnuler.BackColor = System.Drawing.Color.Silver;
             this.btnAnnuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnAnnuler.ForeColor = System.Drawing.Color.Black;
             this.btnAnnuler.Location = new System.Drawing.Point(542, 440);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(75, 23);
             this.btnAnnuler.TabIndex = 4;
             this.btnAnnuler.Text = "Annuler";
-            this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.UseVisualStyleBackColor = false;
             this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
+            this.btnAnnuler.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
+            this.btnAnnuler.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // mtbTelephone
+            // 
+            this.mtbTelephone.Location = new System.Drawing.Point(135, 149);
+            this.mtbTelephone.Mask = "00 00 00 00 00 00 00 0";
+            this.mtbTelephone.Name = "mtbTelephone";
+            this.mtbTelephone.Size = new System.Drawing.Size(124, 20);
+            this.mtbTelephone.TabIndex = 12;
             // 
             // FormSaisieNouveauClient
             // 
@@ -379,6 +399,7 @@
         private System.Windows.Forms.Label lblEffectif;
         private System.Windows.Forms.Label lblPrive;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.MaskedTextBox mtbTelephone;
     }
 }
 

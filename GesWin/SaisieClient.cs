@@ -12,9 +12,9 @@ using GestionCommercialeDll;
 namespace GesWin
 {
     public partial class FormSaisieNouveauClient : Form
-    
+
     {
-        
+
         public FormSaisieNouveauClient()
         {
             InitializeComponent();
@@ -36,11 +36,11 @@ namespace GesWin
                 lstNature.Items.Add(item);
             }
 
-        }             
-                          
+        }
+
 
         private void btnContacts_Click(object sender, EventArgs e)
-        { 
+        {
             if (btnOK.Enabled == false)
             {
                 // ne lance pas le formulaire
@@ -56,26 +56,17 @@ namespace GesWin
                     }
                 }
             }
-            
+
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
             Client _client = new Client();
 
-            try
-            {
+            
                 _client.IdClient = int.Parse(txtNumeroClient.Text);
-            }
-            catch (Exception ex)
-            {
-
-                errorProvider1.SetError(txtNumeroClient, ex.Message);
-
-            }
-
-           
-
+         
+                    
             _client.RaisonSociale = txtRaisonSociale.Text;
             _client.Adresse1 = txtAdresse1.Text;
             _client.Adresse2 = txtAdresse2.Text;
@@ -83,18 +74,18 @@ namespace GesWin
             _client.Ville = txtVille.Text;
 
 
-            _client.TelephoneClient = int.Parse(txtTelephone.Text);
+            _client.TelephoneClient = int.Parse(txtTelepho.Text);
 
             _client.TypeSociete = chBoxPrive.Checked;
             _client.Effectif = int.Parse(txtEffectif.Text);
             _client.CA = decimal.Parse(txtCA.Text);
-            
+
             //nouveau client donc nouvelle instance de la classe Activité
             Activite activite = new Activite();
 
-            activite.Activit= (String)lstActivite.SelectedItem;
+            activite.Activit = (String)lstActivite.SelectedItem;
 
-            activite.NatureAct= (Natur)lstNature.SelectedItem;
+            activite.NatureAct = (Natur)lstNature.SelectedItem;
 
             _client.Activite = activite;
             Client.clientsHS.Add(_client);
@@ -111,7 +102,7 @@ namespace GesWin
 
         private void lstActivite_SelectedIndexChanged(object sender, EventArgs e)
         {
-          //  String metier = (String)lstActivite.SelectedItem;
+            //  String metier = (String)lstActivite.SelectedItem;
         }
 
         private void lstNature_SelectedIndexChanged(object sender, EventArgs e)
@@ -143,51 +134,52 @@ namespace GesWin
 
         private void gBoxIdentification_Leave(object sender, EventArgs e)
         {
-           
-                Client x = new Client();
 
-                errorProvider1.SetError(txtNumeroClient, string.Empty);
-                errorProvider1.SetError(txtCP, string.Empty);
-                errorProvider1.SetError(txtTelephone, string.Empty);
+            Client x = new Client();
 
-                try
-                {
-                    x.IdClient = int.Parse(txtNumeroClient.Text);
-                    this.btnOK.Enabled = true;
-                }
-                catch (Exception)
-                {
+            errorProvider1.SetError(txtNumeroClient, string.Empty);
+            errorProvider1.SetError(txtCP, string.Empty);
+            errorProvider1.SetError(txtTelepho, string.Empty);
 
-                    errorProvider1.SetError(txtNumeroClient, "Le Numero client ne doit comporter que 4 chiffres");
-                    MessageBox.Show("Le numéro Client saisi n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
-                    this.btnOK.Enabled = false;
-                }
-
-                try
-                {
-                    x.CodPostal = int.Parse(txtCP.Text);
-                    this.btnOK.Enabled = true;
-                }
-                catch (Exception)
-                {
-
-                    errorProvider1.SetError(txtCP, "Le Code Postale doit comporter 5 chiffres");
-                    MessageBox.Show("Le Code Postal n'est pas valide", "ERREUR", MessageBoxButtons.OK);
-                    this.btnOK.Enabled = false;
-                }
-
-                try
-                {
-                    x.TelephoneClient = int.Parse(txtTelephone.Text);
-                    this.btnOK.Enabled = true;
-                }
-                catch (Exception)
-                {
-
-                    errorProvider1.SetError(txtTelephone, "Le Numero de telephone doit comporter 10 chiffres");
-                    MessageBox.Show("Le numéro de Telephone  n'est pas valide", "ERREUR", MessageBoxButtons.OK);
-                    this.btnOK.Enabled = false;
-
-                }
+            try
+            {
+                x.IdClient = int.Parse(txtNumeroClient.Text);
+                this.btnOK.Enabled = true;
             }
+            catch (Exception)
+            {
+
+                errorProvider1.SetError(txtNumeroClient, "Le Numero client ne doit comporter que 4 chiffres");
+                MessageBox.Show("Le numéro Client saisi n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
+                this.btnOK.Enabled = false;
+            }
+
+            try
+            {
+                x.CodPostal = int.Parse(txtCP.Text);
+                this.btnOK.Enabled = true;
+            }
+            catch (Exception)
+            {
+
+                errorProvider1.SetError(txtCP, "Le Code Postale doit comporter 5 chiffres");
+                MessageBox.Show("Le Code Postal n'est pas valide", "ERREUR", MessageBoxButtons.OK);
+                this.btnOK.Enabled = false;
+            }
+
+            try
+            {
+                x.TelephoneClient = int.Parse(txtTelephone.Text);
+                this.btnOK.Enabled = true;
+            }
+            catch (Exception)
+            {
+
+                errorProvider1.SetError(txtTelephone, "Le Numero de telephone doit comporter 10 chiffres");
+                MessageBox.Show("Le numéro de Telephone  n'est pas valide", "ERREUR", MessageBoxButtons.OK);
+                this.btnOK.Enabled = false;
+
+            }
+        }
+    }
 }

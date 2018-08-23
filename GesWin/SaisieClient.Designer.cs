@@ -30,13 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gBoxIdentification = new System.Windows.Forms.GroupBox();
-            this.mtbTelephone = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelephone = new System.Windows.Forms.MaskedTextBox();
             this.lblTelephone = new System.Windows.Forms.Label();
             this.lblCpVille = new System.Windows.Forms.Label();
             this.lblAdresse = new System.Windows.Forms.Label();
             this.lblRaisonSociale = new System.Windows.Forms.Label();
             this.lblNumeroClient = new System.Windows.Forms.Label();
-            this.txtTelephone = new System.Windows.Forms.TextBox();
             this.txtVille = new System.Windows.Forms.TextBox();
             this.txtCP = new System.Windows.Forms.TextBox();
             this.txtAdresse2 = new System.Windows.Forms.TextBox();
@@ -65,13 +64,12 @@
             // 
             // gBoxIdentification
             // 
-            this.gBoxIdentification.Controls.Add(this.mtbTelephone);
+            this.gBoxIdentification.Controls.Add(this.txtTelephone);
             this.gBoxIdentification.Controls.Add(this.lblTelephone);
             this.gBoxIdentification.Controls.Add(this.lblCpVille);
             this.gBoxIdentification.Controls.Add(this.lblAdresse);
             this.gBoxIdentification.Controls.Add(this.lblRaisonSociale);
             this.gBoxIdentification.Controls.Add(this.lblNumeroClient);
-            this.gBoxIdentification.Controls.Add(this.txtTelephone);
             this.gBoxIdentification.Controls.Add(this.txtVille);
             this.gBoxIdentification.Controls.Add(this.txtCP);
             this.gBoxIdentification.Controls.Add(this.txtAdresse2);
@@ -86,13 +84,13 @@
             this.gBoxIdentification.Text = "Identification";
             this.gBoxIdentification.Leave += new System.EventHandler(this.gBoxIdentification_Leave);
             // 
-            // mtbTelephone
+            // txtTelephone
             // 
-            this.mtbTelephone.Location = new System.Drawing.Point(135, 149);
-            this.mtbTelephone.Mask = "00 00 00 00 00 00 00 0";
-            this.mtbTelephone.Name = "mtbTelephone";
-            this.mtbTelephone.Size = new System.Drawing.Size(124, 20);
-            this.mtbTelephone.TabIndex = 12;
+            this.txtTelephone.Location = new System.Drawing.Point(135, 149);
+            this.txtTelephone.Mask = "00 00 00 00 00";
+            this.txtTelephone.Name = "txtTelephone";
+            this.txtTelephone.Size = new System.Drawing.Size(96, 20);
+            this.txtTelephone.TabIndex = 12;
             // 
             // lblTelephone
             // 
@@ -143,13 +141,6 @@
             this.lblNumeroClient.Size = new System.Drawing.Size(78, 13);
             this.lblNumeroClient.TabIndex = 7;
             this.lblNumeroClient.Text = "Numéro client :";
-            // 
-            // txtTelephone
-            // 
-            this.txtTelephone.Location = new System.Drawing.Point(402, 165);
-            this.txtTelephone.Name = "txtTelephone";
-            this.txtTelephone.Size = new System.Drawing.Size(163, 20);
-            this.txtTelephone.TabIndex = 6;
             // 
             // txtVille
             // 
@@ -374,7 +365,6 @@
 
         private System.Windows.Forms.GroupBox gBoxIdentification;
         private System.Windows.Forms.GroupBox gBoxCaracteristiques;
-        private System.Windows.Forms.TextBox txtTelephone;
         private System.Windows.Forms.TextBox txtVille;
         private System.Windows.Forms.TextBox txtCP;
         private System.Windows.Forms.TextBox txtAdresse2;
@@ -400,7 +390,7 @@
         private System.Windows.Forms.Label lblEffectif;
         private System.Windows.Forms.Label lblPrive;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.MaskedTextBox mtbTelephone;
+        private System.Windows.Forms.MaskedTextBox txtTelephone;
     }
 }
 

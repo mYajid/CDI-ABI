@@ -22,8 +22,8 @@ namespace GesWin
 
             Client.clientsHS = new HashSet<Client>(clientList);
 
-            //List<String> metiers = new List<string>()
-            //{"Administration", "Bovins", "Cereales", "Boissons", "laiterie", "pêche","Mecanique" };
+            List<String> metiers = new List<string>()
+            {"Administration", "Bovins", "Cereales", "Boissons", "laiterie", "pêche","Mecanique" };
 
 
             //Client client1 = new Client();

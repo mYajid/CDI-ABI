@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GestionCommercialeDll
-{   //public enum Metier {Administration, Bovins, Cereales, Boissons, laiterie, pêche,Mecanique, }
+{   //public enum Metier {Administration, Bovins, Cereales, Boissons, Laiterie, Pêche,Mecanique, }
     public  enum Natur { Principale, Secondaire,Ancienne}
    public class Activite
     {

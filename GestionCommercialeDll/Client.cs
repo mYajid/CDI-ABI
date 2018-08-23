@@ -24,8 +24,7 @@ namespace GestionCommercialeDll
         private string _ville;
         private int _CP;
 
-
-
+        
         public Client()
         {
 
@@ -45,11 +44,9 @@ namespace GestionCommercialeDll
                 if (!IsIdClientValid(value))
                 {
                     throw new Exception(string.Format("La valeur saisie {0} n'est pas valide", value));
-
                 }
                 _idClient = value;
             }
-
         }
 
         /// <summary>
@@ -69,7 +66,6 @@ namespace GestionCommercialeDll
                 }
                 _telephoneClient = value;
             }
-
         }
         /// <summary>
         /// L'effectif de mon client
@@ -84,7 +80,6 @@ namespace GestionCommercialeDll
             {
                 _effectif = value;
             }
-
         }
         /// <summary>
         /// La chiffre d'affaire de mon client 
@@ -99,7 +94,6 @@ namespace GestionCommercialeDll
             {
                 _CA = value;
             }
-
         }
         /// <summary>
         /// Type Societe client
@@ -112,11 +106,8 @@ namespace GestionCommercialeDll
             }
             set
             {
-
                 _typeSociete = value;
-
             }
-
         }
         /// <summary>
         /// Raison Sociale client 
@@ -135,7 +126,6 @@ namespace GestionCommercialeDll
                 }
                 _raisonSociale = value;
             }
-
         }
         /// <summary>
         /// Adresse client
@@ -150,7 +140,6 @@ namespace GestionCommercialeDll
             {
                 _adresse1 = value;
             }
-
         }
         public string Adresse2
         {
@@ -162,7 +151,6 @@ namespace GestionCommercialeDll
             {
                 _adresse2 = value;
             }
-
         }
         /// <summary>
         /// Cod postal client
@@ -176,9 +164,7 @@ namespace GestionCommercialeDll
             set
             {
                 _CP = value;
-
             }
-
         }
         /// <summary>
         /// Ville client 
@@ -191,10 +177,8 @@ namespace GestionCommercialeDll
             }
             set
             {
-
                 _ville = value;
             }
-
         }
         /// <summary>
         /// Vérification du format de la valeur Raison Sociale
@@ -210,14 +194,12 @@ namespace GestionCommercialeDll
 
             for (int i = 0; i < value.Length - 1; i++)
             {
-               
                 if (!char.IsLetter(value[i]) && !char.IsWhiteSpace(value[i]))
                 {
                     return false;
                 }
             }
             return true;
-
         }
         /// <summary>
         /// Verification du format de la valeur telephone
@@ -227,10 +209,9 @@ namespace GestionCommercialeDll
         /// <returns></returns>
         public bool IsTelephoneClientValid(int value)
         {
-
             string valeur = value.ToString();
 
-            if (valeur == null || valeur.Length > 15)
+            if (valeur == null|| valeur.Length < 10 || valeur.Length > 15)
 
                 return false;
 
@@ -242,7 +223,6 @@ namespace GestionCommercialeDll
                 }
             }
             return true;
-
         }
          /// <summary>
         /// Verification de la propriete id client, longueur maxi 4,
@@ -267,7 +247,7 @@ namespace GestionCommercialeDll
                 }
             }
             return true;
-            
+           
         }
         /// <summary>
         /// Surcharge (override) de la fonction héritée Equals
@@ -282,7 +262,6 @@ namespace GestionCommercialeDll
 
             if (!(obj is Client))
             { return false; }
-
 
             return this.IdClient == ((Client)obj).IdClient;
         }

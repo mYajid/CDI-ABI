@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gBoxIdentification = new System.Windows.Forms.GroupBox();
             this.lblTelephone = new System.Windows.Forms.Label();
             this.lblCpVille = new System.Windows.Forms.Label();
@@ -55,8 +56,10 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.btnContacts = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gBoxIdentification.SuspendLayout();
             this.gBoxCaracteristiques.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // gBoxIdentification
@@ -314,6 +317,10 @@
             this.btnAnnuler.UseVisualStyleBackColor = true;
             this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormSaisieNouveauClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,6 +339,7 @@
             this.gBoxIdentification.PerformLayout();
             this.gBoxCaracteristiques.ResumeLayout(false);
             this.gBoxCaracteristiques.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -365,6 +373,7 @@
         private System.Windows.Forms.Label lblActivite;
         private System.Windows.Forms.Label lblEffectif;
         private System.Windows.Forms.Label lblPrive;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

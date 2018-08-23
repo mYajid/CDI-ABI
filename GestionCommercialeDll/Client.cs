@@ -53,14 +53,8 @@ namespace GestionCommercialeDll
         }
 
         /// <summary>
-        ///          
-        /// 
         /// Numero de telephone client
-        /// </summary>
-        /// 
-
-       
-
+        /// </summary>        
         public int TelephoneClient
         {
             get
@@ -171,7 +165,7 @@ namespace GestionCommercialeDll
 
         }
         /// <summary>
-        /// Cod Postal Client
+        /// Cod postal client
         /// </summary>
         public int CodPostal
         {
@@ -202,7 +196,12 @@ namespace GestionCommercialeDll
             }
 
         }
-
+        /// <summary>
+        /// Vérification du format de la valeur Raison Sociale
+        /// La longueur maxi 32 ne doit pas contenir de chiffre, elle accepte aussi des espaces vides
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public bool IsRaisonSocialeValide(string value)
         {
             if (value == null || value.Length > 32)
@@ -220,6 +219,12 @@ namespace GestionCommercialeDll
             return true;
 
         }
+        /// <summary>
+        /// Verification du format de la valeur telephone
+        /// Longueur maxi 15, ne doit pas contenir de lettres  
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public bool IsTelephoneClientValid(int value)
         {
 
@@ -238,11 +243,13 @@ namespace GestionCommercialeDll
             }
             return true;
 
-
-
-
         }
-
+         /// <summary>
+        /// Verification de la propriete id client, longueur maxi 4,
+        /// ne doit pas contenir de lettres
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public bool IsIdClientValid(int value)
             
         {
@@ -262,6 +269,12 @@ namespace GestionCommercialeDll
             return true;
             
         }
+        /// <summary>
+        /// Surcharge (override) de la fonction héritée Equals
+        /// Elle doit renvoyer la comparaison de deux clients
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(Object obj)
         {
             if (obj == null)
@@ -273,13 +286,19 @@ namespace GestionCommercialeDll
 
             return this.IdClient == ((Client)obj).IdClient;
         }
-
+        /// <summary>
+        /// Surcharge(override) de la fonction héritée Equals
+        /// Elle doit renvoyer le HashCode de la proprieté Id client 
+        /// </summary>
+        /// <returns></returns>
         public override int GetHashCode()
         {
             return this.IdClient.GetHashCode();
         }
 
+
         public HashSet<Contact> ListContact {get; set;}
+
         public Activite Activite { get; set; }
         
 

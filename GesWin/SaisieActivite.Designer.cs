@@ -41,17 +41,21 @@
             // lblNouvelleActivite
             // 
             this.lblNouvelleActivite.AutoSize = true;
-            this.lblNouvelleActivite.Location = new System.Drawing.Point(12, 23);
+            this.lblNouvelleActivite.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNouvelleActivite.Location = new System.Drawing.Point(16, 25);
+            this.lblNouvelleActivite.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNouvelleActivite.Name = "lblNouvelleActivite";
-            this.lblNouvelleActivite.Size = new System.Drawing.Size(123, 13);
+            this.lblNouvelleActivite.Size = new System.Drawing.Size(163, 14);
             this.lblNouvelleActivite.TabIndex = 0;
             this.lblNouvelleActivite.Text = "Entrez nouvelle activité :";
             // 
             // btnTrierActivite
             // 
-            this.btnTrierActivite.Location = new System.Drawing.Point(309, 13);
+            this.btnTrierActivite.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrierActivite.Location = new System.Drawing.Point(536, 13);
+            this.btnTrierActivite.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnTrierActivite.Name = "btnTrierActivite";
-            this.btnTrierActivite.Size = new System.Drawing.Size(78, 23);
+            this.btnTrierActivite.Size = new System.Drawing.Size(116, 37);
             this.btnTrierActivite.TabIndex = 1;
             this.btnTrierActivite.Text = "Trier";
             this.btnTrierActivite.UseVisualStyleBackColor = true;
@@ -59,9 +63,11 @@
             // 
             // btnAnnulerActivite
             // 
-            this.btnAnnulerActivite.Location = new System.Drawing.Point(353, 227);
+            this.btnAnnulerActivite.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnnulerActivite.Location = new System.Drawing.Point(647, 272);
+            this.btnAnnulerActivite.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAnnulerActivite.Name = "btnAnnulerActivite";
-            this.btnAnnulerActivite.Size = new System.Drawing.Size(85, 23);
+            this.btnAnnulerActivite.Size = new System.Drawing.Size(113, 36);
             this.btnAnnulerActivite.TabIndex = 2;
             this.btnAnnulerActivite.Text = "Annuler";
             this.btnAnnulerActivite.UseVisualStyleBackColor = true;
@@ -69,18 +75,23 @@
             // 
             // lstActivite
             // 
+            this.lstActivite.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstActivite.FormattingEnabled = true;
-            this.lstActivite.Location = new System.Drawing.Point(243, 56);
+            this.lstActivite.ItemHeight = 14;
+            this.lstActivite.Location = new System.Drawing.Point(412, 66);
+            this.lstActivite.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lstActivite.Name = "lstActivite";
             this.lstActivite.ScrollAlwaysVisible = true;
-            this.lstActivite.Size = new System.Drawing.Size(195, 160);
+            this.lstActivite.Size = new System.Drawing.Size(347, 172);
             this.lstActivite.TabIndex = 3;
             // 
             // btnAjouterActivite
             // 
-            this.btnAjouterActivite.Location = new System.Drawing.Point(15, 227);
+            this.btnAjouterActivite.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjouterActivite.Location = new System.Drawing.Point(169, 272);
+            this.btnAjouterActivite.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAjouterActivite.Name = "btnAjouterActivite";
-            this.btnAjouterActivite.Size = new System.Drawing.Size(75, 23);
+            this.btnAjouterActivite.Size = new System.Drawing.Size(112, 36);
             this.btnAjouterActivite.TabIndex = 4;
             this.btnAjouterActivite.Text = "Ajouter";
             this.btnAjouterActivite.UseVisualStyleBackColor = true;
@@ -88,9 +99,11 @@
             // 
             // btnSupprimerActivite
             // 
-            this.btnSupprimerActivite.Location = new System.Drawing.Point(127, 227);
+            this.btnSupprimerActivite.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupprimerActivite.Location = new System.Drawing.Point(323, 272);
+            this.btnSupprimerActivite.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSupprimerActivite.Name = "btnSupprimerActivite";
-            this.btnSupprimerActivite.Size = new System.Drawing.Size(75, 23);
+            this.btnSupprimerActivite.Size = new System.Drawing.Size(111, 36);
             this.btnSupprimerActivite.TabIndex = 5;
             this.btnSupprimerActivite.Text = "Supprimer ";
             this.btnSupprimerActivite.UseVisualStyleBackColor = true;
@@ -98,16 +111,20 @@
             // 
             // txtNouvelleActivite
             // 
-            this.txtNouvelleActivite.Location = new System.Drawing.Point(15, 56);
+            this.txtNouvelleActivite.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNouvelleActivite.Location = new System.Drawing.Point(20, 60);
+            this.txtNouvelleActivite.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNouvelleActivite.Name = "txtNouvelleActivite";
-            this.txtNouvelleActivite.Size = new System.Drawing.Size(187, 20);
+            this.txtNouvelleActivite.Size = new System.Drawing.Size(293, 22);
             this.txtNouvelleActivite.TabIndex = 6;
             // 
             // btnOKActivite
             // 
-            this.btnOKActivite.Location = new System.Drawing.Point(243, 227);
+            this.btnOKActivite.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOKActivite.Location = new System.Drawing.Point(489, 272);
+            this.btnOKActivite.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnOKActivite.Name = "btnOKActivite";
-            this.btnOKActivite.Size = new System.Drawing.Size(75, 23);
+            this.btnOKActivite.Size = new System.Drawing.Size(107, 36);
             this.btnOKActivite.TabIndex = 7;
             this.btnOKActivite.Text = "OK";
             this.btnOKActivite.UseVisualStyleBackColor = true;
@@ -115,9 +132,9 @@
             // 
             // FormSaisieActivite
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 267);
+            this.ClientSize = new System.Drawing.Size(875, 360);
             this.Controls.Add(this.btnOKActivite);
             this.Controls.Add(this.txtNouvelleActivite);
             this.Controls.Add(this.btnSupprimerActivite);
@@ -126,6 +143,8 @@
             this.Controls.Add(this.btnAnnulerActivite);
             this.Controls.Add(this.btnTrierActivite);
             this.Controls.Add(this.lblNouvelleActivite);
+            this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormSaisieActivite";

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Text.RegularExpressions;
 namespace GestionCommercialeDll
 {
    
@@ -60,7 +60,11 @@ namespace GestionCommercialeDll
             }
             set
             {
-                if (!IsTelephoneClientValid(value))
+
+
+
+               if (!IsTelephoneClientValid(value))
+
                 {
                     throw new Exception(string.Format("Le numero saisie {0} n'est pas valide", value));
                 }
@@ -205,24 +209,31 @@ namespace GestionCommercialeDll
         /// Verification du format de la valeur telephone
         /// Longueur maxi 15, ne doit pas contenir de lettres  
         /// </summary>
-        /// <param name="value"></param>
+        /// <param name="number"></param>
         /// <returns></returns>
         public bool IsTelephoneClientValid(int value)
         {
-            string valeur = value.ToString();
+            string number = value.ToString();
 
-            if (valeur == null|| valeur.Length < 10 || valeur.Length > 15)
+            return Regex.Match(number, @"^(^[0-9]{9}$|^06[0-9]{8}$|^00[0-9]{11,13}$)$").Success;
 
-                return false;
 
-            for (int i = 0; i < valeur.Length - 1; i++)
-            {
-                if (!char.IsDigit(valeur[i]))
-                {
-                    return false;
-                }
-            }
-            return true;
+
+
+            //string valeur = value.ToString();
+
+            //if (valeur == null|| valeur.Length < 10 || valeur.Length > 15)
+
+            //    return false;
+
+            //for (int i = 0; i < valeur.Length - 1; i++)
+            //{
+            //    if (!char.IsDigit(valeur[i]))
+            //    {
+            //        return false;
+            //    }
+            //}
+            //return true;
         }
          /// <summary>
         /// Verification de la propriete id client, longueur maxi 4,

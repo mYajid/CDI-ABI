@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gBoxIdentification = new System.Windows.Forms.GroupBox();
-            this.txtTelephone = new System.Windows.Forms.MaskedTextBox();
             this.lblTelephone = new System.Windows.Forms.Label();
             this.lblCpVille = new System.Windows.Forms.Label();
             this.lblAdresse = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@
             this.btnContacts = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtTelephone = new System.Windows.Forms.TextBox();
             this.gBoxIdentification.SuspendLayout();
             this.gBoxCaracteristiques.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -83,14 +83,6 @@
             this.gBoxIdentification.TabStop = false;
             this.gBoxIdentification.Text = "Identification";
             this.gBoxIdentification.Leave += new System.EventHandler(this.gBoxIdentification_Leave);
-            // 
-            // txtTelephone
-            // 
-            this.txtTelephone.Location = new System.Drawing.Point(135, 149);
-            this.txtTelephone.Mask = "00 00 00 00 00";
-            this.txtTelephone.Name = "txtTelephone";
-            this.txtTelephone.Size = new System.Drawing.Size(96, 20);
-            this.txtTelephone.TabIndex = 12;
             // 
             // lblTelephone
             // 
@@ -298,6 +290,7 @@
             // 
             this.btnOK.BackColor = System.Drawing.Color.Silver;
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnOK.Enabled = false;
             this.btnOK.ForeColor = System.Drawing.Color.Black;
             this.btnOK.Location = new System.Drawing.Point(344, 440);
             this.btnOK.Name = "btnOK";
@@ -337,6 +330,14 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // txtTelephone
+            // 
+            this.txtTelephone.Location = new System.Drawing.Point(135, 149);
+            this.txtTelephone.MaxLength = 14;
+            this.txtTelephone.Name = "txtTelephone";
+            this.txtTelephone.Size = new System.Drawing.Size(96, 20);
+            this.txtTelephone.TabIndex = 12;
             // 
             // FormSaisieNouveauClient
             // 
@@ -390,7 +391,7 @@
         private System.Windows.Forms.Label lblEffectif;
         private System.Windows.Forms.Label lblPrive;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.MaskedTextBox txtTelephone;
+        private System.Windows.Forms.TextBox txtTelephone;
     }
 }
 

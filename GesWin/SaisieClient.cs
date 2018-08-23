@@ -64,15 +64,13 @@ namespace GesWin
             Client _client = new Client();
 
             
-                _client.IdClient = int.Parse(txtNumeroClient.Text);
-         
+            _client.IdClient = int.Parse(txtNumeroClient.Text);         
                     
             _client.RaisonSociale = txtRaisonSociale.Text;
             _client.Adresse1 = txtAdresse1.Text;
             _client.Adresse2 = txtAdresse2.Text;
             _client.CodPostal = int.Parse(txtCP.Text);
             _client.Ville = txtVille.Text;
-
 
             _client.TelephoneClient = int.Parse(txtTelephone.Text);
 
@@ -112,10 +110,7 @@ namespace GesWin
 
         private void txtNumeroClient_Validating(object sender, CancelEventArgs e)
         {
-            //    errorProvider1.SetError(txtNumeroClient, string.Empty);
-
-
-            //    errorProvider1.SetError(txtNumeroClient, " Numero non valide");
+            
         }
 
         private void btnColor_MouseEnter(object sender, EventArgs e)
@@ -140,6 +135,8 @@ namespace GesWin
             errorProvider1.SetError(txtNumeroClient, string.Empty);
             errorProvider1.SetError(txtCP, string.Empty);
             errorProvider1.SetError(txtTelephone, string.Empty);
+
+           
 
             try
             {
@@ -168,7 +165,7 @@ namespace GesWin
             }
 
             try
-            {
+            {   
                 x.TelephoneClient = int.Parse(txtTelephone.Text);
                 this.btnOK.Enabled = true;
             }

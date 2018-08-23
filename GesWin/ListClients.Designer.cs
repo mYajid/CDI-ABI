@@ -69,7 +69,7 @@
             this.gbxrechclt.Controls.Add(this.btnListeCliente);
             this.gbxrechclt.Location = new System.Drawing.Point(34, 25);
             this.gbxrechclt.Name = "gbxrechclt";
-            this.gbxrechclt.Size = new System.Drawing.Size(561, 93);
+            this.gbxrechclt.Size = new System.Drawing.Size(550, 93);
             this.gbxrechclt.TabIndex = 0;
             this.gbxrechclt.TabStop = false;
             this.gbxrechclt.Text = "Recherche";
@@ -110,9 +110,9 @@
             // 
             this.btnRecherche.BackColor = System.Drawing.Color.LightCyan;
             this.btnRecherche.ForeColor = System.Drawing.Color.Black;
-            this.btnRecherche.Location = new System.Drawing.Point(347, 33);
+            this.btnRecherche.Location = new System.Drawing.Point(360, 33);
             this.btnRecherche.Name = "btnRecherche";
-            this.btnRecherche.Size = new System.Drawing.Size(89, 30);
+            this.btnRecherche.Size = new System.Drawing.Size(87, 30);
             this.btnRecherche.TabIndex = 1;
             this.btnRecherche.Text = "Rechercher";
             this.btnRecherche.UseVisualStyleBackColor = false;
@@ -136,6 +136,7 @@
             // 
             // datgwListeClients
             // 
+            this.datgwListeClients.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Honeydew;
@@ -171,7 +172,8 @@
             this.datgwListeClients.Name = "datgwListeClients";
             this.datgwListeClients.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.datgwListeClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datgwListeClients.Size = new System.Drawing.Size(734, 281);
+            this.datgwListeClients.Size = new System.Drawing.Size(550, 281);
+            this.datgwListeClients.StandardTab = true;
             this.datgwListeClients.TabIndex = 1;
             this.datgwListeClients.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datgwListeClients_CellDoubleClick);
             this.datgwListeClients.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.datgwListeClients_CellEnter);
@@ -181,9 +183,9 @@
             // 
             this.btnNouveauClient.BackColor = System.Drawing.Color.LightCyan;
             this.btnNouveauClient.ForeColor = System.Drawing.Color.Black;
-            this.btnNouveauClient.Location = new System.Drawing.Point(391, 421);
+            this.btnNouveauClient.Location = new System.Drawing.Point(272, 421);
             this.btnNouveauClient.Name = "btnNouveauClient";
-            this.btnNouveauClient.Size = new System.Drawing.Size(101, 24);
+            this.btnNouveauClient.Size = new System.Drawing.Size(100, 25);
             this.btnNouveauClient.TabIndex = 2;
             this.btnNouveauClient.Text = "Nouveau Client";
             this.btnNouveauClient.UseVisualStyleBackColor = false;
@@ -195,9 +197,9 @@
             // 
             this.btnSuprimeClient.BackColor = System.Drawing.Color.LightCyan;
             this.btnSuprimeClient.ForeColor = System.Drawing.Color.Black;
-            this.btnSuprimeClient.Location = new System.Drawing.Point(498, 421);
+            this.btnSuprimeClient.Location = new System.Drawing.Point(378, 421);
             this.btnSuprimeClient.Name = "btnSuprimeClient";
-            this.btnSuprimeClient.Size = new System.Drawing.Size(97, 23);
+            this.btnSuprimeClient.Size = new System.Drawing.Size(100, 25);
             this.btnSuprimeClient.TabIndex = 3;
             this.btnSuprimeClient.Text = "Supprimer";
             this.btnSuprimeClient.UseVisualStyleBackColor = false;
@@ -209,9 +211,9 @@
             // 
             this.btnFermerListeClient.BackColor = System.Drawing.Color.LightCyan;
             this.btnFermerListeClient.ForeColor = System.Drawing.Color.Black;
-            this.btnFermerListeClient.Location = new System.Drawing.Point(601, 421);
+            this.btnFermerListeClient.Location = new System.Drawing.Point(484, 421);
             this.btnFermerListeClient.Name = "btnFermerListeClient";
-            this.btnFermerListeClient.Size = new System.Drawing.Size(75, 23);
+            this.btnFermerListeClient.Size = new System.Drawing.Size(100, 25);
             this.btnFermerListeClient.TabIndex = 4;
             this.btnFermerListeClient.Text = "Fermer";
             this.btnFermerListeClient.UseVisualStyleBackColor = false;
@@ -247,7 +249,7 @@
             this.lblAttention.AutoSize = true;
             this.lblAttention.BackColor = System.Drawing.Color.LightBlue;
             this.lblAttention.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.lblAttention.Location = new System.Drawing.Point(89, 40);
+            this.lblAttention.Location = new System.Drawing.Point(90, 40);
             this.lblAttention.Name = "lblAttention";
             this.lblAttention.Size = new System.Drawing.Size(233, 13);
             this.lblAttention.TabIndex = 5;
@@ -327,7 +329,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(826, 450);
+            this.ClientSize = new System.Drawing.Size(618, 450);
             this.Controls.Add(this.lblRechEntete);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnFermerListeClient);

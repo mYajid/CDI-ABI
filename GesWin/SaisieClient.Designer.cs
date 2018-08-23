@@ -82,6 +82,7 @@
             this.gBoxIdentification.TabIndex = 0;
             this.gBoxIdentification.TabStop = false;
             this.gBoxIdentification.Text = "Identification";
+            this.gBoxIdentification.Leave += new System.EventHandler(this.gBoxIdentification_Leave);
             this.gBoxIdentification.Validating += new System.ComponentModel.CancelEventHandler(this.gBoxIdentification_Validating);
             this.gBoxIdentification.Validated += new System.EventHandler(this.gBoxIdentification_Validated);
             // 

@@ -110,12 +110,24 @@ namespace GesWin
 
         private void gBoxIdentification_Validating(object sender, CancelEventArgs e)
         {
+          
+
+
+
+        }
+
+        private void gBoxIdentification_Leave(object sender, EventArgs e)
+        {
             Client x = new Client();
-            this.btnOK.Enabled = true;
+           
             errorProvider1.SetError(txtNumeroClient, string.Empty);
+            errorProvider1.SetError(txtCP, string.Empty);
+            errorProvider1.SetError(txtTelephone, string.Empty);
+
             try
             {
                 x.IdClient = int.Parse(txtNumeroClient.Text);
+                this.btnOK.Enabled = true;
             }
             catch (Exception)
             {
@@ -125,8 +137,31 @@ namespace GesWin
                 this.btnOK.Enabled = false;
             }
 
+            try
+            {
+                x.CodPostal = int.Parse(txtCP.Text);
+                this.btnOK.Enabled = true;
+            }
+            catch (Exception)
+            {
 
+                errorProvider1.SetError(txtCP, "Le Code Postale doit comporter 5 chiffres");
+                MessageBox.Show("le Code Postal n'est pas valide", "ERREUR", MessageBoxButtons.OK);
+                this.btnOK.Enabled = false;
+            }
 
+            try
+            {
+                x.TelephoneClient = int.Parse(txtTelephone.Text);
+                this.btnOK.Enabled = true;
+            }
+            catch (Exception)
+            {
+
+                errorProvider1.SetError(txtTelephone, "Le Numero de telephone doit comporter 10 chiffres");
+                MessageBox.Show("le numéro de Telephone  n'est pas valide", "ERREUR", MessageBoxButtons.OK);
+                this.btnOK.Enabled = false;
+            }
 
 
         }

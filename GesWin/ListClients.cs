@@ -19,16 +19,17 @@ namespace GesWin
         int nbligne = 0;
         int numcol = 0;
         int numligne = 0;
-        string arret = "";
-
+        string arret = ""; // pour point d'arrêt
+        
         public FormListeClients()
         {                                   
             InitializeComponent();
+
             btnSuprimeClient.Enabled = false;
             btnListeCliente.Enabled = false;
             chbRecherchePrive.Enabled = false;
-
-
+            lblAttention.SendToBack();
+            Recherche();
 
 
             foreach (var item in Client.clientsHS)
@@ -54,7 +55,11 @@ namespace GesWin
 
         private void txtRecherche_TextChanged(object sender, EventArgs e)
         {
-            if (txtRecherche.Text == "")
+            //if (lblRecherche.Text == "RaisonSociale")
+            //{
+                //datgwListeClients.Columns
+            //}
+            if (txtRecherche.Text.Length !=0 && chbRecherchePrive.Enabled==false)
             {
                 btnListeCliente.Enabled = false;
             }
@@ -135,16 +140,18 @@ namespace GesWin
             Recherche();
             //arret = "Pause";
         }
+        #region Recherche selon l'entrée de l'utilisateur
 
         private void btnRecherche_Click(object sender, EventArgs e)
         {
-            choix = txtRecherche.Text;
+            choix = txtRecherche.Text; // saisie de l'utilisateur
             Long = choix.Length;
-            nbligne = datgwListeClients.RowCount;
+            nbligne = datgwListeClients.RowCount; // nombre
             //numcol=
             for (int Tour =0; Tour < nbligne-1; Tour++)
             {
                 choix1 = datgwListeClients.Rows[Tour].Cells[numcol].Value.ToString();
+               
                if (choix1.Length < Long)
                 {
                     datgwListeClients.Rows[Tour].Visible = false;
@@ -163,7 +170,9 @@ namespace GesWin
             }
             
         }
+        #endregion
 
+        #region Rétablissements de toutes les lignes
         private void btnListeCliente_Click(object sender, EventArgs e)
         {
             for (int Tour = 0; Tour < nbligne - 1; Tour++)
@@ -173,6 +182,7 @@ namespace GesWin
             }
             
         }
+        #endregion
 
         private void btnSuprimeClient_Click(object sender, EventArgs e)
         {
@@ -182,26 +192,32 @@ namespace GesWin
 
         private void chbRecherchePrive_Click(object sender, EventArgs e)
         {
-            txtRecherche.Text = chbRecherchePrive.Checked.ToString().ToLower();
+            txtRecherche.Text = chbRecherchePrive.Checked.ToString();
+            
         }
+        #region Méthode de selection alternative Coche/Texte 
         private void Recherche()
         {
             if(lblRecherche.Text != "Privé")
             {
                 txtRecherche.ReadOnly = false;
                 txtRecherche.Text = "";
-                txtRecherche.BackColor = Color.Empty;
+                lblAttention.SendToBack();
+                txtRecherche.BackColor = Color.Empty;//facultatif
                 chbRecherchePrive.Enabled = false;
             }
             else
             {
                 txtRecherche.ReadOnly = true;
-                txtRecherche.Text = "false";
-                txtRecherche.BackColor = Color.Black;
+                txtRecherche.Text = "False";
+                //txtRecherche.BackColor = Color.Black;
+                lblAttention.BringToFront();
                 chbRecherchePrive.Enabled = true;
                 chbRecherchePrive.Checked = false;
+                btnListeCliente.Enabled = true;
             }
         }
+        #endregion
 
         private void btnColor_MouseEnter(object sender, EventArgs e)
         {
@@ -213,7 +229,7 @@ namespace GesWin
         private void btnColor_MouseLeave(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            btn.BackColor = Color.Silver;
+            btn.BackColor = Color.LightCyan;
             btn.ForeColor = Color.Black;
         }
     }

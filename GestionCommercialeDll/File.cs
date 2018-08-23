@@ -9,6 +9,7 @@ namespace GestionCommercialeDll
     public class Fichier
     {
         //Méthode pour écrire la collection clientsHS sur le disque.
+
          static public void WriteToFile()
         {
             // Conversion du HashSet en list

@@ -30,6 +30,12 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbxrechclt = new System.Windows.Forms.GroupBox();
             this.chbRecherchePrive = new System.Windows.Forms.CheckBox();
             this.lblRecherche = new System.Windows.Forms.Label();
@@ -42,6 +48,7 @@
             this.btnFermerListeClient = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblRechEntete = new System.Windows.Forms.Label();
+            this.lblAttention = new System.Windows.Forms.Label();
             this.RaisonSociale = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VilleClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodePostalClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +61,7 @@
             // 
             // gbxrechclt
             // 
+            this.gbxrechclt.Controls.Add(this.lblAttention);
             this.gbxrechclt.Controls.Add(this.chbRecherchePrive);
             this.gbxrechclt.Controls.Add(this.lblRecherche);
             this.gbxrechclt.Controls.Add(this.txtRecherche);
@@ -85,33 +93,37 @@
             this.lblRecherche.ForeColor = System.Drawing.Color.Black;
             this.lblRecherche.Location = new System.Drawing.Point(6, 40);
             this.lblRecherche.Name = "lblRecherche";
-            this.lblRecherche.Size = new System.Drawing.Size(12, 13);
+            this.lblRecherche.Size = new System.Drawing.Size(78, 13);
             this.lblRecherche.TabIndex = 3;
-            this.lblRecherche.Text = "/";
+            this.lblRecherche.Text = "Raison Sociale";
+            this.lblRecherche.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtRecherche
             // 
-            this.txtRecherche.Location = new System.Drawing.Point(86, 37);
+            this.txtRecherche.Location = new System.Drawing.Point(90, 37);
             this.txtRecherche.Name = "txtRecherche";
-            this.txtRecherche.Size = new System.Drawing.Size(242, 20);
+            this.txtRecherche.Size = new System.Drawing.Size(249, 20);
             this.txtRecherche.TabIndex = 2;
             this.txtRecherche.TextChanged += new System.EventHandler(this.txtRecherche_TextChanged);
             // 
             // btnRecherche
             // 
+            this.btnRecherche.BackColor = System.Drawing.Color.LightCyan;
+            this.btnRecherche.ForeColor = System.Drawing.Color.Black;
             this.btnRecherche.Location = new System.Drawing.Point(347, 33);
             this.btnRecherche.Name = "btnRecherche";
             this.btnRecherche.Size = new System.Drawing.Size(89, 30);
             this.btnRecherche.TabIndex = 1;
             this.btnRecherche.Text = "Rechercher";
-            this.btnRecherche.UseVisualStyleBackColor = true;
+            this.btnRecherche.UseVisualStyleBackColor = false;
             this.btnRecherche.Click += new System.EventHandler(this.btnRecherche_Click);
             this.btnRecherche.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
             this.btnRecherche.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
             // btnListeCliente
             // 
-            this.btnListeCliente.BackColor = System.Drawing.SystemColors.Control;
+            this.btnListeCliente.BackColor = System.Drawing.Color.LightCyan;
+            this.btnListeCliente.ForeColor = System.Drawing.Color.Black;
             this.btnListeCliente.Location = new System.Drawing.Point(453, 33);
             this.btnListeCliente.Name = "btnListeCliente";
             this.btnListeCliente.Size = new System.Drawing.Size(87, 30);
@@ -124,14 +136,21 @@
             // 
             // datgwListeClients
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datgwListeClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Brown;
+            this.datgwListeClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.datgwListeClients.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.datgwListeClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datgwListeClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.datgwListeClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datgwListeClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RaisonSociale,
@@ -140,19 +159,19 @@
             this.PriveClient,
             this.ActiviteClient,
             this.NatureClient});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datgwListeClients.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Brown;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datgwListeClients.DefaultCellStyle = dataGridViewCellStyle8;
             this.datgwListeClients.Location = new System.Drawing.Point(34, 134);
             this.datgwListeClients.Name = "datgwListeClients";
             this.datgwListeClients.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.datgwListeClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datgwListeClients.Size = new System.Drawing.Size(744, 281);
+            this.datgwListeClients.Size = new System.Drawing.Size(734, 281);
             this.datgwListeClients.TabIndex = 1;
             this.datgwListeClients.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datgwListeClients_CellDoubleClick);
             this.datgwListeClients.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.datgwListeClients_CellEnter);
@@ -160,36 +179,42 @@
             // 
             // btnNouveauClient
             // 
+            this.btnNouveauClient.BackColor = System.Drawing.Color.LightCyan;
+            this.btnNouveauClient.ForeColor = System.Drawing.Color.Black;
             this.btnNouveauClient.Location = new System.Drawing.Point(391, 421);
             this.btnNouveauClient.Name = "btnNouveauClient";
             this.btnNouveauClient.Size = new System.Drawing.Size(101, 24);
             this.btnNouveauClient.TabIndex = 2;
             this.btnNouveauClient.Text = "Nouveau Client";
-            this.btnNouveauClient.UseVisualStyleBackColor = true;
+            this.btnNouveauClient.UseVisualStyleBackColor = false;
             this.btnNouveauClient.Click += new System.EventHandler(this.button1_Click);
             this.btnNouveauClient.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
             this.btnNouveauClient.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
             // btnSuprimeClient
             // 
+            this.btnSuprimeClient.BackColor = System.Drawing.Color.LightCyan;
+            this.btnSuprimeClient.ForeColor = System.Drawing.Color.Black;
             this.btnSuprimeClient.Location = new System.Drawing.Point(498, 421);
             this.btnSuprimeClient.Name = "btnSuprimeClient";
             this.btnSuprimeClient.Size = new System.Drawing.Size(97, 23);
             this.btnSuprimeClient.TabIndex = 3;
             this.btnSuprimeClient.Text = "Supprimer";
-            this.btnSuprimeClient.UseVisualStyleBackColor = true;
+            this.btnSuprimeClient.UseVisualStyleBackColor = false;
             this.btnSuprimeClient.Click += new System.EventHandler(this.btnSuprimeClient_Click);
             this.btnSuprimeClient.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
             this.btnSuprimeClient.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
             // btnFermerListeClient
             // 
+            this.btnFermerListeClient.BackColor = System.Drawing.Color.LightCyan;
+            this.btnFermerListeClient.ForeColor = System.Drawing.Color.Black;
             this.btnFermerListeClient.Location = new System.Drawing.Point(601, 421);
             this.btnFermerListeClient.Name = "btnFermerListeClient";
             this.btnFermerListeClient.Size = new System.Drawing.Size(75, 23);
             this.btnFermerListeClient.TabIndex = 4;
             this.btnFermerListeClient.Text = "Fermer";
-            this.btnFermerListeClient.UseVisualStyleBackColor = true;
+            this.btnFermerListeClient.UseVisualStyleBackColor = false;
             this.btnFermerListeClient.Click += new System.EventHandler(this.btnFermerListeClient_Click);
             this.btnFermerListeClient.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
             this.btnFermerListeClient.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
@@ -212,54 +237,90 @@
             this.lblRechEntete.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblRechEntete.Location = new System.Drawing.Point(38, 9);
             this.lblRechEntete.Name = "lblRechEntete";
-            this.lblRechEntete.Size = new System.Drawing.Size(334, 13);
+            this.lblRechEntete.Size = new System.Drawing.Size(678, 13);
             this.lblRechEntete.TabIndex = 6;
-            this.lblRechEntete.Text = "Cliquez sun une des cellules de l\'entête pour orientez votre recherche";
+            this.lblRechEntete.Text = "Cliquez sun une des cellules de l\'entête pour orienter votre recherche. Pour réta" +
+    "blir toutes les lignes, effacez votre entrée puis cliquez sur Tous.";
+            // 
+            // lblAttention
+            // 
+            this.lblAttention.AutoSize = true;
+            this.lblAttention.BackColor = System.Drawing.Color.LightBlue;
+            this.lblAttention.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lblAttention.Location = new System.Drawing.Point(89, 40);
+            this.lblAttention.Name = "lblAttention";
+            this.lblAttention.Size = new System.Drawing.Size(233, 13);
+            this.lblAttention.TabIndex = 5;
+            this.lblAttention.Text = "* Attention la selection textuelle est désactivée *";
             // 
             // RaisonSociale
             // 
             this.RaisonSociale.DataPropertyName = "RaisonSociale";
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.RaisonSociale.DefaultCellStyle = dataGridViewCellStyle3;
+            this.RaisonSociale.DividerWidth = 1;
             this.RaisonSociale.HeaderText = "Raison Sociale";
             this.RaisonSociale.MaxInputLength = 60;
             this.RaisonSociale.Name = "RaisonSociale";
-            this.RaisonSociale.ReadOnly = true;
             this.RaisonSociale.Width = 180;
             // 
             // VilleClient
             // 
             this.VilleClient.DataPropertyName = "Ville";
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Brown;
+            this.VilleClient.DefaultCellStyle = dataGridViewCellStyle4;
+            this.VilleClient.DividerWidth = 1;
             this.VilleClient.HeaderText = "Ville";
             this.VilleClient.Name = "VilleClient";
-            this.VilleClient.ReadOnly = true;
+            this.VilleClient.Width = 180;
             // 
             // CodePostalClient
             // 
             this.CodePostalClient.DataPropertyName = "CodPostal";
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Brown;
+            this.CodePostalClient.DefaultCellStyle = dataGridViewCellStyle5;
+            this.CodePostalClient.DividerWidth = 1;
             this.CodePostalClient.HeaderText = "Code Postal";
             this.CodePostalClient.Name = "CodePostalClient";
-            this.CodePostalClient.ReadOnly = true;
             // 
             // PriveClient
             // 
             this.PriveClient.DataPropertyName = "TypeSociete";
+            this.PriveClient.DividerWidth = 1;
             this.PriveClient.HeaderText = "Privé";
             this.PriveClient.Name = "PriveClient";
-            this.PriveClient.ReadOnly = true;
             this.PriveClient.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.PriveClient.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.PriveClient.Width = 50;
             // 
             // ActiviteClient
             // 
             this.ActiviteClient.DataPropertyName = "Activite";
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Brown;
+            this.ActiviteClient.DefaultCellStyle = dataGridViewCellStyle6;
+            this.ActiviteClient.DividerWidth = 1;
             this.ActiviteClient.HeaderText = "Activite";
             this.ActiviteClient.Name = "ActiviteClient";
-            this.ActiviteClient.ReadOnly = true;
             // 
             // NatureClient
             // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Brown;
+            this.NatureClient.DefaultCellStyle = dataGridViewCellStyle7;
+            this.NatureClient.DividerWidth = 1;
             this.NatureClient.HeaderText = "Nature";
             this.NatureClient.Name = "NatureClient";
-            this.NatureClient.ReadOnly = true;
             // 
             // FormListeClients
             // 
@@ -298,6 +359,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox chbRecherchePrive;
         private System.Windows.Forms.Label lblRechEntete;
+        private System.Windows.Forms.Label lblAttention;
         private System.Windows.Forms.DataGridViewTextBoxColumn RaisonSociale;
         private System.Windows.Forms.DataGridViewTextBoxColumn VilleClient;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodePostalClient;

@@ -74,7 +74,7 @@ namespace GesWin
             _client.Ville = txtVille.Text;
 
 
-            _client.TelephoneClient = int.Parse(txtTelepho.Text);
+            _client.TelephoneClient = int.Parse(txtTelephone.Text);
 
             _client.TypeSociete = chBoxPrive.Checked;
             _client.Effectif = int.Parse(txtEffectif.Text);
@@ -139,7 +139,7 @@ namespace GesWin
 
             errorProvider1.SetError(txtNumeroClient, string.Empty);
             errorProvider1.SetError(txtCP, string.Empty);
-            errorProvider1.SetError(txtTelepho, string.Empty);
+            errorProvider1.SetError(txtTelephone, string.Empty);
 
             try
             {

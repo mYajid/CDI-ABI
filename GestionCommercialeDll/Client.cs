@@ -211,7 +211,7 @@ namespace GestionCommercialeDll
         {
             string valeur = value.ToString();
 
-            if (valeur == null|| valeur.Length+1 < 10 || valeur.Length > 15)
+            if (valeur == null|| valeur.Length < 10 || valeur.Length > 15)
 
                 return false;
 

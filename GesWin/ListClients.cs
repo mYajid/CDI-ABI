@@ -19,7 +19,7 @@ namespace GesWin
         int nbligne = 0;
         int numcol = 0;
         int numligne = 0;
-        string arret = "";
+        //string arret = "";
 
         public FormListeClients()
         {                                   

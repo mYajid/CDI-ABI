@@ -133,7 +133,7 @@ namespace GesWin
             {
 
                 errorProvider1.SetError(txtNumeroClient, "Le Numero client ne doit comporter que 4 chiffres");
-                MessageBox.Show("le numéro Client saisi n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
+                MessageBox.Show("Le numéro Client saisi n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
                 this.btnOK.Enabled = false;
             }
 
@@ -146,7 +146,7 @@ namespace GesWin
             {
 
                 errorProvider1.SetError(txtCP, "Le Code Postale doit comporter 5 chiffres");
-                MessageBox.Show("le Code Postal n'est pas valide", "ERREUR", MessageBoxButtons.OK);
+                MessageBox.Show("Le Code Postal n'est pas valide", "ERREUR", MessageBoxButtons.OK);
                 this.btnOK.Enabled = false;
             }
 
@@ -159,7 +159,7 @@ namespace GesWin
             {
 
                 errorProvider1.SetError(txtTelephone, "Le Numero de telephone doit comporter 10 chiffres");
-                MessageBox.Show("le numéro de Telephone  n'est pas valide", "ERREUR", MessageBoxButtons.OK);
+                MessageBox.Show("Le numéro de Telephone  n'est pas valide", "ERREUR", MessageBoxButtons.OK);
                 this.btnOK.Enabled = false;
             }
 

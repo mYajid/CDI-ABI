@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbxrechclt = new System.Windows.Forms.GroupBox();
             this.chbRecherchePrive = new System.Windows.Forms.CheckBox();
             this.lblRecherche = new System.Windows.Forms.Label();
@@ -85,9 +85,9 @@
             this.lblRecherche.ForeColor = System.Drawing.Color.Black;
             this.lblRecherche.Location = new System.Drawing.Point(6, 40);
             this.lblRecherche.Name = "lblRecherche";
-            this.lblRecherche.Size = new System.Drawing.Size(12, 13);
+            this.lblRecherche.Size = new System.Drawing.Size(78, 13);
             this.lblRecherche.TabIndex = 3;
-            this.lblRecherche.Text = "/";
+            this.lblRecherche.Text = "Raison Sociale";
             // 
             // txtRecherche
             // 
@@ -124,14 +124,14 @@
             // 
             // datgwListeClients
             // 
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datgwListeClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datgwListeClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.datgwListeClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datgwListeClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RaisonSociale,
@@ -140,14 +140,14 @@
             this.PriveClient,
             this.ActiviteClient,
             this.NatureClient});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datgwListeClients.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datgwListeClients.DefaultCellStyle = dataGridViewCellStyle4;
             this.datgwListeClients.Location = new System.Drawing.Point(34, 134);
             this.datgwListeClients.Name = "datgwListeClients";
             this.datgwListeClients.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -251,9 +251,10 @@
             this.lblRechEntete.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblRechEntete.Location = new System.Drawing.Point(38, 9);
             this.lblRechEntete.Name = "lblRechEntete";
-            this.lblRechEntete.Size = new System.Drawing.Size(334, 13);
+            this.lblRechEntete.Size = new System.Drawing.Size(680, 13);
             this.lblRechEntete.TabIndex = 6;
-            this.lblRechEntete.Text = "Cliquez sun une des cellules de l\'entête pour orientez votre recherche";
+            this.lblRechEntete.Text = "Cliquez sun une des cellules de l\'entête pour orientez votre recherche.  Pour rét" +
+    "ablir toutes les lignes, effacez votre entrée puis cliquez sur Tous";
             // 
             // FormListeClients
             // 

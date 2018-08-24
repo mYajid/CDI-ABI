@@ -84,10 +84,7 @@ namespace GesWin
 
                 }
             }
-
-
-
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -101,11 +98,8 @@ namespace GesWin
             else
             {
                 Refresh();
-            }
-           
-
-
-        }
+            }         
+          }
             
 
        

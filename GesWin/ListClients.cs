@@ -27,7 +27,8 @@ namespace GesWin
             btnSuprimeClient.Enabled = false;
             btnListeCliente.Enabled = false;
             chbRecherchePrive.Enabled = false;
-
+            lblAttention.SendToBack();
+            Recherche();
 
 
 
@@ -191,7 +192,7 @@ namespace GesWin
             {
                 txtRecherche.ReadOnly = true;
                 txtRecherche.Text = "false";
-                txtRecherche.BackColor = Color.Black;
+                //txtRecherche.BackColor = Color.Black;
                 chbRecherchePrive.Enabled = true;
                 chbRecherchePrive.Checked = false;
             }
@@ -207,7 +208,7 @@ namespace GesWin
         private void btnColor_MouseLeave(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            btn.BackColor = Color.Silver;
+            btn.BackColor = Color.LightCyan;
             btn.ForeColor = Color.Black;
         }
     }

@@ -82,11 +82,11 @@
             this.boxIdentification.Controls.Add(this.lblRaisonSociale);
             this.boxIdentification.Controls.Add(this.lblNumeroClient);
             this.boxIdentification.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxIdentification.Location = new System.Drawing.Point(9, 30);
+            this.boxIdentification.Location = new System.Drawing.Point(13, 13);
             this.boxIdentification.Margin = new System.Windows.Forms.Padding(4);
             this.boxIdentification.Name = "boxIdentification";
             this.boxIdentification.Padding = new System.Windows.Forms.Padding(4);
-            this.boxIdentification.Size = new System.Drawing.Size(538, 301);
+            this.boxIdentification.Size = new System.Drawing.Size(513, 301);
             this.boxIdentification.TabIndex = 0;
             this.boxIdentification.TabStop = false;
             this.boxIdentification.Text = "Identification";
@@ -101,7 +101,7 @@
             // 
             // txtTelephone
             // 
-            this.txtTelephone.Location = new System.Drawing.Point(164, 244);
+            this.txtTelephone.Location = new System.Drawing.Point(154, 241);
             this.txtTelephone.Name = "txtTelephone";
             this.txtTelephone.ReadOnly = true;
             this.txtTelephone.Size = new System.Drawing.Size(144, 22);
@@ -109,7 +109,7 @@
             // 
             // txtCp
             // 
-            this.txtCp.Location = new System.Drawing.Point(164, 202);
+            this.txtCp.Location = new System.Drawing.Point(154, 202);
             this.txtCp.Name = "txtCp";
             this.txtCp.ReadOnly = true;
             this.txtCp.Size = new System.Drawing.Size(144, 22);
@@ -117,7 +117,7 @@
             // 
             // txt2Adresse
             // 
-            this.txt2Adresse.Location = new System.Drawing.Point(164, 162);
+            this.txt2Adresse.Location = new System.Drawing.Point(154, 160);
             this.txt2Adresse.Name = "txt2Adresse";
             this.txt2Adresse.ReadOnly = true;
             this.txt2Adresse.Size = new System.Drawing.Size(354, 22);
@@ -125,7 +125,7 @@
             // 
             // txt1Adresse
             // 
-            this.txt1Adresse.Location = new System.Drawing.Point(164, 124);
+            this.txt1Adresse.Location = new System.Drawing.Point(154, 121);
             this.txt1Adresse.Name = "txt1Adresse";
             this.txt1Adresse.ReadOnly = true;
             this.txt1Adresse.Size = new System.Drawing.Size(354, 22);
@@ -133,7 +133,7 @@
             // 
             // txtRaisonSociale
             // 
-            this.txtRaisonSociale.Location = new System.Drawing.Point(164, 81);
+            this.txtRaisonSociale.Location = new System.Drawing.Point(154, 81);
             this.txtRaisonSociale.Name = "txtRaisonSociale";
             this.txtRaisonSociale.ReadOnly = true;
             this.txtRaisonSociale.Size = new System.Drawing.Size(181, 22);
@@ -142,7 +142,7 @@
             // txtNumeroClient
             // 
             this.txtNumeroClient.Enabled = false;
-            this.txtNumeroClient.Location = new System.Drawing.Point(164, 34);
+            this.txtNumeroClient.Location = new System.Drawing.Point(154, 34);
             this.txtNumeroClient.Name = "txtNumeroClient";
             this.txtNumeroClient.ReadOnly = true;
             this.txtNumeroClient.Size = new System.Drawing.Size(100, 22);
@@ -178,7 +178,7 @@
             // lblRaisonSociale
             // 
             this.lblRaisonSociale.AutoSize = true;
-            this.lblRaisonSociale.Location = new System.Drawing.Point(23, 84);
+            this.lblRaisonSociale.Location = new System.Drawing.Point(23, 79);
             this.lblRaisonSociale.Name = "lblRaisonSociale";
             this.lblRaisonSociale.Size = new System.Drawing.Size(106, 14);
             this.lblRaisonSociale.TabIndex = 1;
@@ -205,18 +205,18 @@
             this.boxCaractéristique.Controls.Add(this.lblActivité);
             this.boxCaractéristique.Controls.Add(this.lblEffectif);
             this.boxCaractéristique.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxCaractéristique.Location = new System.Drawing.Point(570, 30);
+            this.boxCaractéristique.Location = new System.Drawing.Point(548, 22);
             this.boxCaractéristique.Margin = new System.Windows.Forms.Padding(4);
             this.boxCaractéristique.Name = "boxCaractéristique";
             this.boxCaractéristique.Padding = new System.Windows.Forms.Padding(4);
-            this.boxCaractéristique.Size = new System.Drawing.Size(309, 301);
+            this.boxCaractéristique.Size = new System.Drawing.Size(294, 292);
             this.boxCaractéristique.TabIndex = 1;
             this.boxCaractéristique.TabStop = false;
             this.boxCaractéristique.Text = "Caracteristique";
             // 
             // txtNature
             // 
-            this.txtNature.Location = new System.Drawing.Point(142, 249);
+            this.txtNature.Location = new System.Drawing.Point(117, 248);
             this.txtNature.Name = "txtNature";
             this.txtNature.ReadOnly = true;
             this.txtNature.Size = new System.Drawing.Size(100, 22);
@@ -224,7 +224,7 @@
             // 
             // txtCA
             // 
-            this.txtCA.Location = new System.Drawing.Point(142, 205);
+            this.txtCA.Location = new System.Drawing.Point(117, 205);
             this.txtCA.Name = "txtCA";
             this.txtCA.ReadOnly = true;
             this.txtCA.Size = new System.Drawing.Size(100, 22);
@@ -232,7 +232,7 @@
             // 
             // txtActivite
             // 
-            this.txtActivite.Location = new System.Drawing.Point(142, 127);
+            this.txtActivite.Location = new System.Drawing.Point(117, 124);
             this.txtActivite.Name = "txtActivite";
             this.txtActivite.ReadOnly = true;
             this.txtActivite.Size = new System.Drawing.Size(100, 22);
@@ -250,7 +250,7 @@
             // 
             // txtEffectif
             // 
-            this.txtEffectif.Location = new System.Drawing.Point(142, 76);
+            this.txtEffectif.Location = new System.Drawing.Point(117, 73);
             this.txtEffectif.Name = "txtEffectif";
             this.txtEffectif.ReadOnly = true;
             this.txtEffectif.ShortcutsEnabled = false;
@@ -297,11 +297,11 @@
             // 
             // btnModifClient
             // 
-            this.btnModifClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnModifClient.BackColor = System.Drawing.Color.Azure;
             this.btnModifClient.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModifClient.Location = new System.Drawing.Point(103, 529);
+            this.btnModifClient.Location = new System.Drawing.Point(88, 488);
             this.btnModifClient.Name = "btnModifClient";
-            this.btnModifClient.Size = new System.Drawing.Size(170, 45);
+            this.btnModifClient.Size = new System.Drawing.Size(151, 45);
             this.btnModifClient.TabIndex = 3;
             this.btnModifClient.Text = "Modifier client";
             this.btnModifClient.UseVisualStyleBackColor = false;
@@ -309,11 +309,11 @@
             // 
             // btnNouveauContact
             // 
-            this.btnNouveauContact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnNouveauContact.BackColor = System.Drawing.Color.Azure;
             this.btnNouveauContact.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNouveauContact.Location = new System.Drawing.Point(366, 529);
+            this.btnNouveauContact.Location = new System.Drawing.Point(349, 488);
             this.btnNouveauContact.Name = "btnNouveauContact";
-            this.btnNouveauContact.Size = new System.Drawing.Size(161, 45);
+            this.btnNouveauContact.Size = new System.Drawing.Size(139, 45);
             this.btnNouveauContact.TabIndex = 4;
             this.btnNouveauContact.Text = "Nouveau Contact";
             this.btnNouveauContact.UseVisualStyleBackColor = false;
@@ -321,11 +321,11 @@
             // 
             // btnFermer
             // 
-            this.btnFermer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnFermer.BackColor = System.Drawing.Color.Azure;
             this.btnFermer.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFermer.Location = new System.Drawing.Point(660, 529);
+            this.btnFermer.Location = new System.Drawing.Point(644, 488);
             this.btnFermer.Name = "btnFermer";
-            this.btnFermer.Size = new System.Drawing.Size(152, 45);
+            this.btnFermer.Size = new System.Drawing.Size(137, 45);
             this.btnFermer.TabIndex = 5;
             this.btnFermer.Text = "Fermer";
             this.btnFermer.UseVisualStyleBackColor = false;
@@ -342,10 +342,10 @@
             this.ColEmail,
             this.ColFonction});
             this.dataGridContact.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridContact.Location = new System.Drawing.Point(9, 371);
+            this.dataGridContact.Location = new System.Drawing.Point(12, 346);
             this.dataGridContact.Name = "dataGridContact";
             this.dataGridContact.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridContact.Size = new System.Drawing.Size(870, 139);
+            this.dataGridContact.Size = new System.Drawing.Size(833, 112);
             this.dataGridContact.TabIndex = 6;
             // 
             // ColNom
@@ -387,7 +387,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(931, 629);
+            this.ClientSize = new System.Drawing.Size(857, 554);
             this.Controls.Add(this.dataGridContact);
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.btnNouveauContact);

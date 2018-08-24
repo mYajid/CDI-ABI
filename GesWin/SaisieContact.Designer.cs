@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNouveauContact));
             this.gBoxIdentiteContact = new System.Windows.Forms.GroupBox();
             this.txtEmailContact = new System.Windows.Forms.TextBox();
             this.txtTelephoneContact = new System.Windows.Forms.TextBox();
@@ -44,11 +45,14 @@
             this.lblClientContact = new System.Windows.Forms.Label();
             this.lblIDContact = new System.Windows.Forms.Label();
             this.lblRaisonSocialeContact = new System.Windows.Forms.Label();
+            this.pictbContact = new System.Windows.Forms.PictureBox();
             this.gBoxIdentiteContact.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictbContact)).BeginInit();
             this.SuspendLayout();
             // 
             // gBoxIdentiteContact
             // 
+            this.gBoxIdentiteContact.Controls.Add(this.pictbContact);
             this.gBoxIdentiteContact.Controls.Add(this.txtEmailContact);
             this.gBoxIdentiteContact.Controls.Add(this.txtTelephoneContact);
             this.gBoxIdentiteContact.Controls.Add(this.txtPrenomContact);
@@ -193,6 +197,16 @@
             this.lblRaisonSocialeContact.TabIndex = 7;
             this.lblRaisonSocialeContact.Text = "RS";
             // 
+            // pictbContact
+            // 
+            this.pictbContact.Image = ((System.Drawing.Image)(resources.GetObject("pictbContact.Image")));
+            this.pictbContact.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictbContact.InitialImage")));
+            this.pictbContact.Location = new System.Drawing.Point(316, 23);
+            this.pictbContact.Name = "pictbContact";
+            this.pictbContact.Size = new System.Drawing.Size(209, 169);
+            this.pictbContact.TabIndex = 9;
+            this.pictbContact.TabStop = false;
+            // 
             // FormNouveauContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +224,7 @@
             this.Text = "Saisie nouveau Contact";
             this.gBoxIdentiteContact.ResumeLayout(false);
             this.gBoxIdentiteContact.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictbContact)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +247,6 @@
         public System.Windows.Forms.Label lblClientContact;
         public System.Windows.Forms.Label lblIDContact;
         public System.Windows.Forms.Label lblRaisonSocialeContact;
+        protected System.Windows.Forms.PictureBox pictbContact;
     }
 }

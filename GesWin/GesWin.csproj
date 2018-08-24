@@ -154,5 +154,8 @@
       <Name>GestionCommercialeDll</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="clients.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

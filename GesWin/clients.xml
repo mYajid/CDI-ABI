@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfClient xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Client>
+    <IdClient>1234</IdClient>
+    <TelephoneClient>299010203</TelephoneClient>
+    <Effectif>12</Effectif>
+    <CA>275000</CA>
+    <TypeSociete>true</TypeSociete>
+    <RaisonSociale>Exploitation Legoff</RaisonSociale>
+    <Adresse1>Le Hameau</Adresse1>
+    <Adresse2>Route de Ploubazlanec</Adresse2>
+    <CodPostal>22500</CodPostal>
+    <Ville>Paimpol</Ville>
+    <ListContact>
+      <Contact>
+        <IdClient>1234</IdClient>
+        <NomContact>Legoff</NomContact>
+        <PrenomContact>Alain</PrenomContact>
+        <Telephone>661564555</Telephone>
+        <Email>alain@LegoffBretagne</Email>
+        <FonctionSetting>Dirigeant</FonctionSetting>
+      </Contact>
+    </ListContact>
+    <Activite>
+      <Activit>Boissons</Activit>
+      <NatureAct>Principale</NatureAct>
+    </Activite>
+  </Client>
+  <Client>
+    <IdClient>1235</IdClient>
+    <TelephoneClient>355555555</TelephoneClient>
+    <Effectif>47</Effectif>
+    <CA>0</CA>
+    <TypeSociete>false</TypeSociete>
+    <RaisonSociale>Conseil Général</RaisonSociale>
+    <Adresse1>3 rue de la république</Adresse1>
+    <Adresse2 />
+    <CodPostal>35000</CodPostal>
+    <Ville>Rennes</Ville>
+    <ListContact>
+      <Contact>
+        <IdClient>1235</IdClient>
+        <NomContact>Doe</NomContact>
+        <PrenomContact>John</PrenomContact>
+        <Telephone>661563333</Telephone>
+        <Email>jDoe@CG.fr</Email>
+        <FonctionSetting>Comptable</FonctionSetting>
+      </Contact>
+    </ListContact>
+    <Activite>
+      <Activit>Administration</Activit>
+      <NatureAct>Principale</NatureAct>
+    </Activite>
+  </Client>
+</ArrayOfClient>

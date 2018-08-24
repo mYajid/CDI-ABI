@@ -52,4 +52,21 @@
       <NatureAct>Principale</NatureAct>
     </Activite>
   </Client>
+  <Client>
+    <IdClient>0</IdClient>
+    <TelephoneClient>111111111</TelephoneClient>
+    <Effectif>45</Effectif>
+    <CA>454545</CA>
+    <TypeSociete>true</TypeSociete>
+    <RaisonSociale>iuouioui</RaisonSociale>
+    <Adresse1>uoiuio</Adresse1>
+    <Adresse2>uiouio</Adresse2>
+    <CodPostal>45444</CodPostal>
+    <Ville>uioy</Ville>
+    <ListContact />
+    <Activite>
+      <Activit>Administration</Activit>
+      <NatureAct>Principale</NatureAct>
+    </Activite>
+  </Client>
 </ArrayOfClient>

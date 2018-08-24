@@ -18,7 +18,7 @@ namespace GestionCommercialeDll
 
 
             XmlSerializer xmlSerializer = new XmlSerializer(typeof (List<Client>));
-            using (StreamWriter SW = new StreamWriter("clients.xml"))
+            using (StreamWriter SW = new StreamWriter(@"C:\Users\tsgeri\source\repos\CDI-ABI\GesWin\clients.xml"))
             {
                 xmlSerializer.Serialize(SW, clientList);
             }
@@ -29,7 +29,7 @@ namespace GestionCommercialeDll
         {
             List<Client> clientList ;
             XmlSerializer xmlSerializer=new XmlSerializer(typeof(List<Client>));
-            using (StreamReader SR = new StreamReader("clients.xml"))
+            using (StreamReader SR = new StreamReader(@"C:\Users\tsgeri\source\repos\CDI-ABI\GesWin\clients.xml"))
             {
                clientList = ( List<Client>)xmlSerializer.Deserialize(SR) ;
             }

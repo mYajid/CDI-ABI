@@ -69,4 +69,21 @@
       <NatureAct>Principale</NatureAct>
     </Activite>
   </Client>
+  <Client>
+    <IdClient>6666</IdClient>
+    <TelephoneClient>599999999</TelephoneClient>
+    <Effectif>84654</Effectif>
+    <CA>687684654</CA>
+    <TypeSociete>false</TypeSociete>
+    <RaisonSociale>AFPA</RaisonSociale>
+    <Adresse1>rzefgze</Adresse1>
+    <Adresse2>ouihp</Adresse2>
+    <CodPostal>61000</CodPostal>
+    <Ville>Brive la Gaillarde</Ville>
+    <ListContact />
+    <Activite>
+      <Activit>Administration</Activit>
+      <NatureAct>Principale</NatureAct>
+    </Activite>
+  </Client>
 </ArrayOfClient>

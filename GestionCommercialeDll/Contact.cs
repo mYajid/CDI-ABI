@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
 
 namespace GestionCommercialeDll
 {
@@ -43,7 +45,15 @@ namespace GestionCommercialeDll
         public string Email
         {
             get { return _emailContact; }
-            set { _emailContact = value; }
+
+            set {
+                if (!IsEmailValide(value))
+
+                {
+                    throw new Exception(string.Format("L'adresse mail  {0} n'est pas valide", value));
+                }
+                
+                _emailContact = value; }
         }
         public Fonction FonctionSetting
         {get; set;  }
@@ -74,6 +84,17 @@ namespace GestionCommercialeDll
                 }
             }
             return true;
+        }
+
+
+        public bool IsEmailValide(string value)
+        {
+            return Regex.Match(value, @"^(([\w-]+\.)+[\w-]+|([a-zA-Z]{1}|[\w-]{2,}))@"
+           + @"((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\.([0-1]?
+				[0-9]{1,2}|25[0-5]|2[0-4][0-9])\."
+           + @"([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\.([0-1]?
+				[0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|"
+           + @"([a-zA-Z0-9]+[\w-]+\.)+[a-zA-Z]{1}[a-zA-Z0-9-]{1,23})$").Success;
         }
 
         public Client Client { get; set; }

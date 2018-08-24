@@ -131,5 +131,38 @@ namespace GesWin
         {
 
         }
+
+        private void dataGridContact_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            foreach (var client in Client.clientsHS)
+            {
+                if (client.IdClient == int.Parse(txtNumeroClient.Text))
+                {
+
+                    string nom = (string)dataGridContact.CurrentRow.Cells["ColNom"].Value;
+
+                    foreach (var contact in client.ListContact)
+                    {
+                        if (contact.NomContact == nom)
+                        {
+
+
+                            ConsultContact ConsultClient = new ConsultContact(contact);
+
+                            ConsultClient.Show();
+
+                        }
+                    }
+
+
+                }
+            }
+
+
+            
+
+
+
+        }
     }
 }

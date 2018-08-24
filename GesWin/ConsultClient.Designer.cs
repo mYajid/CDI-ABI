@@ -347,6 +347,7 @@
             this.dataGridContact.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridContact.Size = new System.Drawing.Size(833, 112);
             this.dataGridContact.TabIndex = 6;
+            this.dataGridContact.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridContact_CellContentClick);
             // 
             // ColNom
             // 

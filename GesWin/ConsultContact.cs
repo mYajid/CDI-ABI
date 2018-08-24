@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GestionCommercialeDll;
 
 namespace GesWin
 {
     public partial class ConsultContact : Form
     {
-        public ConsultContact()
+        public ConsultContact(Contact contact)
         {
             InitializeComponent();
         }

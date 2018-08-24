@@ -177,7 +177,7 @@ namespace GesWin
 
         private void chbRecherchePrive_Click(object sender, EventArgs e)
         {
-            txtRecherche.Text = chbRecherchePrive.Checked.ToString().ToLower();
+            txtRecherche.Text = chbRecherchePrive.Checked.ToString();
         }
         private void Recherche()
         {
@@ -187,14 +187,16 @@ namespace GesWin
                 txtRecherche.Text = "";
                 txtRecherche.BackColor = Color.Empty;
                 chbRecherchePrive.Enabled = false;
+                lblAttention.SendToBack();
             }
             else
             {
                 txtRecherche.ReadOnly = true;
-                txtRecherche.Text = "false";
+                txtRecherche.Text = "False";
                 //txtRecherche.BackColor = Color.Black;
                 chbRecherchePrive.Enabled = true;
                 chbRecherchePrive.Checked = false;
+                lblAttention.BringToFront();
             }
         }
 
@@ -210,11 +212,6 @@ namespace GesWin
             Button btn = (Button)sender;
             btn.BackColor = Color.LightCyan;
             btn.ForeColor = Color.Black;
-        }
-
-        private void datgwListeClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

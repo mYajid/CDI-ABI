@@ -26,6 +26,7 @@ namespace GesWin
             InitializeComponent();
             btnSuprimeClient.Enabled = false;
             btnListeCliente.Enabled = false;
+
             chbRecherchePrive.Enabled = false;
             lblAttention.SendToBack();
             Recherche();
@@ -88,7 +89,7 @@ namespace GesWin
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnNouveauClient_Click(object sender, EventArgs e)
         {
             //note affichage du formulaire création client
             FormSaisieNouveauClient nouveauClient = new FormSaisieNouveauClient();
@@ -96,10 +97,7 @@ namespace GesWin
             {
                 Rafraichir();
             }
-            else
-            {
-                Refresh();
-            }         
+                   
           }
             
 
@@ -117,10 +115,7 @@ namespace GesWin
 
         }
 
-        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void datgwListeClients_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -136,16 +131,16 @@ namespace GesWin
             choix = txtRecherche.Text;
             Long = choix.Length;
             nbligne = datgwListeClients.RowCount;
-            //numcol=
+            
             for (int Tour =0; Tour < nbligne-1; Tour++)
             {
                 choix1 = datgwListeClients.Rows[Tour].Cells[numcol].Value.ToString();
                if (choix1.Length < Long)
-                {
+               {
                     datgwListeClients.Rows[Tour].Visible = false;
-                }
+               }
                else
-                {
+               {
                     choix1 = choix1.Substring(0, Long);
                     if (choix1 != choix)
                     {
@@ -153,7 +148,7 @@ namespace GesWin
                        
                     }
 
-                }
+               }
                 // Ne reste que les lignes visibles correpondant au choix de l'utilisateur
             }
             
@@ -185,7 +180,7 @@ namespace GesWin
             {
                 txtRecherche.ReadOnly = false;
                 txtRecherche.Text = "";
-                txtRecherche.BackColor = Color.Empty;
+                //txtRecherche.BackColor = Color.Empty;
                 chbRecherchePrive.Enabled = false;
                 lblAttention.SendToBack();
             }

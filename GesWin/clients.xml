@@ -80,9 +80,27 @@
     <Adresse2>hyuihy</Adresse2>
     <CodPostal>33000</CodPostal>
     <Ville>bdx</Ville>
+    <ListContact />
     <Activite>
       <Activit>Bovins</Activit>
       <NatureAct>Secondaire</NatureAct>
+    </Activite>
+  </Client>
+  <Client>
+    <IdClient>7777</IdClient>
+    <TelephoneClient>322222222</TelephoneClient>
+    <Effectif>54</Effectif>
+    <CA>5453</CA>
+    <TypeSociete>true</TypeSociete>
+    <RaisonSociale>Agritive</RaisonSociale>
+    <Adresse1>dtyjherty</Adresse1>
+    <Adresse2>eyte</Adresse2>
+    <CodPostal>22200</CodPostal>
+    <Ville>Guingamp</Ville>
+    <ListContact />
+    <Activite>
+      <Activit>Cereales</Activit>
+      <NatureAct>Principale</NatureAct>
     </Activite>
   </Client>
 </ArrayOfClient>

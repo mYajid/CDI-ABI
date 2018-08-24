@@ -69,4 +69,20 @@
       <NatureAct>Principale</NatureAct>
     </Activite>
   </Client>
+  <Client>
+    <IdClient>4444</IdClient>
+    <TelephoneClient>644444444</TelephoneClient>
+    <Effectif>55</Effectif>
+    <CA>78657865</CA>
+    <TypeSociete>true</TypeSociete>
+    <RaisonSociale>toto</RaisonSociale>
+    <Adresse1>huikh</Adresse1>
+    <Adresse2>hyuihy</Adresse2>
+    <CodPostal>33000</CodPostal>
+    <Ville>bdx</Ville>
+    <Activite>
+      <Activit>Bovins</Activit>
+      <NatureAct>Secondaire</NatureAct>
+    </Activite>
+  </Client>
 </ArrayOfClient>

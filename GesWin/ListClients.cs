@@ -211,5 +211,10 @@ namespace GesWin
             btn.BackColor = Color.LightCyan;
             btn.ForeColor = Color.Black;
         }
+
+        private void datgwListeClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -74,7 +74,18 @@ namespace GesWin
         private void btnOKActivite_Click(object sender, EventArgs e)
         {
             // = lstActivite.Items
-            this.DialogResult = DialogResult.OK;
+           
+
+            foreach (string item in lstActivite.Items)
+            {
+                if (!Activite.Metiers.Contains(item))
+                {
+                    Activite.Metiers.Add(item);
+                }
+               
+
+            }
+                this.DialogResult = DialogResult.OK;
         }
 
         private void btnAnnulerActivite_Click(object sender, EventArgs e)

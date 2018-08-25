@@ -328,6 +328,7 @@
             // btnAnnuler
             // 
             this.btnAnnuler.BackColor = System.Drawing.Color.Silver;
+            this.btnAnnuler.CausesValidation = false;
             this.btnAnnuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnAnnuler.ForeColor = System.Drawing.Color.Black;
             this.btnAnnuler.Location = new System.Drawing.Point(542, 440);

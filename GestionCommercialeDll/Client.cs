@@ -60,9 +60,7 @@ namespace GestionCommercialeDll
             }
             set
             {
-
-
-
+                
                if (!IsTelephoneClientValid(value))
 
                 {

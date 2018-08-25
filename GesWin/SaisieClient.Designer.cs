@@ -262,7 +262,7 @@
             this.lstNature.Location = new System.Drawing.Point(382, 93);
             this.lstNature.Name = "lstNature";
             this.lstNature.ScrollAlwaysVisible = true;
-            this.lstNature.Size = new System.Drawing.Size(143, 17);
+            this.lstNature.Size = new System.Drawing.Size(143, 30);
             this.lstNature.TabIndex = 4;
             this.lstNature.SelectedIndexChanged += new System.EventHandler(this.lstNature_SelectedIndexChanged);
             // 
@@ -272,7 +272,7 @@
             this.lstActivite.Location = new System.Drawing.Point(135, 93);
             this.lstActivite.Name = "lstActivite";
             this.lstActivite.ScrollAlwaysVisible = true;
-            this.lstActivite.Size = new System.Drawing.Size(142, 17);
+            this.lstActivite.Size = new System.Drawing.Size(142, 30);
             this.lstActivite.TabIndex = 3;
             this.lstActivite.SelectedIndexChanged += new System.EventHandler(this.lstActivite_SelectedIndexChanged);
             // 

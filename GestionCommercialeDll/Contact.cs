@@ -19,7 +19,7 @@ namespace GestionCommercialeDll
         private string _prenomContact;
         private int _telephoneContact;
         private string _emailContact;
-
+        private string _imageContact;
 
         public int IdClient
         {
@@ -117,6 +117,12 @@ namespace GestionCommercialeDll
            + @"([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\.([0-1]?
 				[0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|"
            + @"([a-zA-Z0-9]+[\w-]+\.)+[a-zA-Z]{1}[a-zA-Z0-9-]{1,23})$").Success;
+        }
+
+        public string ImageClient
+        {
+            get { return _imageContact; }
+            set { _imageContact = value; }
         }
 
         public Client Client { get; set; }

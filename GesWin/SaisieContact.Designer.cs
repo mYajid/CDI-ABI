@@ -179,6 +179,7 @@
             // btnAnnulerContact
             // 
             this.btnAnnulerContact.BackColor = System.Drawing.Color.Azure;
+            this.btnAnnulerContact.CausesValidation = false;
             this.btnAnnulerContact.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnnulerContact.Location = new System.Drawing.Point(424, 321);
             this.btnAnnulerContact.Name = "btnAnnulerContact";

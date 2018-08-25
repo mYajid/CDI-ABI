@@ -47,7 +47,10 @@ namespace GesWin
                     if (item.IdClient == int.Parse(txtNumeroClient.Text))
                     {
                         var contact = new FormNouveauContact(item);
-                        contact.Show();
+                        if (contact.ShowDialog() == DialogResult.OK)
+                        {
+                            MessageBox.Show("Nouveau Contact ajouté", "succes", MessageBoxButtons.OK);
+                        }
                     }
                 }
             }

@@ -78,7 +78,7 @@ namespace GestionCommercialeDll
 
         public bool IsNomPrenomValide(string value)
         {
-            if (value == null || value.Length > 32)
+            if (value == string.Empty || value.Length > 32)
                 return false;
             for (int i = 0; i < value.Length - 1; i++)
             {

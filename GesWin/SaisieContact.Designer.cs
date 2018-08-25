@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNouveauContact));
             this.gBoxIdentiteContact = new System.Windows.Forms.GroupBox();
             this.pictbContact = new System.Windows.Forms.PictureBox();
@@ -46,8 +47,10 @@
             this.lblClientContact = new System.Windows.Forms.Label();
             this.lblIDContact = new System.Windows.Forms.Label();
             this.lblRaisonSocialeContact = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gBoxIdentiteContact.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictbContact)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // gBoxIdentiteContact
@@ -106,6 +109,7 @@
             this.txtNomContact.Name = "txtNomContact";
             this.txtNomContact.Size = new System.Drawing.Size(155, 22);
             this.txtNomContact.TabIndex = 4;
+            this.txtNomContact.Validating += new System.ComponentModel.CancelEventHandler(this.txtNomContact_Validating);
             // 
             // lblEmailContact
             // 
@@ -219,6 +223,10 @@
             this.lblRaisonSocialeContact.TabIndex = 7;
             this.lblRaisonSocialeContact.Text = "RS";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormNouveauContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,6 +246,7 @@
             this.gBoxIdentiteContact.ResumeLayout(false);
             this.gBoxIdentiteContact.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictbContact)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +270,6 @@
         public System.Windows.Forms.Label lblIDContact;
         public System.Windows.Forms.Label lblRaisonSocialeContact;
         protected System.Windows.Forms.PictureBox pictbContact;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

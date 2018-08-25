@@ -63,5 +63,22 @@ namespace GesWin
         {
             this.DialogResult = DialogResult.Cancel;
         }
+
+        private void txtNomContact_Validating(object sender, CancelEventArgs e)
+        {
+            Contact c = new Contact();
+            errorProvider1.SetError(txtNomContact, string.Empty);
+            try
+            {
+                c.NomContact = txtNomContact.Text;
+            }
+            catch (Exception)
+            {
+
+                errorProvider1.SetError(txtNomContact, "Le Nom doit comporter de 2 à 32 caractères");
+                MessageBox.Show("Le nom n'est pas valide", "ERREUR", MessageBoxButtons.OK);
+                e.Cancel = true;
+            }
+        }
     }
 }

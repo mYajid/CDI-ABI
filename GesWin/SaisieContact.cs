@@ -121,7 +121,7 @@ namespace GesWin
             errorProvider1.SetError(txtEmailContact, string.Empty);
             try
             {
-                c.Telephone = int.Parse(txtEmailContact.Text);
+                c.Email = txtEmailContact.Text;
             }
             catch (Exception)
             {

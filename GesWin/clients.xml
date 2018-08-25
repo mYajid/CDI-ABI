@@ -114,7 +114,16 @@
     <Adresse2 />
     <CodPostal>55445</CodPostal>
     <Ville>Loin</Ville>
-    <ListContact />
+    <ListContact>
+      <Contact>
+        <IdClient>4455</IdClient>
+        <NomContact>Valjean</NomContact>
+        <PrenomContact>Jean</PrenomContact>
+        <Telephone>144444444</Telephone>
+        <Email>truc@machin.et</Email>
+        <FonctionSetting>Comptable</FonctionSetting>
+      </Contact>
+    </ListContact>
     <Activite>
       <Activit>Bovins</Activit>
       <NatureAct>Ancienne</NatureAct>

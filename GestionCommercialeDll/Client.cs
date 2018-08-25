@@ -194,13 +194,13 @@ namespace GestionCommercialeDll
         /// <returns></returns>
         public bool IsRaisonSocialeValide(string value)
         {
-            if (value == null || value.Length > 32)
+            if (value == string.Empty || value.Length > 32)
 
             { return false; }
 
             for (int i = 0; i < value.Length - 1; i++)
             {
-                if (!char.IsLetter(value[i]) && !char.IsWhiteSpace(value[i]))
+                if (!char.IsLetter(value[i]) && !char.IsWhiteSpace(value[i]) && !char.IsDigit(value[i]))
                 {
                     return false;
                 }

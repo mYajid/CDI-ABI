@@ -31,19 +31,7 @@ namespace GesWin
 
            
 
-       // private void MenuTool(object sender, EventArgs e)
-        //{
-           // ToolStripMenuItem frmMdi = (ToolStripMenuItem)sender;
-           // if (frmMdi.Text == "Client")
-            //{
-        //        Form enf = new Saisieclient(); enf.MdiParent = this; enf.Visible = true;
-        //    }
-        //    else // donc frmMdi.Text == "Contact"
-        //    {
-        //        Form enf = new Formcontact(); enf.MdiParent = this; enf.Visible = true;
-        //    }
-
-        //}
+       
 
         
        

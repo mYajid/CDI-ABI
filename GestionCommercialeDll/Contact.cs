@@ -82,7 +82,7 @@ namespace GestionCommercialeDll
                 return false;
             for (int i = 0; i < value.Length - 1; i++)
             {
-                if (!char.IsLetter(value[i]))
+                if (!char.IsLetter(value[i])&&!char.IsWhiteSpace(value[i]))
                 {
                     return false;
                 }

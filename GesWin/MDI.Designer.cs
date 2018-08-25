@@ -33,15 +33,13 @@
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.activiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.créationClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultationClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +63,6 @@
             this.newToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cToolStripMenuItem,
             this.contactToolStripMenuItem,
-            this.activiteToolStripMenuItem,
             this.quitterToolStripMenuItem});
             this.newToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
@@ -88,12 +85,14 @@
             this.contactToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.contactToolStripMenuItem.Text = "Creation Activité";
             // 
-            // activiteToolStripMenuItem
+            // quitterToolStripMenuItem
             // 
-            this.activiteToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.activiteToolStripMenuItem.Name = "activiteToolStripMenuItem";
-            this.activiteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.activiteToolStripMenuItem.Text = "Creation Nature";
+            this.quitterToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.quitterToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitterToolStripMenuItem.Text = "Quitter";
+            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
             // modificationToolStripMenuItem
             // 
@@ -115,20 +114,11 @@
             // 
             // consultationToolStripMenuItem
             // 
-            this.consultationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientToolStripMenuItem1});
             this.consultationToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consultationToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.consultationToolStripMenuItem.Name = "consultationToolStripMenuItem";
             this.consultationToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.consultationToolStripMenuItem.Text = "Fenêtre";
-            // 
-            // clientToolStripMenuItem1
-            // 
-            this.clientToolStripMenuItem1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.clientToolStripMenuItem1.Name = "clientToolStripMenuItem1";
-            this.clientToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.clientToolStripMenuItem1.Text = "Client";
             // 
             // aideToolStripMenuItem
             // 
@@ -153,15 +143,6 @@
             this.consultationClientToolStripMenuItem.Name = "consultationClientToolStripMenuItem";
             this.consultationClientToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.consultationClientToolStripMenuItem.Text = "Consultation client";
-            // 
-            // quitterToolStripMenuItem
-            // 
-            this.quitterToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.quitterToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.quitterToolStripMenuItem.Text = "Quitter";
-            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
             // MDI
             // 
@@ -197,11 +178,9 @@
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contactToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem activiteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem créationClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultationClientToolStripMenuItem;

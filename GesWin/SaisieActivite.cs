@@ -84,6 +84,8 @@ namespace GesWin
                 }
 
                 Activite.Metiers.Sort();
+
+                Fichier.WriteActivite();
             }
                 this.DialogResult = DialogResult.OK;
         }

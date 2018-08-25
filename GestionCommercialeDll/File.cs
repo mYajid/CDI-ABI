@@ -39,5 +39,19 @@ namespace GestionCommercialeDll
             
             return clientList;
         }
+
+
+        static public void WriteActivite()
+        {
+           
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<string>));
+            using (StreamWriter SW = new StreamWriter("..\\..\\activites.xml"))
+            {
+                xmlSerializer.Serialize(SW, Activite.Metiers);
+
+                SW.Close();
+            }
+
+        }
     }
 }

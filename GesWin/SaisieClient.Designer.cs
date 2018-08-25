@@ -92,6 +92,7 @@
             this.txtTelephone.Size = new System.Drawing.Size(96, 20);
             this.txtTelephone.TabIndex = 12;
             this.txtTelephone.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelephone_Validating);
+            this.txtTelephone.Validated += new System.EventHandler(this.txtTelephone_Validated);
             // 
             // lblTelephone
             // 

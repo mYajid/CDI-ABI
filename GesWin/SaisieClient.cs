@@ -137,53 +137,6 @@ namespace GesWin
         private void gBoxIdentification_Leave(object sender, EventArgs e)
         {
 
-            //Client x = new Client();
-
-            //errorProvider1.SetError(txtNumeroClient, string.Empty);
-            //errorProvider1.SetError(txtCP, string.Empty);
-            //errorProvider1.SetError(txtTelephone, string.Empty);
-
-           
-
-            //try
-            //{
-            //    x.IdClient = int.Parse(txtNumeroClient.Text);
-            //    this.btnOK.Enabled = true;
-            //}
-            //catch (Exception)
-            //{
-
-            //    errorProvider1.SetError(txtNumeroClient, "Le Numero client ne doit comporter que 4 chiffres");
-            //    MessageBox.Show("Le numéro Client saisi n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
-            //    this.btnOK.Enabled = false;
-            //}
-
-            //try
-            //{
-            //    x.CodPostal = int.Parse(txtCP.Text);
-            //    this.btnOK.Enabled = true;
-            //}
-            //catch (Exception)
-            //{
-
-            //    errorProvider1.SetError(txtCP, "Le Code Postale doit comporter 5 chiffres");
-            //    MessageBox.Show("Le Code Postal n'est pas valide", "ERREUR", MessageBoxButtons.OK);
-            //    this.btnOK.Enabled = false;
-            //}
-
-            //try
-            //{   
-            //    x.TelephoneClient = int.Parse(txtTelephone.Text);
-            //    this.btnOK.Enabled = true;
-            //}
-            //catch (Exception)
-            //{
-
-            //    errorProvider1.SetError(txtTelephone, "Le Numero de telephone doit comporter 10 chiffres");
-            //    MessageBox.Show("Le numéro de Telephone  n'est pas valide", "ERREUR", MessageBoxButtons.OK);
-            //    this.btnOK.Enabled = false;
-
-            //}
         }
 
         private void txtRaisonSociale_Validating(object sender, CancelEventArgs e)
@@ -209,8 +162,8 @@ namespace GesWin
 
             if(txtAdresse1.Text=="")
             {
-                errorProvider1.SetError(txtAdresse1, "Raison Sociale non valide");
-                MessageBox.Show("Raison Sociale doit comporter de 2 à 32 caractères", "ERREUR", MessageBoxButtons.OK);
+                errorProvider1.SetError(txtAdresse1, "adresse vide");
+                MessageBox.Show("L' adresse ne neut pas être vide", "ERREUR", MessageBoxButtons.OK);
                 e.Cancel = true;
             }
           
@@ -227,7 +180,7 @@ namespace GesWin
             catch (Exception)
             {
                 errorProvider1.SetError(txtCP, "Le Code Postale doit comporter 5 chiffres");
-                MessageBox.Show("Raison Sociale doit comporter de 2 à 32 caractères", "ERREUR", MessageBoxButtons.OK);
+                MessageBox.Show("Le Code Postal n'est pas valide", "ERREUR", MessageBoxButtons.OK);
                 e.Cancel = true;
             }
         }
@@ -238,14 +191,19 @@ namespace GesWin
             errorProvider1.SetError(txtTelephone, string.Empty);
             try
             {
-                x.CodPostal = int.Parse(txtTelephone.Text);
+                x.TelephoneClient = int.Parse(txtTelephone.Text);
             }
             catch (Exception)
             {
-                errorProvider1.SetError(txtTelephone, "Le Code Postale doit comporter 5 chiffres");
-                MessageBox.Show("Raison Sociale doit comporter de 2 à 32 caractères", "ERREUR", MessageBoxButtons.OK);
+               errorProvider1.SetError(txtTelephone, "Le Numero de telephone doit comporter 10 chiffres");
+                MessageBox.Show("Le numéro de Telephone  n'est pas valide", "ERREUR", MessageBoxButtons.OK);
                 e.Cancel = true;
             }
+        }
+
+        private void txtTelephone_Validated(object sender, EventArgs e)
+        {
+            this.btnOK.Enabled = true;
         }
     }
 }

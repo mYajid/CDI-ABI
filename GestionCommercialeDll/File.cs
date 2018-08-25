@@ -53,5 +53,18 @@ namespace GestionCommercialeDll
             }
 
         }
+
+        public static List<string> ReadActivite()
+        {
+            List<string> activites;
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<string>));
+            using (StreamReader SR = new StreamReader("..\\..\\activites.xml"))
+            {
+                activites = (List<string>)xmlSerializer.Deserialize(SR);
+                SR.Close();
+            }
+
+            return activites;
+        }
     }
 }

@@ -10,10 +10,10 @@ namespace GestionCommercialeDll
    public class Activite
     {
 
-        public static List<String> Metiers = new List<String>()
-        { "Administration", "Bovins", "Cereales", "Boissons", "Laiterie", "Pêche","Mecanique"};
+        public static List<String> Metiers = Fichier.ReadActivite();
+       // { "Administration", "Bovins", "Cereales", "Boissons", "Laiterie", "Pêche","Mecanique"};
 
-
+        
 
         public String Activit { get; set; }
         public Natur NatureAct { get; set; }

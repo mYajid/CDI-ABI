@@ -82,7 +82,7 @@ namespace GesWin
                 {
                     Activite.Metiers.Add(item);
                 }
-
+                
                 Activite.Metiers.Sort();
 
                 Fichier.WriteActivite();

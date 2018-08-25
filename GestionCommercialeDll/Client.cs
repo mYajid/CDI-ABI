@@ -167,6 +167,10 @@ namespace GestionCommercialeDll
             }
             set
             {
+                if (!CPValid(value))
+                {
+                    throw new Exception(string.Format("Le Code Postal {0} n'est pas valide", value));
+                }
                 _CP = value;
             }
         }
@@ -260,6 +264,22 @@ namespace GestionCommercialeDll
             return true;
            
         }
+
+        public bool CPValid(int value)
+
+        {
+            string valeur = value.ToString();
+
+            if (valeur == null || valeur.Length != 5)
+            { 
+                return false;
+            }
+            return true;
+
+        }
+
+
+
         /// <summary>
         /// Surcharge (override) de la fonction héritée Equals
         /// Elle doit renvoyer la comparaison de deux clients
@@ -276,6 +296,7 @@ namespace GestionCommercialeDll
 
             return this.IdClient == ((Client)obj).IdClient;
         }
+        
         /// <summary>
         /// Surcharge(override) de la fonction héritée Equals
         /// Elle doit renvoyer le HashCode de la proprieté Id client 

@@ -103,4 +103,21 @@
       <NatureAct>Principale</NatureAct>
     </Activite>
   </Client>
+  <Client>
+    <IdClient>4455</IdClient>
+    <TelephoneClient>224555555</TelephoneClient>
+    <Effectif>3423</Effectif>
+    <CA>2332234234</CA>
+    <TypeSociete>true</TypeSociete>
+    <RaisonSociale>Société</RaisonSociale>
+    <Adresse1>3 rue de la paix</Adresse1>
+    <Adresse2 />
+    <CodPostal>55445</CodPostal>
+    <Ville>Loin</Ville>
+    <ListContact />
+    <Activite>
+      <Activit>Bovins</Activit>
+      <NatureAct>Ancienne</NatureAct>
+    </Activite>
+  </Client>
 </ArrayOfClient>

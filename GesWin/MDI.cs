@@ -71,6 +71,12 @@ namespace GesWin
         {
             Application.Exit();
         }
+
+        private void FichierActivite_Click(object sender, EventArgs e)
+        {
+            FormSaisieActivite form = new FormSaisieActivite();
+            form.ShowDialog();
+        }
     }
 }
     

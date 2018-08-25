@@ -32,7 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FichierActivite = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +62,7 @@
             // 
             this.newToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cToolStripMenuItem,
-            this.contactToolStripMenuItem,
+            this.FichierActivite,
             this.quitterToolStripMenuItem});
             this.newToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
@@ -78,12 +78,13 @@
             this.cToolStripMenuItem.Text = "Nouveau Client";
             this.cToolStripMenuItem.Click += new System.EventHandler(this.cToolStripMenuItem_Click);
             // 
-            // contactToolStripMenuItem
+            // FichierActivite
             // 
-            this.contactToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
-            this.contactToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.contactToolStripMenuItem.Text = "Creation Activité";
+            this.FichierActivite.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.FichierActivite.Name = "FichierActivite";
+            this.FichierActivite.Size = new System.Drawing.Size(180, 22);
+            this.FichierActivite.Text = "Creation Activité";
+            this.FichierActivite.Click += new System.EventHandler(this.FichierActivite_Click);
             // 
             // quitterToolStripMenuItem
             // 
@@ -108,7 +109,7 @@
             // 
             this.clientToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.clientToolStripMenuItem.Text = "Liste des Clients";
             this.clientToolStripMenuItem.Click += new System.EventHandler(this.clientToolStripMenuItem_Click_1);
             // 
@@ -177,7 +178,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contactToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem FichierActivite;
         private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultationToolStripMenuItem;

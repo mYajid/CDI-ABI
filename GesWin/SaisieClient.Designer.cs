@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gBoxIdentification = new System.Windows.Forms.GroupBox();
+            this.txtTelephone = new System.Windows.Forms.TextBox();
             this.lblTelephone = new System.Windows.Forms.Label();
             this.lblCpVille = new System.Windows.Forms.Label();
             this.lblAdresse = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.btnContacts = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtTelephone = new System.Windows.Forms.TextBox();
             this.gBoxIdentification.SuspendLayout();
             this.gBoxCaracteristiques.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -83,6 +83,15 @@
             this.gBoxIdentification.TabStop = false;
             this.gBoxIdentification.Text = "Identification";
             this.gBoxIdentification.Leave += new System.EventHandler(this.gBoxIdentification_Leave);
+            // 
+            // txtTelephone
+            // 
+            this.txtTelephone.Location = new System.Drawing.Point(135, 149);
+            this.txtTelephone.MaxLength = 14;
+            this.txtTelephone.Name = "txtTelephone";
+            this.txtTelephone.Size = new System.Drawing.Size(96, 20);
+            this.txtTelephone.TabIndex = 12;
+            this.txtTelephone.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelephone_Validating);
             // 
             // lblTelephone
             // 
@@ -147,6 +156,7 @@
             this.txtCP.Name = "txtCP";
             this.txtCP.Size = new System.Drawing.Size(96, 20);
             this.txtCP.TabIndex = 4;
+            this.txtCP.Validating += new System.ComponentModel.CancelEventHandler(this.txtCP_Validating);
             // 
             // txtAdresse2
             // 
@@ -161,6 +171,7 @@
             this.txtAdresse1.Name = "txtAdresse1";
             this.txtAdresse1.Size = new System.Drawing.Size(430, 20);
             this.txtAdresse1.TabIndex = 2;
+            this.txtAdresse1.Validating += new System.ComponentModel.CancelEventHandler(this.txtAdresse1_Validating);
             // 
             // txtRaisonSociale
             // 
@@ -168,6 +179,7 @@
             this.txtRaisonSociale.Name = "txtRaisonSociale";
             this.txtRaisonSociale.Size = new System.Drawing.Size(430, 20);
             this.txtRaisonSociale.TabIndex = 1;
+            this.txtRaisonSociale.Validating += new System.ComponentModel.CancelEventHandler(this.txtRaisonSociale_Validating);
             // 
             // txtNumeroClient
             // 
@@ -330,14 +342,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // txtTelephone
-            // 
-            this.txtTelephone.Location = new System.Drawing.Point(135, 149);
-            this.txtTelephone.MaxLength = 14;
-            this.txtTelephone.Name = "txtTelephone";
-            this.txtTelephone.Size = new System.Drawing.Size(96, 20);
-            this.txtTelephone.TabIndex = 12;
             // 
             // FormSaisieNouveauClient
             // 

@@ -19,15 +19,10 @@ namespace GesWin
         {
             InitializeComponent();
 
+           
 
             lstActivite.DataSource = Activite.Metiers;
-
-            //Array arrayMetier = Enum.GetValues(typeof(List));
-
-            //foreach (var item in arrayMetier)
-            //{
-            //    lstActivite.Items.Add(item);
-            //}
+                       
 
             Array arrayNatur = Enum.GetValues(typeof(Natur));
 
@@ -110,7 +105,19 @@ namespace GesWin
 
         private void txtNumeroClient_Validating(object sender, CancelEventArgs e)
         {
-            
+            Client x = new Client();
+            errorProvider1.SetError(txtNumeroClient, string.Empty);
+            try
+            {
+                x.IdClient = int.Parse(txtNumeroClient.Text);
+            }
+            catch (Exception)
+            {
+                errorProvider1.SetError(txtNumeroClient, "Le Numero client ne doit comporter que 4 chiffres");
+                MessageBox.Show("Le numéro Client saisi n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
+                e.Cancel = true;
+            }
+
         }
 
         private void btnColor_MouseEnter(object sender, EventArgs e)
@@ -130,52 +137,114 @@ namespace GesWin
         private void gBoxIdentification_Leave(object sender, EventArgs e)
         {
 
-            Client x = new Client();
+            //Client x = new Client();
 
-            errorProvider1.SetError(txtNumeroClient, string.Empty);
-            errorProvider1.SetError(txtCP, string.Empty);
-            errorProvider1.SetError(txtTelephone, string.Empty);
+            //errorProvider1.SetError(txtNumeroClient, string.Empty);
+            //errorProvider1.SetError(txtCP, string.Empty);
+            //errorProvider1.SetError(txtTelephone, string.Empty);
 
            
 
+            //try
+            //{
+            //    x.IdClient = int.Parse(txtNumeroClient.Text);
+            //    this.btnOK.Enabled = true;
+            //}
+            //catch (Exception)
+            //{
+
+            //    errorProvider1.SetError(txtNumeroClient, "Le Numero client ne doit comporter que 4 chiffres");
+            //    MessageBox.Show("Le numéro Client saisi n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
+            //    this.btnOK.Enabled = false;
+            //}
+
+            //try
+            //{
+            //    x.CodPostal = int.Parse(txtCP.Text);
+            //    this.btnOK.Enabled = true;
+            //}
+            //catch (Exception)
+            //{
+
+            //    errorProvider1.SetError(txtCP, "Le Code Postale doit comporter 5 chiffres");
+            //    MessageBox.Show("Le Code Postal n'est pas valide", "ERREUR", MessageBoxButtons.OK);
+            //    this.btnOK.Enabled = false;
+            //}
+
+            //try
+            //{   
+            //    x.TelephoneClient = int.Parse(txtTelephone.Text);
+            //    this.btnOK.Enabled = true;
+            //}
+            //catch (Exception)
+            //{
+
+            //    errorProvider1.SetError(txtTelephone, "Le Numero de telephone doit comporter 10 chiffres");
+            //    MessageBox.Show("Le numéro de Telephone  n'est pas valide", "ERREUR", MessageBoxButtons.OK);
+            //    this.btnOK.Enabled = false;
+
+            //}
+        }
+
+        private void txtRaisonSociale_Validating(object sender, CancelEventArgs e)
+        {
+            Client x = new Client();
+            errorProvider1.SetError(txtRaisonSociale, string.Empty);
             try
             {
-                x.IdClient = int.Parse(txtNumeroClient.Text);
-                this.btnOK.Enabled = true;
+                x.RaisonSociale =txtRaisonSociale.Text;
             }
             catch (Exception)
             {
-
-                errorProvider1.SetError(txtNumeroClient, "Le Numero client ne doit comporter que 4 chiffres");
-                MessageBox.Show("Le numéro Client saisi n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
-                this.btnOK.Enabled = false;
+                errorProvider1.SetError(txtRaisonSociale, "Raison Sociale non valide");
+                MessageBox.Show("Raison Sociale doit comporter de 2 à 32 caractères", "ERREUR", MessageBoxButtons.OK);
+                e.Cancel = true;
             }
+        }
 
+        private void txtAdresse1_Validating(object sender, CancelEventArgs e)
+        {
+           
+            errorProvider1.SetError(txtAdresse1, string.Empty);
+
+            if(txtAdresse1.Text=="")
+            {
+                errorProvider1.SetError(txtAdresse1, "Raison Sociale non valide");
+                MessageBox.Show("Raison Sociale doit comporter de 2 à 32 caractères", "ERREUR", MessageBoxButtons.OK);
+                e.Cancel = true;
+            }
+          
+        }
+
+        private void txtCP_Validating(object sender, CancelEventArgs e)
+        {
+            Client x = new Client();
+            errorProvider1.SetError(txtCP, string.Empty);
             try
             {
-                x.CodPostal = int.Parse(txtCP.Text);
-                this.btnOK.Enabled = true;
+                x.CodPostal =int.Parse(txtCP.Text);
             }
             catch (Exception)
             {
-
                 errorProvider1.SetError(txtCP, "Le Code Postale doit comporter 5 chiffres");
-                MessageBox.Show("Le Code Postal n'est pas valide", "ERREUR", MessageBoxButtons.OK);
-                this.btnOK.Enabled = false;
+                MessageBox.Show("Raison Sociale doit comporter de 2 à 32 caractères", "ERREUR", MessageBoxButtons.OK);
+                e.Cancel = true;
             }
+        }
 
+        private void txtTelephone_Validating(object sender, CancelEventArgs e)
+        {
+            Client x = new Client();
+            errorProvider1.SetError(txtTelephone, string.Empty);
             try
-            {   
-                x.TelephoneClient = int.Parse(txtTelephone.Text);
-                this.btnOK.Enabled = true;
+            {
+                x.CodPostal = int.Parse(txtTelephone.Text);
             }
             catch (Exception)
             {
-
-                errorProvider1.SetError(txtTelephone, "Le Numero de telephone doit comporter 10 chiffres");
-                MessageBox.Show("Le numéro de Telephone  n'est pas valide", "ERREUR", MessageBoxButtons.OK);
-                this.btnOK.Enabled = false;
-
+                errorProvider1.SetError(txtTelephone, "Le Code Postale doit comporter 5 chiffres");
+                MessageBox.Show("Raison Sociale doit comporter de 2 à 32 caractères", "ERREUR", MessageBoxButtons.OK);
+                e.Cancel = true;
             }
         }
     }

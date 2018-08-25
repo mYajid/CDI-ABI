@@ -80,5 +80,57 @@ namespace GesWin
                 e.Cancel = true;
             }
         }
+
+        private void txtPrenomContact_Validating(object sender, CancelEventArgs e)
+        {
+            Contact c = new Contact();
+            errorProvider1.SetError(txtPrenomContact, string.Empty);
+            try
+            {
+                c.PrenomContact = txtPrenomContact.Text;
+            }
+            catch (Exception)
+            {
+
+                errorProvider1.SetError(txtPrenomContact, "Le Prénom doit comporter de 2 à 32 caractères");
+                MessageBox.Show("Le Prénom n'est pas valide", "ERREUR", MessageBoxButtons.OK);
+                e.Cancel = true;
+            }
+        }
+
+        private void txtTelephoneContact_Validating(object sender, CancelEventArgs e)
+        {
+            Contact c = new Contact();
+            errorProvider1.SetError(txtTelephoneContact, string.Empty);
+            try
+            {
+                c.Telephone = int.Parse(txtTelephoneContact.Text);
+            }
+            catch (Exception)
+            {
+
+                errorProvider1.SetError(txtTelephoneContact, "Le numéro de telephone n'est pas au format");
+                MessageBox.Show("Le numéro de telephone n'est pas valide", "ERREUR", MessageBoxButtons.OK);
+                e.Cancel = true;
+            }
+        }
+
+        private void txtEmailContact_Validating(object sender, CancelEventArgs e)
+        {
+            Contact c = new Contact();
+            errorProvider1.SetError(txtEmailContact, string.Empty);
+            try
+            {
+                c.Telephone = int.Parse(txtEmailContact.Text);
+            }
+            catch (Exception)
+            {
+
+                errorProvider1.SetError(txtEmailContact, "L' email doit être au format xxx@xxx.xx");
+                MessageBox.Show("L'email n'est pas valide", "ERREUR", MessageBoxButtons.OK);
+                e.Cancel = true;
+            }
+
+        }
     }
 }

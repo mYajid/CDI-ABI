@@ -88,6 +88,7 @@
             this.txtEmailContact.Name = "txtEmailContact";
             this.txtEmailContact.Size = new System.Drawing.Size(155, 22);
             this.txtEmailContact.TabIndex = 7;
+            this.txtEmailContact.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmailContact_Validating);
             // 
             // txtTelephoneContact
             // 
@@ -95,6 +96,7 @@
             this.txtTelephoneContact.Name = "txtTelephoneContact";
             this.txtTelephoneContact.Size = new System.Drawing.Size(155, 22);
             this.txtTelephoneContact.TabIndex = 6;
+            this.txtTelephoneContact.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelephoneContact_Validating);
             // 
             // txtPrenomContact
             // 
@@ -102,6 +104,7 @@
             this.txtPrenomContact.Name = "txtPrenomContact";
             this.txtPrenomContact.Size = new System.Drawing.Size(155, 22);
             this.txtPrenomContact.TabIndex = 5;
+            this.txtPrenomContact.Validating += new System.ComponentModel.CancelEventHandler(this.txtPrenomContact_Validating);
             // 
             // txtNomContact
             // 

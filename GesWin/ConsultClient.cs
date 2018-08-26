@@ -174,7 +174,20 @@ namespace GesWin
 
         private void btnSupr_Click(object sender, EventArgs e)
         {
-           int numligne = dataGridContact.CurrentRow.Index;
+
+            foreach (var item in Client.clientsHS)
+            {
+                if (item.IdClient == int.Parse(txtNumeroClient.Text))
+                {
+                    string nom = (string)dataGridContact.CurrentRow.Cells["ColNom"].Value;
+
+                 }
+                item.ListContact.Remove.Contains(nom);
+
+            }
+
+
+            int numligne = dataGridContact.CurrentRow.Index;
 
             dataGridContact.Rows.RemoveAt(numligne);
         }

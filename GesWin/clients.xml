@@ -55,6 +55,24 @@
         <Email>jDoe@CG.fr</Email>
         <FonctionSetting>Comptable</FonctionSetting>
       </Contact>
+      <Contact>
+        <IdClient>1235</IdClient>
+        <NomContact>Bogosse</NomContact>
+        <PrenomContact>Roberto</PrenomContact>
+        <Telephone>133333333</Telephone>
+        <Email>erf@zerg.fr</Email>
+        <FonctionSetting>Dirigeant</FonctionSetting>
+        <ImageClient>C:\Users\adm\source\repos\CDI-ABI\GesWin\Resources\bogosse.jpg</ImageClient>
+      </Contact>
+      <Contact>
+        <IdClient>1235</IdClient>
+        <NomContact>Tal</NomContact>
+        <PrenomContact>Neander</PrenomContact>
+        <Telephone>122222222</Telephone>
+        <Email>erfzerg@zergz.fr</Email>
+        <FonctionSetting>Dirigeant</FonctionSetting>
+        <ImageClient>C:\Users\adm\source\repos\CDI-ABI\GesWin\Resources\neandertal.jpg</ImageClient>
+      </Contact>
     </ListContact>
     <Activite>
       <Activit>Administration</Activit>

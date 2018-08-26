@@ -184,6 +184,7 @@
             this.btnOKContact.Text = "OK";
             this.btnOKContact.UseVisualStyleBackColor = false;
             this.btnOKContact.Click += new System.EventHandler(this.btnOKContact_Click);
+            this.btnOKContact.MouseHover += new System.EventHandler(this.btnOKContact_MouseHover);
             // 
             // btnAnnulerContact
             // 

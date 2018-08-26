@@ -49,17 +49,12 @@ namespace GesWin
                     contact.PrenomContact = txtPrenomContact.Text;
                     contact.Telephone = int.Parse(txtTelephoneContact.Text);
                     contact.Email = txtEmailContact.Text;
+                    contact.FonctionSetting = (Fonction)lstFonctionContact.SelectedItem;
+                    
+                   
 
-                    //Verification que le contact a bien une fonction
-                    if (lstFonctionContact.SelectedItem==null)
-                    {
-                        MessageBox.Show("Selectionnez une fonction du contact", "ERREUR", MessageBoxButtons.OK);
-                    }
-                    else
-                    {
-                        contact.FonctionSetting = (Fonction)lstFonctionContact.SelectedItem;
-                    }
-
+                  
+                  
                     //Ajout du contact dans le hashset Listcontact du Client _client
 
                     contact.ImageClient = photoContact.ImageLocation;
@@ -106,7 +101,7 @@ namespace GesWin
 
                 errorProvider1.SetError(txtPrenomContact, "Le Prénom doit comporter de 2 à 32 caractères");
                 MessageBox.Show("Le Prénom n'est pas valide", "ERREUR", MessageBoxButtons.OK);
-                e.Cancel = true;
+              
             }
         }
 
@@ -123,7 +118,7 @@ namespace GesWin
 
                 errorProvider1.SetError(txtTelephoneContact, "Le numéro de telephone n'est pas au format");
                 MessageBox.Show("Le numéro de telephone n'est pas valide", "ERREUR", MessageBoxButtons.OK);
-                e.Cancel = true;
+               
             }
         }
 
@@ -140,18 +135,40 @@ namespace GesWin
 
                 errorProvider1.SetError(txtEmailContact, "L' email doit être au format xxx@xxx.xx");
                 MessageBox.Show("L'email n'est pas valide", "ERREUR", MessageBoxButtons.OK);
-                e.Cancel = true;
+                
             }
 
         }
+
+
+      
+
+        //Ajout de la photo du client par une fenetre de dialogue OpenFileDialog
 
         private void btnphoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
 
-            if (open.ShowDialog()==DialogResult.OK)
+            if (open.ShowDialog() == DialogResult.OK)
             {
                 photoContact.ImageLocation = open.FileName;
+            }
+        }
+
+        private void btnOKContact_MouseHover(object sender, EventArgs e)
+        {
+            Contact c = new Contact();
+            errorProvider1.SetError(lstFonctionContact, string.Empty);
+            try
+            {
+                c.FonctionSetting = (Fonction)lstFonctionContact.SelectedItem;
+            }
+            catch (Exception)
+            {
+
+                errorProvider1.SetError(lstFonctionContact, "La fonction est obligatoire");
+                MessageBox.Show("Selectionnez une fonction du contact", "ERREUR", MessageBoxButtons.OK);
+               
             }
         }
     }

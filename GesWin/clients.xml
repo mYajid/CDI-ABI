@@ -107,7 +107,17 @@
     <Adresse2>hyuihy</Adresse2>
     <CodPostal>33000</CodPostal>
     <Ville>bdx</Ville>
-    <ListContact />
+    <ListContact>
+      <Contact>
+        <IdClient>4444</IdClient>
+        <NomContact>ere</NomContact>
+        <PrenomContact>ere</PrenomContact>
+        <Telephone>122222222</Telephone>
+        <Email>hgoiuy@uhygou.fr</Email>
+        <FonctionSetting>Dirigeant</FonctionSetting>
+        <ImageClient>C:\Users\adm\source\repos\CDI-ABI\GesWin\Resources\luke.jpg</ImageClient>
+      </Contact>
+    </ListContact>
     <Activite>
       <Activit>Bovins</Activit>
       <NatureAct>Secondaire</NatureAct>
@@ -133,6 +143,32 @@
         <Email>azef@azef.fr</Email>
         <FonctionSetting>Comptable</FonctionSetting>
         <ImageClient>..\..\Ressources\luke.jpg</ImageClient>
+      </Contact>
+      <Contact>
+        <IdClient>7777</IdClient>
+        <NomContact>erg</NomContact>
+        <PrenomContact>uyg</PrenomContact>
+        <Telephone>222222222</Telephone>
+        <Email>ezrfoiu@ezrf.ei</Email>
+        <FonctionSetting>Comptable</FonctionSetting>
+        <ImageClient>..\..\Resources\bogosse.jpg</ImageClient>
+      </Contact>
+      <Contact>
+        <IdClient>7777</IdClient>
+        <NomContact>Dodo</NomContact>
+        <PrenomContact>Fifi</PrenomContact>
+        <Telephone>102235689</Telephone>
+        <Email>as@fr.dr</Email>
+        <FonctionSetting>Dirigeant</FonctionSetting>
+      </Contact>
+      <Contact>
+        <IdClient>7777</IdClient>
+        <NomContact>roo</NomContact>
+        <PrenomContact>foo</PrenomContact>
+        <Telephone>206897845</Telephone>
+        <Email>drt@yahoo.fr</Email>
+        <FonctionSetting>Dirigeant</FonctionSetting>
+        <ImageClient>..\..\Resources\neandertal.jpg</ImageClient>
       </Contact>
     </ListContact>
     <Activite>

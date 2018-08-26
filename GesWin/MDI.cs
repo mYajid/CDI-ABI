@@ -22,18 +22,7 @@ namespace GesWin
 
         }
 
-        // AJOUT
-        private void clientToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //var Appel = new Form Form3();
-            //Appel.Show();
-        }
-
-           
-
-       
-
-        
+                       
        
         private void btnColor_MouseEnter(object sender, EventArgs e)
         {

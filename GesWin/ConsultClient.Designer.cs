@@ -62,6 +62,7 @@
             this.ColTelephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColFonction = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSupr = new System.Windows.Forms.Button();
             this.boxIdentification.SuspendLayout();
             this.boxCaractéristique.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridContact)).BeginInit();
@@ -311,7 +312,7 @@
             // 
             this.btnNouveauContact.BackColor = System.Drawing.Color.Azure;
             this.btnNouveauContact.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNouveauContact.Location = new System.Drawing.Point(349, 488);
+            this.btnNouveauContact.Location = new System.Drawing.Point(279, 488);
             this.btnNouveauContact.Name = "btnNouveauContact";
             this.btnNouveauContact.Size = new System.Drawing.Size(139, 45);
             this.btnNouveauContact.TabIndex = 4;
@@ -384,12 +385,25 @@
             this.ColFonction.Name = "ColFonction";
             this.ColFonction.Width = 150;
             // 
+            // btnSupr
+            // 
+            this.btnSupr.BackColor = System.Drawing.Color.Azure;
+            this.btnSupr.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupr.Location = new System.Drawing.Point(467, 488);
+            this.btnSupr.Name = "btnSupr";
+            this.btnSupr.Size = new System.Drawing.Size(139, 45);
+            this.btnSupr.TabIndex = 7;
+            this.btnSupr.Text = "Supprimer Contact";
+            this.btnSupr.UseVisualStyleBackColor = false;
+            this.btnSupr.Click += new System.EventHandler(this.btnSupr_Click);
+            // 
             // FormConsultClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(857, 554);
+            this.Controls.Add(this.btnSupr);
             this.Controls.Add(this.dataGridContact);
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.btnNouveauContact);
@@ -444,5 +458,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTelephone;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColFonction;
+        public System.Windows.Forms.Button btnSupr;
     }
 }

@@ -153,6 +153,23 @@
         <FonctionSetting>Comptable</FonctionSetting>
         <ImageClient>..\..\Resources\bogosse.jpg</ImageClient>
       </Contact>
+      <Contact>
+        <IdClient>7777</IdClient>
+        <NomContact>Dodo</NomContact>
+        <PrenomContact>Fifi</PrenomContact>
+        <Telephone>102235689</Telephone>
+        <Email>as@fr.dr</Email>
+        <FonctionSetting>Dirigeant</FonctionSetting>
+      </Contact>
+      <Contact>
+        <IdClient>7777</IdClient>
+        <NomContact>roo</NomContact>
+        <PrenomContact>foo</PrenomContact>
+        <Telephone>206897845</Telephone>
+        <Email>drt@yahoo.fr</Email>
+        <FonctionSetting>Dirigeant</FonctionSetting>
+        <ImageClient>..\..\Resources\neandertal.jpg</ImageClient>
+      </Contact>
     </ListContact>
     <Activite>
       <Activit>Cereales</Activit>

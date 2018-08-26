@@ -175,6 +175,7 @@ namespace GesWin
         private void btnSupr_Click(object sender, EventArgs e)
         {
            int numligne = dataGridContact.CurrentRow.Index;
+
             dataGridContact.Rows.RemoveAt(numligne);
         }
     }

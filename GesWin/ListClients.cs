@@ -157,7 +157,7 @@ namespace GesWin
         private void btnListeCliente_Click(object sender, EventArgs e)
         {
             for (int Tour = 0; Tour < nbligne - 1; Tour++)
-            {
+            {               
                 datgwListeClients.Rows[Tour].Visible = true;
                 txtRecherche.Text = "";
             }
@@ -166,6 +166,16 @@ namespace GesWin
 
         private void btnSuprimeClient_Click(object sender, EventArgs e)
         {
+            string RS = (string)datgwListeClients.CurrentRow.Cells["RaisonSociale"].Value;
+
+            foreach (Client client in Client.clientsHS)
+            {
+                if (client.RaisonSociale==RS)
+                {
+                    Client.clientsHS.Remove(client);
+                }
+            }
+
             numligne = datgwListeClients.CurrentRow.Index;
             datgwListeClients.Rows.RemoveAt(numligne);
         }

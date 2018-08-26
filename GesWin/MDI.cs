@@ -22,7 +22,7 @@ namespace GesWin
 
         }
 
-                       
+                     
        
         private void btnColor_MouseEnter(object sender, EventArgs e)
         {

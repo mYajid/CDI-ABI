@@ -184,6 +184,8 @@ namespace GesWin
 
             numligne = datgwListeClients.CurrentRow.Index;
             datgwListeClients.Rows.RemoveAt(numligne);
+
+            
             
         }
 

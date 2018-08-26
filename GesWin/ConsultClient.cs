@@ -134,6 +134,17 @@ namespace GesWin
 
         private void dataGridContact_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+           
+
+            
+
+
+
+        }
+
+        private void dataGridContact_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
             foreach (var client in Client.clientsHS)
             {
                 if (client.IdClient == int.Parse(txtNumeroClient.Text))
@@ -157,10 +168,6 @@ namespace GesWin
 
                 }
             }
-
-
-            
-
 
 
         }

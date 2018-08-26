@@ -49,10 +49,11 @@
             // 
             // photoClontact
             // 
+            this.photoClontact.Image = global::GesWin.Properties.Resources.edv_roboter_hintergrund_zeichnungen_csp14758599;
             this.photoClontact.InitialImage = global::GesWin.Properties.Resources.edv_roboter_hintergrund_zeichnungen_csp14758599;
-            this.photoClontact.Location = new System.Drawing.Point(382, 25);
+            this.photoClontact.Location = new System.Drawing.Point(349, -12);
             this.photoClontact.Name = "photoClontact";
-            this.photoClontact.Size = new System.Drawing.Size(100, 115);
+            this.photoClontact.Size = new System.Drawing.Size(204, 194);
             this.photoClontact.TabIndex = 0;
             this.photoClontact.TabStop = false;
             // 

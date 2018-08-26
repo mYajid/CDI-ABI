@@ -30,17 +30,14 @@ namespace GesWin
             chbRecherchePrive.Enabled = false;
             lblAttention.SendToBack();
             Recherche();
-
-
+            
 
             foreach (Client item in Client.clientsHS)
             {
                 //Remplit la DataGridView à partir de la liste HachSet où sont stockées les données des clients.
                 this.datgwListeClients.Rows.Add(item.RaisonSociale, item.Ville, item.CodPostal, item.TypeSociete, item.Activite.Activit, item.Activite.NatureAct);
 
-            }
-
-          
+            }                    
 
         }
         
@@ -88,8 +85,7 @@ namespace GesWin
                     ConsultClient.Show();
 
                 }
-            }
-            
+            }            
         }
 
         private void btnNouveauClient_Click(object sender, EventArgs e)
@@ -99,11 +95,12 @@ namespace GesWin
             if (nouveauClient.ShowDialog()==DialogResult.OK)
             {
                 Rafraichir();
-            }
-                   
-          }
+            }                   
+        }
             
-
+        /// <summary>
+        /// Methode pour raffraichir l' affichage du datagrid apres l' ajout ou suppression de client
+        /// </summary>
        
         public void Rafraichir()
         {
@@ -111,8 +108,7 @@ namespace GesWin
             datgwListeClients.Rows.Clear();
 
             foreach (var item in Client.clientsHS)
-            {
-               
+            {               
                 this.datgwListeClients.Rows.Add(item.RaisonSociale, item.Ville, item.CodPostal, item.TypeSociete, item.Activite.Activit, item.Activite.NatureAct);
 
             }
@@ -130,6 +126,11 @@ namespace GesWin
             //arret = "Pause";
         }
 
+        /// <summary>
+        /// Bouton Recherche Client
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRecherche_Click(object sender, EventArgs e)
         {
             //Recherche selon le critère (sauf "Type Société"). Comparaison de la saisie avec le contenu de la cellule.
@@ -166,27 +167,25 @@ namespace GesWin
             {               
                 datgwListeClients.Rows[Tour].Visible = true;
                 txtRecherche.Text = "";
-            }
-            
+            }            
         }
 
+        /// <summary>
+        /// Bouton Supprimer Client
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSuprimeClient_Click(object sender, EventArgs e)
         {
             string RS = (string)datgwListeClients.CurrentRow.Cells["RaisonSociale"].Value;
 
-            foreach (Client client in Client.clientsHS)
-            {
-                if (client.RaisonSociale==RS)
-                {
-                    Client.clientsHS.Remove(client);
-                }
-            }
+            //On récupère le client par la Raison Sociale Grace à la méthode GetClient
+            Client client = GetClient(RS);
 
-            numligne = datgwListeClients.CurrentRow.Index;
-            datgwListeClients.Rows.RemoveAt(numligne);
+            Client.clientsHS.Remove(client);
 
-            
-            
+            Rafraichir();
+                       
         }
 
         private void chbRecherchePrive_Click(object sender, EventArgs e)
@@ -230,6 +229,19 @@ namespace GesWin
             Button btn = (Button)sender;
             btn.BackColor = Color.LightCyan;
             btn.ForeColor = Color.Black;
+        }
+
+        private Client GetClient(string RS)
+        {
+            Client client = new Client();
+            foreach (var item in Client.clientsHS)
+            {
+                if (item.RaisonSociale == RS)
+                {
+                    client = item;
+                }
+            }
+            return client;
         }
     }
 }

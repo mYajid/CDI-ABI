@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using GestionCommercialeDll;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using GestionCommercialeDll;
 
 namespace GesWin
 {
@@ -101,8 +95,7 @@ namespace GesWin
                         this.Refresh();
                     }
                 }
-            }
-                                
+            }                               
                        
         }
         private void RafraichirContact(Client client)
@@ -110,8 +103,7 @@ namespace GesWin
             dataGridContact.Rows.Clear();
 
             foreach (var cont in client.ListContact)
-            {
-               
+            {               
                 this.dataGridContact.Rows.Add(cont.NomContact, cont.PrenomContact,  cont.Telephone, cont.Email, cont.FonctionSetting);
                
             }
@@ -134,12 +126,7 @@ namespace GesWin
 
         private void dataGridContact_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
-
-            
-
-
-
+                    
         }
 
         private void dataGridContact_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -156,12 +143,9 @@ namespace GesWin
                     {
                         if (contact.NomContact == nom)
                         {
-
-
                             ConsultContact ConsultClient = new ConsultContact(contact);
 
                             ConsultClient.Show();
-
                         }
                     }
 
@@ -172,24 +156,54 @@ namespace GesWin
 
         }
 
+
+        /// <summary>
+        /// Bouton suppression contact
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void btnSupr_Click(object sender, EventArgs e)
         {
 
-            foreach (var item in Client.clientsHS)
-            {
-                if (item.IdClient == int.Parse(txtNumeroClient.Text))
-                {
-                    string nom = (string)dataGridContact.CurrentRow.Cells["ColNom"].Value;
+            //On récupère le client par l' Id Grace à la méthode GetClient
+          Client  client=GetClient(int.Parse(txtNumeroClient.Text));
 
-                 }
-                item.ListContact.Remove.Contains(nom);
-
-            }
+            //On supprime le contact de la listeContact du client
+            //grace à la méthode GetContact
+            client.ListContact.Remove(GetContact(client));
 
 
+            //Suppression de la ligne correspondant au click
             int numligne = dataGridContact.CurrentRow.Index;
-
             dataGridContact.Rows.RemoveAt(numligne);
         }
+
+        private Client GetClient(int id)
+        {
+            Client client=new Client();
+            foreach (var item in Client.clientsHS)
+            {
+                if (item.IdClient == id)
+                {
+                    client = item;
+                }                
+            }
+            return client;
+        }
+
+        private Contact GetContact(Client client)
+        {
+            Contact contact = new Contact();
+            foreach (var item in client.ListContact)
+            {
+                if (item.NomContact == (string)dataGridContact.CurrentRow.Cells["ColNom"].Value)
+                {
+                    contact = item;
+                }
+            }
+            return contact;
+        }
+
     }
 }

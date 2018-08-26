@@ -132,10 +132,9 @@ namespace GesWin
             }
             catch (Exception)
             {
-
+                
                 errorProvider1.SetError(txtEmailContact, "L' email doit être au format xxx@xxx.xx");
                 MessageBox.Show("L'email n'est pas valide", "ERREUR", MessageBoxButtons.OK);
-                
             }
 
         }

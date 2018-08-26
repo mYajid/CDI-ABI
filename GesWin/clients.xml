@@ -124,7 +124,17 @@
     <Adresse2>eyte</Adresse2>
     <CodPostal>22200</CodPostal>
     <Ville>Guingamp</Ville>
-    <ListContact />
+    <ListContact>
+      <Contact>
+        <IdClient>7777</IdClient>
+        <NomContact>zef</NomContact>
+        <PrenomContact>fazerf</PrenomContact>
+        <Telephone>111111111</Telephone>
+        <Email>azef@azef.fr</Email>
+        <FonctionSetting>Comptable</FonctionSetting>
+        <ImageClient>..\..\Ressources\luke.jpg</ImageClient>
+      </Contact>
+    </ListContact>
     <Activite>
       <Activit>Cereales</Activit>
       <NatureAct>Principale</NatureAct>

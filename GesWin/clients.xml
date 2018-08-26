@@ -123,6 +123,15 @@
         <Email>truc@machin.et</Email>
         <FonctionSetting>Comptable</FonctionSetting>
       </Contact>
+      <Contact>
+        <IdClient>4455</IdClient>
+        <NomContact>Luke</NomContact>
+        <PrenomContact>Skywalker</PrenomContact>
+        <Telephone>199999999</Telephone>
+        <Email>htf@gdcze.et</Email>
+        <FonctionSetting>Dirigeant</FonctionSetting>
+        <ImageClient>C:\Users\adm\source\repos\CDI-ABI\GesWin\Resources\index.jpg</ImageClient>
+      </Contact>
     </ListContact>
     <Activite>
       <Activit>Bovins</Activit>

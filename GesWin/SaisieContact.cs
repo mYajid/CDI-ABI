@@ -49,8 +49,20 @@ namespace GesWin
                     contact.PrenomContact = txtPrenomContact.Text;
                     contact.Telephone = int.Parse(txtTelephoneContact.Text);
                     contact.Email = txtEmailContact.Text;
-                    contact.FonctionSetting = (Fonction)lstFonctionContact.SelectedItem;
 
+                    //Verification que le contact a bien une fonction
+                    if (lstFonctionContact.SelectedItem==null)
+                    {
+                        MessageBox.Show("Selectionnez une fonction du contact", "ERREUR", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        contact.FonctionSetting = (Fonction)lstFonctionContact.SelectedItem;
+                    }
+
+                    //Ajout du contact dans le hashset Listcontact du Client _client
+
+                    contact.ImageClient = photoContact.ImageLocation;
                     _client.ListContact.Add(contact);
 
                     this.DialogResult = DialogResult.OK;
@@ -131,6 +143,16 @@ namespace GesWin
                 e.Cancel = true;
             }
 
+        }
+
+        private void btnphoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+
+            if (open.ShowDialog()==DialogResult.OK)
+            {
+                photoContact.ImageLocation = open.FileName;
+            }
         }
     }
 }

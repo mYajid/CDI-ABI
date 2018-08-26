@@ -48,6 +48,7 @@
             this.lblIDContact = new System.Windows.Forms.Label();
             this.lblRaisonSocialeContact = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnphoto = new System.Windows.Forms.Button();
             this.gBoxIdentiteContact.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photoContact)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -231,12 +232,24 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // btnphoto
+            // 
+            this.btnphoto.Location = new System.Drawing.Point(360, 29);
+            this.btnphoto.Name = "btnphoto";
+            this.btnphoto.Size = new System.Drawing.Size(143, 23);
+            this.btnphoto.TabIndex = 8;
+            this.btnphoto.Text = "photo du contact";
+            this.btnphoto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnphoto.UseVisualStyleBackColor = true;
+            this.btnphoto.Click += new System.EventHandler(this.btnphoto_Click);
+            // 
             // FormNouveauContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(549, 396);
+            this.Controls.Add(this.btnphoto);
             this.Controls.Add(this.lblRaisonSocialeContact);
             this.Controls.Add(this.lblIDContact);
             this.Controls.Add(this.lblClientContact);
@@ -275,5 +288,6 @@
         public System.Windows.Forms.Label lblRaisonSocialeContact;
         protected System.Windows.Forms.PictureBox photoContact;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnphoto;
     }
 }

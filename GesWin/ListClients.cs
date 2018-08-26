@@ -13,8 +13,8 @@ namespace GesWin
 {    
     public partial class FormListeClients : Form
     {
-        string choix = "";
-        string choix1 = "";
+        string choix = ""; //Saisie d'utilisateur pour la recherche d'un client.
+        string choix1 = ""; //Choix est comparé avec choix1 (le contenu d'une cellule).
         int Long = 0;
         int nbligne = 0;
         int numcol = 0;
@@ -33,16 +33,17 @@ namespace GesWin
 
 
 
-            foreach (var item in Client.clientsHS)
+            foreach (Client item in Client.clientsHS)
             {
+                //Remplit la DataGridView à partir de la liste HachSet où sont stockées les données des clients.
                 this.datgwListeClients.Rows.Add(item.RaisonSociale, item.Ville, item.CodPostal, item.TypeSociete, item.Activite.Activit, item.Activite.NatureAct);
 
             }
 
-          //  datgwListeClients.DataSource = Client.clientsHS.ToList();
+          
 
         }
-
+        
         private void datgwListeClients_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             btnSuprimeClient.Enabled = true;
@@ -50,25 +51,27 @@ namespace GesWin
 
         private void btnFermerListeClient_Click(object sender, EventArgs e)
         {
+            //Ecrit les données dans le fichier avant de fermer la fenêtre.
            Fichier.WriteToFile();
             this.Close();
         }
 
         private void txtRecherche_TextChanged(object sender, EventArgs e)
         {
+            //Active et désactive le bouton "Tous".
             if (txtRecherche.Text == "")
             {
-                btnListeCliente.Enabled = false;
+                btnListeCliente.Enabled = false; //Une liste des clients correspondant au critère de la recherche.
             }
             else
             {
-                btnListeCliente.Enabled = true;
+                btnListeCliente.Enabled = true; //Possibilité de rétablir la liste complète des clients
             }
         }
 
         private void datgwListeClients_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            //note affichage du formulaire détail du client
+            //Note affichage du formulaire détail du client
 
             string RS = (string)datgwListeClients.CurrentRow.Cells["RaisonSociale"].Value;
 
@@ -78,7 +81,7 @@ namespace GesWin
             {
                 if (client.RaisonSociale == RS)
                 {
-                    
+                    //Dialogue non modale avec fenêtre Consultation Client.
                    
                     FormConsultClient ConsultClient = new FormConsultClient(client);
 
@@ -91,7 +94,7 @@ namespace GesWin
 
         private void btnNouveauClient_Click(object sender, EventArgs e)
         {
-            //note affichage du formulaire création client
+            //Note affichage du formulaire création client. Dialogue modale.
             FormSaisieNouveauClient nouveauClient = new FormSaisieNouveauClient();
             if (nouveauClient.ShowDialog()==DialogResult.OK)
             {
@@ -104,6 +107,7 @@ namespace GesWin
        
         public void Rafraichir()
         {
+            //Mise à jour des données par la fonction Rafraichir().
             datgwListeClients.Rows.Clear();
 
             foreach (var item in Client.clientsHS)
@@ -119,7 +123,7 @@ namespace GesWin
 
         private void datgwListeClients_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            // recupération de la dénomination d'entête de la colonne à partir de l'index de colonne
+            // Recupération de la dénomination d'entête de la colonne à partir de l'index de colonne
             lblRecherche.Text = datgwListeClients.Columns[e.ColumnIndex].HeaderText;
             numcol = e.ColumnIndex;
             Recherche();
@@ -128,6 +132,7 @@ namespace GesWin
 
         private void btnRecherche_Click(object sender, EventArgs e)
         {
+            //Recherche selon le critère (sauf "Type Société"). Comparaison de la saisie avec le contenu de la cellule.
             choix = txtRecherche.Text;
             Long = choix.Length;
             nbligne = datgwListeClients.RowCount;
@@ -156,6 +161,7 @@ namespace GesWin
 
         private void btnListeCliente_Click(object sender, EventArgs e)
         {
+            //Rétablit toute la liste. Efface le texte de la zone de la recherche.
             for (int Tour = 0; Tour < nbligne - 1; Tour++)
             {
                 datgwListeClients.Rows[Tour].Visible = true;
@@ -168,6 +174,7 @@ namespace GesWin
         {
             numligne = datgwListeClients.CurrentRow.Index;
             datgwListeClients.Rows.RemoveAt(numligne);
+            
         }
 
         private void chbRecherchePrive_Click(object sender, EventArgs e)
@@ -178,6 +185,7 @@ namespace GesWin
         {
             if(lblRecherche.Text != "Privé")
             {
+                //La recherche sur un critère autre que "Type Société".
                 txtRecherche.ReadOnly = false;
                 txtRecherche.Text = "";
                 //txtRecherche.BackColor = Color.Empty;
@@ -186,6 +194,7 @@ namespace GesWin
             }
             else
             {
+                //La recherche sur le critère "Type Société".
                 txtRecherche.ReadOnly = true;
                 txtRecherche.Text = "False";
                 //txtRecherche.BackColor = Color.Black;
@@ -197,6 +206,7 @@ namespace GesWin
 
         private void btnColor_MouseEnter(object sender, EventArgs e)
         {
+           //Couleur des boutons quand souris entre.
             Button btn = (Button)sender;
             btn.BackColor = Color.LightSteelBlue;
             btn.ForeColor = Color.Blue;
@@ -204,6 +214,7 @@ namespace GesWin
 
         private void btnColor_MouseLeave(object sender, EventArgs e)
         {
+            //Couleur des boutons quand souris quitte les boutons
             Button btn = (Button)sender;
             btn.BackColor = Color.LightCyan;
             btn.ForeColor = Color.Black;

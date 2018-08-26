@@ -150,7 +150,8 @@ namespace GesWin
 
             if (open.ShowDialog() == DialogResult.OK)
             {
-                photoContact.ImageLocation = open.FileName;
+                
+                photoContact.ImageLocation = string.Format(@"..\..\Resources\{0}",open.SafeFileName);
             }
         }
 

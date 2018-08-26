@@ -22,7 +22,7 @@ namespace GesWin
             lblTel.Text = contact.Telephone.ToString();
             lblEmail.Text = contact.Email.ToString();
             lblFonction.Text = contact.FonctionSetting.ToString();
-             
+            photoClontact.ImageLocation = contact.ImageClient;
                 
         }
 

@@ -20,6 +20,15 @@
         <Email>alain@LegoffBretagne.fr</Email>
         <FonctionSetting>Dirigeant</FonctionSetting>
       </Contact>
+      <Contact>
+        <IdClient>1234</IdClient>
+        <NomContact>Skywalker</NomContact>
+        <PrenomContact>luke</PrenomContact>
+        <Telephone>544444455</Telephone>
+        <Email>uigi@zerf.et</Email>
+        <FonctionSetting>ResponsableRH</FonctionSetting>
+        <ImageClient>C:\Users\adm\source\repos\CDI-ABI\GesWin\Resources\luke.jpg</ImageClient>
+      </Contact>
     </ListContact>
     <Activite>
       <Activit>Boissons</Activit>

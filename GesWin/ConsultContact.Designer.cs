@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.photoClontact = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblTel = new System.Windows.Forms.Label();
+            this.lblPrenom = new System.Windows.Forms.Label();
+            this.lblNom = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lblId = new System.Windows.Forms.Label();
-            this.lblNom = new System.Windows.Forms.Label();
-            this.lblPrenom = new System.Windows.Forms.Label();
-            this.lblTel = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
             this.lblFonction = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.photoClontact)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // photoClontact
             // 
-            this.pictureBox1.InitialImage = global::GesWin.Properties.Resources.edv_roboter_hintergrund_zeichnungen_csp14758599;
-            this.pictureBox1.Location = new System.Drawing.Point(382, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 115);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.photoClontact.InitialImage = global::GesWin.Properties.Resources.edv_roboter_hintergrund_zeichnungen_csp14758599;
+            this.photoClontact.Location = new System.Drawing.Point(382, 25);
+            this.photoClontact.Name = "photoClontact";
+            this.photoClontact.Size = new System.Drawing.Size(100, 115);
+            this.photoClontact.TabIndex = 0;
+            this.photoClontact.TabStop = false;
             // 
             // groupBox1
             // 
@@ -66,7 +66,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.photoClontact);
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(51, 53);
             this.groupBox1.Name = "groupBox1";
@@ -75,35 +75,51 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Identité";
             // 
-            // label1
+            // lblEmail
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(125, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 14);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Client :";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(173, 146);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(12, 14);
+            this.lblEmail.TabIndex = 13;
+            this.lblEmail.Text = "/";
             // 
-            // label2
+            // lblTel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(74, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nom :";
+            this.lblTel.AutoSize = true;
+            this.lblTel.Location = new System.Drawing.Point(173, 108);
+            this.lblTel.Name = "lblTel";
+            this.lblTel.Size = new System.Drawing.Size(12, 14);
+            this.lblTel.TabIndex = 12;
+            this.lblTel.Text = "/";
             // 
-            // label3
+            // lblPrenom
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(74, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 16);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Prenom :";
+            this.lblPrenom.AutoSize = true;
+            this.lblPrenom.Location = new System.Drawing.Point(173, 69);
+            this.lblPrenom.Name = "lblPrenom";
+            this.lblPrenom.Size = new System.Drawing.Size(12, 14);
+            this.lblPrenom.TabIndex = 11;
+            this.lblPrenom.Text = "/";
+            // 
+            // lblNom
+            // 
+            this.lblNom.AutoSize = true;
+            this.lblNom.Location = new System.Drawing.Point(174, 25);
+            this.lblNom.Name = "lblNom";
+            this.lblNom.Size = new System.Drawing.Size(12, 14);
+            this.lblNom.TabIndex = 10;
+            this.lblNom.Text = "/";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(74, 144);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 16);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Email : ";
             // 
             // label4
             // 
@@ -115,6 +131,36 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Téléphone :";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(74, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 16);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Prenom :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(74, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nom :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(125, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 14);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Client :";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -124,16 +170,6 @@
             this.label5.Size = new System.Drawing.Size(69, 14);
             this.label5.TabIndex = 2;
             this.label5.Text = "Fonction :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(74, 144);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 16);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Email : ";
             // 
             // button1
             // 
@@ -156,42 +192,6 @@
             this.lblId.Size = new System.Drawing.Size(12, 14);
             this.lblId.TabIndex = 5;
             this.lblId.Text = "/";
-            // 
-            // lblNom
-            // 
-            this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(174, 25);
-            this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(12, 14);
-            this.lblNom.TabIndex = 10;
-            this.lblNom.Text = "/";
-            // 
-            // lblPrenom
-            // 
-            this.lblPrenom.AutoSize = true;
-            this.lblPrenom.Location = new System.Drawing.Point(173, 69);
-            this.lblPrenom.Name = "lblPrenom";
-            this.lblPrenom.Size = new System.Drawing.Size(12, 14);
-            this.lblPrenom.TabIndex = 11;
-            this.lblPrenom.Text = "/";
-            // 
-            // lblTel
-            // 
-            this.lblTel.AutoSize = true;
-            this.lblTel.Location = new System.Drawing.Point(173, 108);
-            this.lblTel.Name = "lblTel";
-            this.lblTel.Size = new System.Drawing.Size(12, 14);
-            this.lblTel.TabIndex = 12;
-            this.lblTel.Text = "/";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(173, 146);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(12, 14);
-            this.lblEmail.TabIndex = 13;
-            this.lblEmail.Text = "/";
             // 
             // lblFonction
             // 
@@ -217,7 +217,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ConsultContact";
             this.Text = "ConsultContact";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.photoClontact)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -227,7 +227,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox photoClontact;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblTel;

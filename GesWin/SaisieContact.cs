@@ -168,7 +168,7 @@ namespace GesWin
 
                 errorProvider1.SetError(lstFonctionContact, "La fonction est obligatoire");
                 MessageBox.Show("Selectionnez une fonction du contact", "ERREUR", MessageBoxButtons.OK);
-               
+                c.FonctionSetting = Fonction.Dirigeant;
             }
         }
     }

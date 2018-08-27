@@ -198,7 +198,7 @@ namespace GestionCommercialeDll
 
             { return false; }
 
-            for (int i = 0; i < value.Length - 1; i++)
+            for (int i = 0; i < value.Length ; i++)
             {
                 if (!char.IsLetter(value[i]) && !char.IsWhiteSpace(value[i]) && !char.IsDigit(value[i]))
                 {
@@ -219,23 +219,7 @@ namespace GestionCommercialeDll
 
             return Regex.Match(number, @"^(^[0-9]{9}$|^06[0-9]{8}$|^00[0-9]{11,13}$)$").Success;
 
-
-
-
-            //string valeur = value.ToString();
-
-            //if (valeur == null|| valeur.Length < 10 || valeur.Length > 15)
-
-            //    return false;
-
-            //for (int i = 0; i < valeur.Length - 1; i++)
-            //{
-            //    if (!char.IsDigit(valeur[i]))
-            //    {
-            //        return false;
-            //    }
-            //}
-            //return true;
+                       
         }
          /// <summary>
         /// Verification de la propriete id client, longueur maxi 4,

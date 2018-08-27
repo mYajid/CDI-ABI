@@ -10,21 +10,21 @@ namespace GesWin
         public FormConsultClient(Client client)
         {
             InitializeComponent();
-           
-                    txtNumeroClient.Text = client.IdClient.ToString();
-                    txtRaisonSociale.Text = client.RaisonSociale;
-                    txt1Adresse.Text = client.Adresse1;
-                    txt2Adresse.Text = client.Adresse2;
-                    txtVille.Text = client.Ville;
-                    txtCp.Text = client.CodPostal.ToString();
-                    txtTelephone.Text = String.Format("0{0:# ## ## ## ##}", client.TelephoneClient.ToString());
-            txtEffectif.Text = client.Effectif.ToString();
-                    chBoxPrivé.Checked = client.TypeSociete;
-                    txtActivite.Text = client.Activite.Activit.ToString();
-                    txtNature.Text = client.Activite.NatureAct.ToString();
-                    txtCA.Text = client.CA.ToString();
 
-            if (client.ListContact!=null)
+            txtNumeroClient.Text = client.IdClient.ToString();
+            txtRaisonSociale.Text = client.RaisonSociale;
+            txt1Adresse.Text = client.Adresse1;
+            txt2Adresse.Text = client.Adresse2;
+            txtVille.Text = client.Ville;
+            txtCp.Text = client.CodPostal.ToString();
+            txtTelephone.Text = String.Format("0{0:# ## ## ## ##}", client.TelephoneClient.ToString());
+            txtEffectif.Text = client.Effectif.ToString();
+            chBoxPrivé.Checked = client.TypeSociete;
+            txtActivite.Text = client.Activite.Activit.ToString();
+            txtNature.Text = client.Activite.NatureAct.ToString();
+            txtCA.Text = client.CA.ToString();
+
+            if (client.ListContact != null)
             {
 
                 foreach (var cont in client.ListContact)
@@ -33,10 +33,10 @@ namespace GesWin
 
                 }
             }
-                                                
+
         }
 
-       
+
 
 
         private void btnModifClient_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace GesWin
             {
                 if (client.RaisonSociale == txtRaisonSociale.Text)
                 {
-                    
+
                     FormModificationClient modificationClient = new FormModificationClient(client);
                     if (modificationClient.ShowDialog() == DialogResult.OK)
                     {
@@ -59,10 +59,10 @@ namespace GesWin
                     }
                 }
             }
-                               
-            
+
+
         }
-         void Rafraichir(Client client)
+        void Rafraichir(Client client)
         {
             txtNumeroClient.Text = client.IdClient.ToString();
             txtRaisonSociale.Text = client.RaisonSociale;
@@ -79,10 +79,10 @@ namespace GesWin
         }
 
         private void btnNouveauContact_Click(object sender, EventArgs e)
-        {           
+        {
             foreach (var item in Client.clientsHS)
             {
-                if (item.IdClient == int.Parse(txtNumeroClient.Text)) 
+                if (item.IdClient == int.Parse(txtNumeroClient.Text))
                 {
                     FormNouveauContact nouveauContact = new FormNouveauContact(item);
                     if (nouveauContact.ShowDialog() == DialogResult.OK)
@@ -95,17 +95,17 @@ namespace GesWin
                         this.Refresh();
                     }
                 }
-            }                               
-                       
+            }
+
         }
         private void RafraichirContact(Client client)
         {
             dataGridContact.Rows.Clear();
 
             foreach (var cont in client.ListContact)
-            {               
-                this.dataGridContact.Rows.Add(cont.NomContact, cont.PrenomContact,  cont.Telephone, cont.Email, cont.FonctionSetting);
-               
+            {
+                this.dataGridContact.Rows.Add(cont.NomContact, cont.PrenomContact, cont.Telephone, cont.Email, cont.FonctionSetting);
+
             }
         }
 
@@ -114,21 +114,7 @@ namespace GesWin
             this.Close();
         }
 
-        private void FormConsultClient_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtActivite_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridContact_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-                    
-        }
-
+       
         private void dataGridContact_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -136,7 +122,6 @@ namespace GesWin
             {
                 if (client.IdClient == int.Parse(txtNumeroClient.Text))
                 {
-
                     string nom = (string)dataGridContact.CurrentRow.Cells["ColNom"].Value;
 
                     foreach (var contact in client.ListContact)
@@ -148,12 +133,8 @@ namespace GesWin
                             ConsultClient.Show();
                         }
                     }
-
-
                 }
             }
-
-
         }
 
 
@@ -167,7 +148,7 @@ namespace GesWin
         {
 
             //On récupère le client par l' Id Grace à la méthode GetClient
-          Client  client=GetClient(int.Parse(txtNumeroClient.Text));
+            Client client = GetClient(int.Parse(txtNumeroClient.Text));
 
             //On supprime le contact de la listeContact du client
             //grace à la méthode GetContact
@@ -178,20 +159,28 @@ namespace GesWin
             int numligne = dataGridContact.CurrentRow.Index;
             dataGridContact.Rows.RemoveAt(numligne);
         }
-
+        /// <summary>
+        /// Methode pour recuperer un objet client dans un hashset
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         private Client GetClient(int id)
         {
-            Client client=new Client();
+            Client client = new Client();
             foreach (var item in Client.clientsHS)
             {
                 if (item.IdClient == id)
                 {
                     client = item;
-                }                
+                }
             }
             return client;
         }
-
+        /// <summary>
+        /// Methode pour recuperer un objet contact dans un hashset
+        /// </summary>
+        /// <param name="client"></param>
+        /// <returns></returns>
         private Contact GetContact(Client client)
         {
             Contact contact = new Contact();

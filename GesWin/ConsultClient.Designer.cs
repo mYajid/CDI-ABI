@@ -238,7 +238,6 @@
             this.txtActivite.ReadOnly = true;
             this.txtActivite.Size = new System.Drawing.Size(100, 22);
             this.txtActivite.TabIndex = 7;
-            this.txtActivite.TextChanged += new System.EventHandler(this.txtActivite_TextChanged);
             // 
             // lblNature
             // 
@@ -348,7 +347,6 @@
             this.dataGridContact.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridContact.Size = new System.Drawing.Size(833, 112);
             this.dataGridContact.TabIndex = 6;
-            this.dataGridContact.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridContact_CellContentClick);
             this.dataGridContact.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridContact_CellContentDoubleClick);
             // 
             // ColNom
@@ -415,7 +413,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormConsultClient";
             this.Text = "Bretagne Informatique - Consultation client";
-            this.Load += new System.EventHandler(this.FormConsultClient_Load);
             this.boxIdentification.ResumeLayout(false);
             this.boxIdentification.PerformLayout();
             this.boxCaractéristique.ResumeLayout(false);

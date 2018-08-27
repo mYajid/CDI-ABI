@@ -18,7 +18,6 @@ namespace GesWin
         int Long = 0;
         int nbligne = 0;
         int numcol = 0;
-        int numligne = 0;
         //string arret = "";
 
         public FormListeClients()
@@ -36,16 +35,25 @@ namespace GesWin
             {
                 //Remplit la DataGridView à partir de la liste HachSet où sont stockées les données des clients.
                 this.datgwListeClients.Rows.Add(item.RaisonSociale, item.Ville, item.CodPostal, item.TypeSociete, item.Activite.Activit, item.Activite.NatureAct);
-
             }                    
-
         }
         
+
+        /// <summary>
+        /// Activation du bouton supprimer quand on clique sur le dataGridView
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void datgwListeClients_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             btnSuprimeClient.Enabled = true;
         }
 
+        /// <summary>
+        /// ecriture sur disque du fichier clients.xml par la methode WriteToFile de la classe Fichier
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFermerListeClient_Click(object sender, EventArgs e)
         {
             //Ecrit les données dans le fichier avant de fermer la fenêtre.
@@ -65,7 +73,11 @@ namespace GesWin
                 btnListeCliente.Enabled = true; //Possibilité de rétablir la liste complète des clients
             }
         }
-
+        /// <summary>
+        /// Affichage dans un dataGrid des objets Client du hashset
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void datgwListeClients_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //Note affichage du formulaire détail du client

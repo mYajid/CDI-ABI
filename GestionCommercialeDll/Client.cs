@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 namespace GestionCommercialeDll
 {
-   
+
     [Serializable()]
     public class Client
     {
 
         public static HashSet<Client> clientsHS = new HashSet<Client>();
-       
+
         private int _idClient;
         private string _raisonSociale;
         private string _adresse1;
@@ -24,7 +24,7 @@ namespace GestionCommercialeDll
         private string _ville;
         private int _CP;
 
-        
+
         public Client()
         {
 
@@ -60,8 +60,8 @@ namespace GestionCommercialeDll
             }
             set
             {
-                
-               if (!IsTelephoneClientValid(value))
+
+                if (!IsTelephoneClientValid(value))
 
                 {
                     throw new Exception(string.Format("Le numero saisie {0} n'est pas valide", value));
@@ -198,7 +198,7 @@ namespace GestionCommercialeDll
 
             { return false; }
 
-            for (int i = 0; i < value.Length ; i++)
+            for (int i = 0; i < value.Length; i++)
             {
                 if (!char.IsLetter(value[i]) && !char.IsWhiteSpace(value[i]) && !char.IsDigit(value[i]))
                 {
@@ -219,16 +219,16 @@ namespace GestionCommercialeDll
 
             return Regex.Match(number, @"^(^[0-9]{9}$|^06[0-9]{8}$|^00[0-9]{11,13}$)$").Success;
 
-                       
+
         }
-         /// <summary>
+        /// <summary>
         /// Verification de la propriete id client, longueur maxi 4,
         /// ne doit pas contenir de lettres
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
         public bool IsIdClientValid(int value)
-            
+
         {
             string valeur = value.ToString();
 
@@ -236,7 +236,7 @@ namespace GestionCommercialeDll
 
                 return false;
 
-            for (int i = 0; i < valeur.Length ; i++)
+            for (int i = 0; i < valeur.Length; i++)
             {
                 if (!char.IsDigit(valeur[i]))
                 {
@@ -244,7 +244,7 @@ namespace GestionCommercialeDll
                 }
             }
             return true;
-           
+
         }
 
         public bool CPValid(int value)
@@ -253,7 +253,7 @@ namespace GestionCommercialeDll
             string valeur = value.ToString();
 
             if (valeur == null || valeur.Length != 5)
-            { 
+            {
                 return false;
             }
             return true;
@@ -278,7 +278,7 @@ namespace GestionCommercialeDll
 
             return this.IdClient == ((Client)obj).IdClient;
         }
-        
+
         /// <summary>
         /// Surcharge(override) de la fonction héritée Equals
         /// Elle doit renvoyer le HashCode de la proprieté Id client 
@@ -290,10 +290,10 @@ namespace GestionCommercialeDll
         }
 
 
-        public HashSet<Contact> ListContact {get; set;}
+        public HashSet<Contact> ListContact { get; set; }
 
         public Activite Activite { get; set; }
-        
+
 
     }
-}  
+}

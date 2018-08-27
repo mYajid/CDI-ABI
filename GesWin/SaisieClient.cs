@@ -14,6 +14,9 @@ namespace GesWin
     public partial class FormSaisieNouveauClient : Form
 
     {
+        Client test = new Client();
+
+
 
         public FormSaisieNouveauClient()
         {
@@ -57,21 +60,23 @@ namespace GesWin
 
         }
 
+        /// <summary>
+        /// instanciation du nouveau client dans lequel on met
+        /// toutes les données du formulaire
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOK_Click(object sender, EventArgs e)
         {
-            Client _client = new Client();
-
+            Client _client = new Client();            
             
-            _client.IdClient = int.Parse(txtNumeroClient.Text);         
-                    
+            _client.IdClient = int.Parse(txtNumeroClient.Text);  
             _client.RaisonSociale = txtRaisonSociale.Text;
             _client.Adresse1 = txtAdresse1.Text;
             _client.Adresse2 = txtAdresse2.Text;
             _client.CodPostal = int.Parse(txtCP.Text);
             _client.Ville = txtVille.Text;
-
             _client.TelephoneClient = int.Parse(txtTelephone.Text);
-
             _client.TypeSociete = chBoxPrive.Checked;
             _client.Effectif = int.Parse(txtEffectif.Text);
             _client.CA = decimal.Parse(txtCA.Text);
@@ -108,11 +113,11 @@ namespace GesWin
 
         private void txtNumeroClient_Validating(object sender, CancelEventArgs e)
         {
-            Client x = new Client();
+            
             errorProvider1.SetError(txtNumeroClient, string.Empty);
             try
             {
-                x.IdClient = int.Parse(txtNumeroClient.Text);
+                test.IdClient = int.Parse(txtNumeroClient.Text);
             }
             catch (Exception)
             {
@@ -144,11 +149,11 @@ namespace GesWin
 
         private void txtRaisonSociale_Validating(object sender, CancelEventArgs e)
         {
-            Client x = new Client();
+           
             errorProvider1.SetError(txtRaisonSociale, string.Empty);
             try
             {
-                x.RaisonSociale =txtRaisonSociale.Text;
+                test.RaisonSociale =txtRaisonSociale.Text;
             }
             catch (Exception)
             {
@@ -174,11 +179,11 @@ namespace GesWin
 
         private void txtCP_Validating(object sender, CancelEventArgs e)
         {
-            Client x = new Client();
+           
             errorProvider1.SetError(txtCP, string.Empty);
             try
             {
-                x.CodPostal =int.Parse(txtCP.Text);
+                test.CodPostal =int.Parse(txtCP.Text);
             }
             catch (Exception)
             {
@@ -190,11 +195,11 @@ namespace GesWin
 
         private void txtTelephone_Validating(object sender, CancelEventArgs e)
         {
-            Client x = new Client();
+           
             errorProvider1.SetError(txtTelephone, string.Empty);
             try
             {
-                x.TelephoneClient = int.Parse(txtTelephone.Text);
+                test.TelephoneClient = int.Parse(txtTelephone.Text);
             }
             catch (Exception)
             {

@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbxrechclt = new System.Windows.Forms.GroupBox();
             this.lblAttention = new System.Windows.Forms.Label();
             this.chbRecherchePrive = new System.Windows.Forms.CheckBox();
@@ -150,20 +150,20 @@
             // 
             // datgwListeClients
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Brown;
-            this.datgwListeClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Brown;
+            this.datgwListeClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.datgwListeClients.BackgroundColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datgwListeClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datgwListeClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.datgwListeClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datgwListeClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RaisonSociale,
@@ -172,14 +172,14 @@
             this.PriveClient,
             this.ActiviteClient,
             this.NatureClient});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datgwListeClients.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datgwListeClients.DefaultCellStyle = dataGridViewCellStyle9;
             this.datgwListeClients.Location = new System.Drawing.Point(34, 168);
             this.datgwListeClients.Name = "datgwListeClients";
             this.datgwListeClients.ReadOnly = true;
@@ -194,11 +194,11 @@
             // RaisonSociale
             // 
             this.RaisonSociale.DataPropertyName = "RaisonSociale";
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Brown;
-            this.RaisonSociale.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Brown;
+            this.RaisonSociale.DefaultCellStyle = dataGridViewCellStyle3;
             this.RaisonSociale.DividerWidth = 1;
             this.RaisonSociale.HeaderText = "Raison Sociale";
             this.RaisonSociale.MaxInputLength = 60;
@@ -209,11 +209,11 @@
             // VilleClient
             // 
             this.VilleClient.DataPropertyName = "Ville";
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Brown;
-            this.VilleClient.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Brown;
+            this.VilleClient.DefaultCellStyle = dataGridViewCellStyle4;
             this.VilleClient.DividerWidth = 1;
             this.VilleClient.HeaderText = "Ville";
             this.VilleClient.Name = "VilleClient";
@@ -223,11 +223,11 @@
             // CodePostalClient
             // 
             this.CodePostalClient.DataPropertyName = "CodPostal";
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Brown;
-            this.CodePostalClient.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Brown;
+            this.CodePostalClient.DefaultCellStyle = dataGridViewCellStyle5;
             this.CodePostalClient.DividerWidth = 1;
             this.CodePostalClient.HeaderText = "Code Postal";
             this.CodePostalClient.Name = "CodePostalClient";
@@ -236,13 +236,13 @@
             // PriveClient
             // 
             this.PriveClient.DataPropertyName = "TypeSociete";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.NullValue = false;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Brown;
-            this.PriveClient.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.NullValue = false;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Brown;
+            this.PriveClient.DefaultCellStyle = dataGridViewCellStyle6;
             this.PriveClient.DividerWidth = 1;
             this.PriveClient.HeaderText = "Privé";
             this.PriveClient.Name = "PriveClient";
@@ -254,11 +254,11 @@
             // ActiviteClient
             // 
             this.ActiviteClient.DataPropertyName = "Activite";
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Brown;
-            this.ActiviteClient.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Brown;
+            this.ActiviteClient.DefaultCellStyle = dataGridViewCellStyle7;
             this.ActiviteClient.DividerWidth = 1;
             this.ActiviteClient.HeaderText = "Activite";
             this.ActiviteClient.Name = "ActiviteClient";
@@ -266,11 +266,11 @@
             // 
             // NatureClient
             // 
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Brown;
-            this.NatureClient.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Brown;
+            this.NatureClient.DefaultCellStyle = dataGridViewCellStyle8;
             this.NatureClient.DividerWidth = 1;
             this.NatureClient.HeaderText = "Nature";
             this.NatureClient.Name = "NatureClient";

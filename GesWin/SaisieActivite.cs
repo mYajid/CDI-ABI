@@ -29,8 +29,7 @@ namespace GesWin
             InitializeComponent();
        
 
-            //act.Add(new FormSaisieActivite { act1 = "Administration", act2 = "Bovins", act3 = "Boissons", act4 = "Céréales", act5 = "Laiterie", act6 = "Mecanique", act7 = "Pêche" });
-            //Array MetierArray = Enum.GetValues(typeof(Metier));
+            
 
             foreach (String Activite in Activite.Metiers)
             {
@@ -47,7 +46,7 @@ namespace GesWin
             if (lstActivite.Items.Contains(activ) || activ =="")
             {
                 txtNouvelleActivite.Text = null;
-                //txtNouvelleActivite.Clear();
+               
                 txtNouvelleActivite.Focus();
             }
             else
@@ -55,8 +54,7 @@ namespace GesWin
                 lstActivite.Items.Add(txtNouvelleActivite.Text.Trim());
                 txtNouvelleActivite.Clear();
                 txtNouvelleActivite.Focus();
-                //Enum Metier.Add(txtNouvelleActivite.Text);
-               // Metier act = (Metier)Enum.Parse(typeof(Metier), activ);
+               
             }
         }
 
